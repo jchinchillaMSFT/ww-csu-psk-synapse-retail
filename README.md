@@ -8,3 +8,6 @@ This Solution Kit includes the following technical assets:
 * Retail Analytics Solution  assets (dataset, pipelines, notebook, scripts, and reports)
 * Product Recommender model
 * Links to learning resources (videos, workshops, and blogs)
+
+## Reference Architecture
+![](https://github.com/jchinchillaMSFT/wwcsu-psk-synapse-retail/blob/4339afd8142772dfbe9b7f5dde5bbe57ba534397/media/SynapseRetailReferenceArchitecture.png)
