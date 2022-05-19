@@ -1,0 +1,1391 @@
+{
+	"name": "Retail - Product recommendations from Sample CSV",
+	"properties": {
+		"folder": {
+			"name": "Retail Recommendation"
+		},
+		"nbformat": 4,
+		"nbformat_minor": 2,
+		"bigDataPool": {
+			"referenceName": "SampleSpark",
+			"type": "BigDataPoolReference"
+		},
+		"sessionProperties": {
+			"driverMemory": "28g",
+			"driverCores": 4,
+			"executorMemory": "28g",
+			"executorCores": 4,
+			"numExecutors": 2,
+			"conf": {
+				"spark.dynamicAllocation.enabled": "false",
+				"spark.dynamicAllocation.minExecutors": "2",
+				"spark.dynamicAllocation.maxExecutors": "2",
+				"spark.autotune.trackingId": "a5b5f90c-cb72-42cf-b37d-79863ad84fd8"
+			}
+		},
+		"metadata": {
+			"saveOutput": true,
+			"synapse_widget": {
+				"version": "0.1",
+				"state": {
+					"abbf25c9-bbe7-4440-befc-8b3fb3cb8290": {
+						"type": "Synapse.DataFrame",
+						"sync_state": {
+							"table": {
+								"rows": [
+									{
+										"0": "84fa61f6",
+										"1": "84fdf5e6",
+										"2": "1",
+										"3": "1007.3703074960509",
+										"4": "100.96380068432816",
+										"5": "1504.0231375425865",
+										"6": "0",
+										"7": "1",
+										"8": "1",
+										"9": "99995.89371017777",
+										"10": "199993.30455927135"
+									},
+									{
+										"0": "84fa61f7",
+										"1": "84fdf5e7",
+										"2": "1",
+										"3": "1009.0165993860892",
+										"4": "96.59174824100965",
+										"5": "1518.7985456646848",
+										"6": "1",
+										"7": "1",
+										"8": "1",
+										"9": "100003.62001368884",
+										"10": "199996.44033653763"
+									},
+									{
+										"0": "84fa61f8",
+										"1": "84fdf5e8",
+										"2": "1",
+										"3": "1017.6356795795646",
+										"4": "101.38067630056376",
+										"5": "1501.3119027109806",
+										"6": "1",
+										"7": "1",
+										"8": "1",
+										"9": "99994.04629461098",
+										"10": "199989.20031100875"
+									},
+									{
+										"0": "84fa61f9",
+										"1": "84fdf5e9",
+										"2": "1",
+										"3": "1016.6712169423425",
+										"4": "79.58174744809645",
+										"5": "1508.114820588185",
+										"6": "1",
+										"7": "1",
+										"8": "1",
+										"9": "99997.76828826875",
+										"10": "199992.02201807586"
+									},
+									{
+										"0": "84fa61fa",
+										"1": "84fdf5ea",
+										"2": "0",
+										"3": "1013.7909772121608",
+										"4": "91.33996840809115",
+										"5": "1517.5457928925623",
+										"6": "0",
+										"7": "1",
+										"8": "1",
+										"9": "100005.97362876785",
+										"10": "199996.4210598991"
+									},
+									{
+										"0": "84fa61fb",
+										"1": "84fdf5eb",
+										"2": "0",
+										"3": "1006.5798773466613",
+										"4": "115.14108135868779",
+										"5": "1502.5461750505765",
+										"6": "1",
+										"7": "1",
+										"8": "0",
+										"9": "100009.80125926025",
+										"10": "199993.94838620344"
+									},
+									{
+										"0": "84fa61fc",
+										"1": "84fdf5ec",
+										"2": "1",
+										"3": "1000.5136432788325",
+										"4": "80.51395571255301",
+										"5": "1497.9178336575956",
+										"6": "1",
+										"7": "1",
+										"8": "1",
+										"9": "99998.92190675237",
+										"10": "200000.39192579014"
+									},
+									{
+										"0": "84fa61fd",
+										"1": "84fdf5ed",
+										"2": "0",
+										"3": "1003.758183775668",
+										"4": "105.46639996026579",
+										"5": "1519.8563854945417",
+										"6": "0",
+										"7": "1",
+										"8": "0",
+										"9": "100002.68122153166",
+										"10": "199995.81658039338"
+									},
+									{
+										"0": "84fa61fe",
+										"1": "84fdf5ee",
+										"2": "1",
+										"3": "1010.8742438074745",
+										"4": "82.881543368899",
+										"5": "1496.1631885981394",
+										"6": "1",
+										"7": "1",
+										"8": "1",
+										"9": "99996.8829138568",
+										"10": "199993.9386832266"
+									},
+									{
+										"0": "84fa61ff",
+										"1": "84fdf5ef",
+										"2": "1",
+										"3": "1006.5953469343162",
+										"4": "117.9262499309015",
+										"5": "1490.3738639911314",
+										"6": "0",
+										"7": "1",
+										"8": "1",
+										"9": "99995.42810358423",
+										"10": "199990.92090442116"
+									}
+								],
+								"schema": [
+									{
+										"key": "0",
+										"name": "CustomerId",
+										"type": "string"
+									},
+									{
+										"key": "1",
+										"name": "ProductId",
+										"type": "string"
+									},
+									{
+										"key": "2",
+										"name": "Rating",
+										"type": "int"
+									},
+									{
+										"key": "3",
+										"name": "Cost",
+										"type": "double"
+									},
+									{
+										"key": "4",
+										"name": "Size",
+										"type": "double"
+									},
+									{
+										"key": "5",
+										"name": "Price",
+										"type": "double"
+									},
+									{
+										"key": "6",
+										"name": "PrimaryBrandId",
+										"type": "int"
+									},
+									{
+										"key": "7",
+										"name": "GenderId",
+										"type": "int"
+									},
+									{
+										"key": "8",
+										"name": "MaritalStatus",
+										"type": "int"
+									},
+									{
+										"key": "9",
+										"name": "LowerIncomeBound",
+										"type": "double"
+									},
+									{
+										"key": "10",
+										"name": "UpperIncomeBound",
+										"type": "double"
+									}
+								],
+								"truncated": false
+							},
+							"isSummary": false,
+							"language": "scala"
+						},
+						"persist_state": {
+							"view": {
+								"type": "details",
+								"chartOptions": {
+									"chartType": "bar",
+									"aggregationType": "sum",
+									"categoryFieldKeys": [
+										"0"
+									],
+									"seriesFieldKeys": [
+										"2"
+									],
+									"isStacked": false
+								}
+							}
+						}
+					},
+					"b93fd97e-ce39-4751-ae88-31b9c32b5df5": {
+						"type": "Synapse.DataFrame",
+						"sync_state": {
+							"table": {
+								"rows": [
+									{
+										"0": "1",
+										"1": "2021"
+									},
+									{
+										"0": "0",
+										"1": "2021"
+									}
+								],
+								"schema": [
+									{
+										"key": "0",
+										"name": "Rating",
+										"type": "int"
+									},
+									{
+										"key": "1",
+										"name": "count",
+										"type": "bigint"
+									}
+								],
+								"truncated": false
+							},
+							"isSummary": false,
+							"language": "scala"
+						},
+						"persist_state": {
+							"view": {
+								"type": "details",
+								"chartOptions": {
+									"chartType": "bar",
+									"aggregationType": "sum",
+									"categoryFieldKeys": [
+										"1"
+									],
+									"seriesFieldKeys": [
+										"0"
+									],
+									"isStacked": false
+								}
+							}
+						}
+					},
+					"b7815e4c-5e90-4741-b699-6442a18ccf63": {
+						"type": "Synapse.DataFrame",
+						"sync_state": {
+							"table": {
+								"rows": [
+									{
+										"0": "1",
+										"1": {
+											"type": 1,
+											"values": [
+												1013.1693458073678,
+												81.48396248120595,
+												1510.8065660915163,
+												0,
+												1,
+												1,
+												99993.97956663521,
+												199995.70871892222
+											]
+										},
+										"2": {
+											"type": 1,
+											"values": [
+												-6.364184072986553,
+												6.364184072986553
+											]
+										},
+										"3": {
+											"type": 1,
+											"values": [
+												0.0017191853435571947,
+												0.9982808146564428
+											]
+										},
+										"4": "1.0"
+									},
+									{
+										"0": "1",
+										"1": {
+											"type": 1,
+											"values": [
+												1006.572581053828,
+												96.89892809136968,
+												1512.9349488618368,
+												0,
+												1,
+												1,
+												99999.66735298479,
+												199992.23736098956
+											]
+										},
+										"2": {
+											"type": 1,
+											"values": [
+												-2.7822262284724566,
+												2.7822262284724566
+											]
+										},
+										"3": {
+											"type": 1,
+											"values": [
+												0.058292228173575045,
+												0.941707771826425
+											]
+										},
+										"4": "1.0"
+									},
+									{
+										"0": "1",
+										"1": {
+											"type": 1,
+											"values": [
+												1019.0877455784694,
+												87.55956439146641,
+												1512.7248840200587,
+												1,
+												1,
+												1,
+												100001.98976262085,
+												199988.69290662097
+											]
+										},
+										"2": {
+											"type": 1,
+											"values": [
+												-2.224423774389368,
+												2.224423774389368
+											]
+										},
+										"3": {
+											"type": 1,
+											"values": [
+												0.09757856596859005,
+												0.90242143403141
+											]
+										},
+										"4": "1.0"
+									},
+									{
+										"0": "1",
+										"1": {
+											"type": 1,
+											"values": [
+												1011.4020471519617,
+												95.88854759865906,
+												1516.9994677197067,
+												0,
+												1,
+												1,
+												99992.29215023812,
+												199992.53579323663
+											]
+										},
+										"2": {
+											"type": 1,
+											"values": [
+												-7.560978415083746,
+												7.560978415083746
+											]
+										},
+										"3": {
+											"type": 1,
+											"values": [
+												0.0005200952211268373,
+												0.9994799047788732
+											]
+										},
+										"4": "1.0"
+									},
+									{
+										"0": "1",
+										"1": {
+											"type": 1,
+											"values": [
+												1013.2124357520984,
+												98.04187478550648,
+												1507.695687496717,
+												0,
+												0,
+												1,
+												99993.47759114974,
+												199994.30247329685
+											]
+										},
+										"2": {
+											"type": 1,
+											"values": [
+												-6.145069551959311,
+												6.145069551959311
+											]
+										},
+										"3": {
+											"type": 1,
+											"values": [
+												0.002139439749379135,
+												0.9978605602506209
+											]
+										},
+										"4": "1.0"
+									},
+									{
+										"0": "1",
+										"1": {
+											"type": 1,
+											"values": [
+												1008.4329658579697,
+												91.21030848978025,
+												1501.8971381852189,
+												1,
+												1,
+												1,
+												99994.71856935644,
+												199999.71482615347
+											]
+										},
+										"2": {
+											"type": 1,
+											"values": [
+												-5.32153801315326,
+												5.32153801315326
+											]
+										},
+										"3": {
+											"type": 1,
+											"values": [
+												0.004861484896355184,
+												0.9951385151036448
+											]
+										},
+										"4": "1.0"
+									},
+									{
+										"0": "0",
+										"1": {
+											"type": 1,
+											"values": [
+												1014.5020575176037,
+												95.23975845909365,
+												1519.5559004004217,
+												0,
+												1,
+												0,
+												100010.21601772199,
+												199987.49531176878
+											]
+										},
+										"2": {
+											"type": 1,
+											"values": [
+												8.697291434037677,
+												-8.697291434037677
+											]
+										},
+										"3": {
+											"type": 1,
+											"values": [
+												0.9998329902656491,
+												0.00016700973435093905
+											]
+										},
+										"4": "0.0"
+									},
+									{
+										"0": "0",
+										"1": {
+											"type": 1,
+											"values": [
+												1009.4020560701326,
+												102.1023996553157,
+												1507.9379387060353,
+												0,
+												1,
+												0,
+												100002.78159339169,
+												199995.17197619507
+											]
+										},
+										"2": {
+											"type": 1,
+											"values": [
+												2.6905695752210304,
+												-2.6905695752210304
+											]
+										},
+										"3": {
+											"type": 1,
+											"values": [
+												0.9364678774194245,
+												0.06353212258057547
+											]
+										},
+										"4": "0.0"
+									},
+									{
+										"0": "1",
+										"1": {
+											"type": 1,
+											"values": [
+												1015.7743107044632,
+												94.54243601228647,
+												1510.225206452774,
+												0,
+												0,
+												0,
+												99994.06289895604,
+												199993.8310820084
+											]
+										},
+										"2": {
+											"type": 1,
+											"values": [
+												-4.083268940585532,
+												4.083268940585532
+											]
+										},
+										"3": {
+											"type": 1,
+											"values": [
+												0.016572993556286497,
+												0.9834270064437135
+											]
+										},
+										"4": "1.0"
+									},
+									{
+										"0": "1",
+										"1": {
+											"type": 1,
+											"values": [
+												1010.5804746871684,
+												102.5344682637609,
+												1508.3690153477446,
+												0,
+												1,
+												1,
+												99990.7784189871,
+												199990.50782652057
+											]
+										},
+										"2": {
+											"type": 1,
+											"values": [
+												-7.42813493916687,
+												7.42813493916687
+											]
+										},
+										"3": {
+											"type": 1,
+											"values": [
+												0.0005939418984050038,
+												0.999406058101595
+											]
+										},
+										"4": "1.0"
+									}
+								],
+								"schema": [
+									{
+										"key": "0",
+										"name": "Rating",
+										"type": "int"
+									},
+									{
+										"key": "1",
+										"name": "features",
+										"type": "org.apache.spark.ml.linalg.VectorUDT@3bfc3ba7"
+									},
+									{
+										"key": "2",
+										"name": "rawPrediction",
+										"type": "org.apache.spark.ml.linalg.VectorUDT@3bfc3ba7"
+									},
+									{
+										"key": "3",
+										"name": "probability",
+										"type": "org.apache.spark.ml.linalg.VectorUDT@3bfc3ba7"
+									},
+									{
+										"key": "4",
+										"name": "prediction",
+										"type": "double"
+									}
+								],
+								"truncated": false
+							},
+							"isSummary": false,
+							"language": "scala"
+						},
+						"persist_state": {
+							"view": {
+								"type": "details",
+								"chartOptions": {
+									"chartType": "bar",
+									"aggregationType": "sum",
+									"categoryFieldKeys": [
+										"4"
+									],
+									"seriesFieldKeys": [
+										"0"
+									],
+									"isStacked": false
+								}
+							}
+						}
+					},
+					"cc6faad9-73f7-4d45-8535-5cfedf620474": {
+						"type": "Synapse.DataFrame",
+						"sync_state": {
+							"table": {
+								"rows": [
+									{
+										"0": "Classification",
+										"1": {
+											"numCols": 2,
+											"isTransposed": false,
+											"values": [
+												448,
+												77,
+												31,
+												402
+											],
+											"type": 1,
+											"numRows": 2
+										},
+										"2": "0.8872651356993737",
+										"3": "0.9284064665127021",
+										"4": "0.8392484342379958",
+										"5": "0.8872651356993737"
+									}
+								],
+								"schema": [
+									{
+										"key": "0",
+										"name": "evaluation_type",
+										"type": "string"
+									},
+									{
+										"key": "1",
+										"name": "confusion_matrix",
+										"type": "org.apache.spark.ml.linalg.MatrixUDT@e59e0c69"
+									},
+									{
+										"key": "2",
+										"name": "accuracy",
+										"type": "double"
+									},
+									{
+										"key": "3",
+										"name": "precision",
+										"type": "double"
+									},
+									{
+										"key": "4",
+										"name": "recall",
+										"type": "double"
+									},
+									{
+										"key": "5",
+										"name": "AUC",
+										"type": "double"
+									}
+								],
+								"truncated": false
+							},
+							"isSummary": false,
+							"language": "scala"
+						},
+						"persist_state": {
+							"view": {
+								"type": "details",
+								"chartOptions": {
+									"chartType": "bar",
+									"aggregationType": "sum",
+									"categoryFieldKeys": [
+										"0"
+									],
+									"seriesFieldKeys": [
+										"2"
+									],
+									"isStacked": false
+								}
+							}
+						}
+					}
+				}
+			},
+			"enableDebugMode": false,
+			"kernelspec": {
+				"name": "synapse_pyspark",
+				"display_name": "Synapse PySpark"
+			},
+			"language_info": {
+				"name": "python"
+			},
+			"a365ComputeOptions": {
+				"id": "/subscriptions/18fe7d2e-5a63-474d-b00b-7dc28b16f41a/resourceGroups/E2E-Analytics-Synapse-Core/providers/Microsoft.Synapse/workspaces/azsynapsewksgo2d3/bigDataPools/SampleSpark",
+				"name": "SampleSpark",
+				"type": "Spark",
+				"endpoint": "https://azsynapsewksgo2d3.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/SampleSpark",
+				"auth": {
+					"type": "AAD",
+					"authResource": "https://dev.azuresynapse.net"
+				},
+				"sparkVersion": "3.1",
+				"nodeCount": 3,
+				"cores": 8,
+				"memory": 56
+			},
+			"sessionKeepAliveTimeout": 30
+		},
+		"cells": [
+			{
+				"cell_type": "markdown",
+				"metadata": {
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"# Retail Recommendation Accelerator Quickstart: Model Training\r\n",
+					"\r\n",
+					"\r\n",
+					"This notebook uses sample data to train a LightGBM model for retail product recommendation. The data is randomly generated."
+				],
+				"attachments": null
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"## Library imports"
+				],
+				"attachments": null
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": true
+				},
+				"source": [
+					"import logging\r\n",
+					"logging.getLogger(\"py4j\").setLevel(logging.ERROR)\r\n",
+					"\r\n",
+					"import pandas as pd\r\n",
+					"import seaborn as sns\r\n",
+					"from matplotlib import pyplot as plt\r\n",
+					"\r\n",
+					"from pyspark.version import __version__ as pyspark_version\r\n",
+					"\r\n",
+					"import mmlspark\r\n",
+					"from mmlspark.train import ComputeModelStatistics\r\n",
+					"from mmlspark.lightgbm import LightGBMClassifier\r\n",
+					"from pyspark.ml.feature import VectorAssembler\r\n",
+					"\r\n",
+					"pd.set_option('display.max_columns', 50)\r\n",
+					"\r\n",
+					"print(f\"PySpark version: {pyspark_version}\")\r\n",
+					"print(f\"MMLSpark version: {mmlspark.core.__spark_package_version__}\")"
+				],
+				"attachments": null,
+				"execution_count": 2
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"## Read the data from Blob"
+				],
+				"attachments": null
+			},
+			{
+				"cell_type": "markdown",
+				"source": [
+					"Note: If you're using a Managed VNet enabled workspace, please download the dataset from the \n",
+					"[url](https://synapsemlpublic.blob.core.windows.net/files/PersonalizedData.csv) and then upload it to your own storage account in order to access it."
+				],
+				"attachments": null
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"#Blob URI in linked RAW ADLSv2\r\n",
+					"storageaccount = \"azrawdatalakego2d3\"\r\n",
+					"filesystem = \"raw\"\r\n",
+					"filename= \"PersonalizedData.csv\"\r\n",
+					"uri = \"abfss://\" + filesystem + \"@\" + storageaccount + \".dfs.core.windows.net\" + \"/\" + filename\r\n",
+					"print(uri)\r\n",
+					"\r\n",
+					"# Read and display schema of file from RAW ADLSv2\r\n",
+					"raw_data = spark.read.csv(uri, header=True, inferSchema=True)\r\n",
+					"print(\"Schema: \")\r\n",
+					"raw_data.printSchema()\r\n",
+					"\r\n",
+					"df = raw_data.toPandas()\r\n",
+					"print(\"Shape: \", df.shape)\r\n",
+					""
+				],
+				"attachments": null,
+				"execution_count": 3
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"## Parameters"
+				],
+				"attachments": null
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": true
+				},
+				"source": [
+					"# Data parameters\r\n",
+					"LABEL_COL = \"Rating\"\r\n",
+					"FEATURE_COL = \"features\"\r\n",
+					"RATIO = 0.8\r\n",
+					"SEED = 42\r\n",
+					"\r\n",
+					"# Model parameters\r\n",
+					"OBJECTIVE = \"binary\"\r\n",
+					"BOOSTING = \"gbdt\"\r\n",
+					"NUM_LEAVES = 32\r\n",
+					"NUM_ITERATIONS = 100\r\n",
+					"LEARNING_RATE = 0.1\r\n",
+					"FEATURE_FRACTION = 0.8\r\n",
+					"EARLY_STOPPING_ROUND = 10\r\n",
+					"MODEL_NAME = \"lgb-quickstart\"\r\n",
+					""
+				],
+				"attachments": null,
+				"execution_count": 4
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"collapsed": false
+				},
+				"source": [
+					"display(df.iloc[:10, :])"
+				],
+				"attachments": null,
+				"execution_count": 5
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"## Data visualization"
+				],
+				"attachments": null
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": true
+				},
+				"source": [
+					"df.describe()\r\n",
+					""
+				],
+				"attachments": null,
+				"execution_count": 6
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": true
+				},
+				"source": [
+					"# calculate the correlation matrix\r\n",
+					"corr = df.corr()\r\n",
+					"\r\n",
+					"# plot the correlation heatmap\r\n",
+					"fig, ax = plt.subplots(figsize=(10,10))         # Sample figsize in inches\r\n",
+					"\r\n",
+					"sns.heatmap(corr, \r\n",
+					"            xticklabels=corr.columns, \r\n",
+					"            yticklabels=corr.columns, \r\n",
+					"            cmap='RdBu', \r\n",
+					"            vmin=-1, \r\n",
+					"            vmax=1, \r\n",
+					"            ax=ax, \r\n",
+					"            annot=True,\r\n",
+					"            fmt='.2f', \r\n",
+					"            annot_kws={'size': 10})\r\n",
+					"plt.show()"
+				],
+				"attachments": null,
+				"execution_count": 7
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": true
+				},
+				"source": [
+					"#scatterplot\r\n",
+					"sns.set()\r\n",
+					"sns.pairplot(df, height=2.5)\r\n",
+					"plt.show()"
+				],
+				"attachments": null,
+				"execution_count": 8
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"## Split the data into train, test\r\n",
+					"\r\n",
+					""
+				],
+				"attachments": null
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": true
+				},
+				"source": [
+					"raw_train, raw_test = raw_data.randomSplit([RATIO, 1 - RATIO], seed=SEED)\n",
+					"print(\"Train: (rows, columns) = {}\".format((raw_train.count(), len(raw_train.columns))))\n",
+					"print(\"Test: (rows, columns) = {}\".format((raw_test.count(), len(raw_test.columns))))"
+				],
+				"attachments": null,
+				"execution_count": 9
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"## Feature engineering \n",
+					"Transform the original data feature columns into feature vectors"
+				],
+				"attachments": null
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": true
+				},
+				"source": [
+					"columns = raw_data.columns[3:]\n",
+					"featurizer = VectorAssembler(inputCols=columns, outputCol=FEATURE_COL)\n",
+					"train = featurizer.transform(raw_train)[LABEL_COL, FEATURE_COL]\n",
+					"test = featurizer.transform(raw_test)[LABEL_COL, FEATURE_COL]"
+				],
+				"attachments": null,
+				"execution_count": 10
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": false
+				},
+				"source": [
+					"# Check if data is unbalanced\n",
+					"display(train.groupBy(LABEL_COL).count())\n",
+					""
+				],
+				"attachments": null,
+				"execution_count": 11
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"## Model Training\n",
+					""
+				],
+				"attachments": null
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": true
+				},
+				"source": [
+					"lgbm = LightGBMClassifier(\n",
+					"    labelCol=LABEL_COL,\n",
+					"    featuresCol=FEATURE_COL,\n",
+					"    objective=OBJECTIVE,\n",
+					"    isUnbalance=False,\n",
+					"    boostingType=BOOSTING,\n",
+					"    boostFromAverage=True,\n",
+					"    baggingSeed=SEED,\n",
+					"    numLeaves=NUM_LEAVES,\n",
+					"    numIterations=NUM_ITERATIONS,\n",
+					"    learningRate=LEARNING_RATE,\n",
+					"    featureFraction=FEATURE_FRACTION,\n",
+					"    earlyStoppingRound=EARLY_STOPPING_ROUND\n",
+					")\n",
+					""
+				],
+				"attachments": null,
+				"execution_count": 12
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": true
+				},
+				"source": [
+					"model = lgbm.fit(train)"
+				],
+				"attachments": null,
+				"execution_count": 13
+			},
+			{
+				"cell_type": "markdown",
+				"source": [
+					"## Feature Importances"
+				],
+				"attachments": null
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"feature_importances = model.getFeatureImportances()\n",
+					"fi = pd.Series(feature_importances,index = columns)\n",
+					"fi = fi.sort_values(ascending = True)\n",
+					"f_index = fi.index\n",
+					"f_values = fi.values\n",
+					" \n",
+					"# print feature importances \n",
+					"print ('f_index:',f_index)\n",
+					"print ('f_values:',f_values)\n",
+					"\n",
+					"# plot\n",
+					"x_index = list(range(len(fi)))\n",
+					"x_index = [x/len(fi) for x in x_index]\n",
+					"plt.rcParams['figure.figsize'] = (10,10)\n",
+					"plt.barh(x_index,f_values,height = 0.028 ,align=\"center\",color = 'tan',tick_label=f_index)\n",
+					"plt.xlabel('importances')\n",
+					"plt.ylabel('features')\n",
+					"plt.show()"
+				],
+				"attachments": null,
+				"execution_count": 14
+			},
+			{
+				"cell_type": "markdown",
+				"source": [
+					"## Model Prediction"
+				],
+				"attachments": null
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": true
+				},
+				"source": [
+					"predictions = model.transform(test)\r\n",
+					""
+				],
+				"attachments": null,
+				"execution_count": 15
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"collapsed": false
+				},
+				"source": [
+					"display(predictions.limit(10))"
+				],
+				"attachments": null,
+				"execution_count": 16
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"## Evaluation"
+				],
+				"attachments": null
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": true
+				},
+				"source": [
+					"evaluator = (\n",
+					"    ComputeModelStatistics()\n",
+					"    .setScoredLabelsCol(\"prediction\")\n",
+					"    .setLabelCol(LABEL_COL)\n",
+					"    .setEvaluationMetric(\"classification\")\n",
+					")\n",
+					"\n",
+					"metrics = evaluator.transform(predictions)"
+				],
+				"attachments": null,
+				"execution_count": 17
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": false
+				},
+				"source": [
+					"display(metrics)"
+				],
+				"attachments": null,
+				"execution_count": 18
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"## Save the model\r\n",
+					"\r\n",
+					"Save the model to linked ADLS"
+				],
+				"attachments": null
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": true
+				},
+				"source": [
+					"import os\r\n",
+					"\r\n",
+					"foldername = '/azsynapsewksgo2d3/'\r\n",
+					"\r\n",
+					"print(MODEL_NAME)\r\n",
+					"model_path = os.path.join(foldername,'models/fromSampleCSVData/',MODEL_NAME)\r\n",
+					"\r\n",
+					"(model\r\n",
+					" .write()\r\n",
+					" .overwrite()\r\n",
+					" .save(model_path)\r\n",
+					" )\r\n",
+					""
+				],
+				"attachments": null,
+				"execution_count": 19
+			}
+		]
+	}
+}

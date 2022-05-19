@@ -1,0 +1,46 @@
+{
+	"name": "F0_ChannelType_Territory_Channel",
+	"properties": {
+		"activities": [
+			{
+				"name": "L0_ChannelType_Territory",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "L0_ChannelType_Territory",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "L1_Channel",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "L0_ChannelType_Territory",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "L1_Channel",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			}
+		],
+		"folder": {
+			"name": "3. adworkstarget"
+		},
+		"annotations": [],
+		"lastPublishTime": "2022-04-01T06:45:44Z"
+	},
+	"type": "Microsoft.Synapse/workspaces/pipelines"
+}

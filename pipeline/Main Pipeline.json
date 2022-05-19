@@ -1,0 +1,46 @@
+{
+	"name": "Main Pipeline",
+	"properties": {
+		"activities": [
+			{
+				"name": "adworkstarget Pipelines",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "adworks Source Pipelines",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "adworkstarget Starting Pipeline",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "adworks Source Pipelines",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "adworks Starting Pipeline",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			}
+		],
+		"folder": {
+			"name": "1. Orchestration"
+		},
+		"annotations": [],
+		"lastPublishTime": "2022-04-12T04:48:58Z"
+	},
+	"type": "Microsoft.Synapse/workspaces/pipelines"
+}

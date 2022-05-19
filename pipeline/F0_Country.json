@@ -1,0 +1,37 @@
+{
+	"name": "F0_Country",
+	"properties": {
+		"activities": [
+			{
+				"name": "adworks_Country",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "1.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "adworks_Country",
+						"type": "DataFlowReference"
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			}
+		],
+		"folder": {
+			"name": "3. adworkstarget"
+		},
+		"annotations": [],
+		"lastPublishTime": "2022-04-12T04:55:13Z"
+	},
+	"type": "Microsoft.Synapse/workspaces/pipelines"
+}

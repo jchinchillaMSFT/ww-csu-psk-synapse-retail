@@ -1,0 +1,43 @@
+{
+	"name": "adworks_ChannelType",
+	"properties": {
+		"folder": {
+			"name": "AdventureWorksDataFlows"
+		},
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"name": "ChannelTypeSource"
+				}
+			],
+			"sinks": [
+				{
+					"name": "ChannelType"
+				}
+			],
+			"transformations": [],
+			"scriptLines": [
+				"source(output(",
+				"          ChannelTypeId as short,",
+				"          ChannelTypeName as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     store: 'synapse',",
+				"     databaseType: 'spark',",
+				"     format: 'table',",
+				"     database: 'adworks',",
+				"     tableName: 'ChannelType') ~> ChannelTypeSource",
+				"ChannelTypeSource sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     store: 'synapse',",
+				"     databaseType: 'spark',",
+				"     format: 'table',",
+				"     database: 'adworkstarget',",
+				"     tableName: 'ChannelType',",
+				"     recreate:true) ~> ChannelType"
+			]
+		}
+	}
+}

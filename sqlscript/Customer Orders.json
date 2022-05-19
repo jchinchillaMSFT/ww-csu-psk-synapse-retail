@@ -1,0 +1,17 @@
+{
+	"name": "Customer Orders",
+	"properties": {
+		"content": {
+			"query": "SELECT   \ncus.CustomerTypeId\n,cus.CustomerId\n,ord.[OrderId]\n,ord.[OrderEnteredByEmployeeId]\n,ord.[OrderReceivedTimestamp]\n,ord.[OrderTotalAmount]\n\n FROM [RetailTemplateDB].[dbo].[Order] ord\n INNER JOIN [RetailTemplateDB].[dbo].[Customer] cus\n ON ord.CustomerId = cus.CustomerId\n ORDER BY cus.CustomerId, ord.[OrderReceivedTimestamp]",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "RetailTemplateDB",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

@@ -1,0 +1,26 @@
+{
+	"name": "relationship-ddyedqoijd",
+	"properties": {
+		"Name": "relationship-ddyedqoijd",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "adworkstarget"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Transaction",
+		"ToTableName": "ChannelType",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "Channel",
+				"ToColumnName": "ChannelTypeName"
+			}
+		],
+		"RelationshipType": 0,
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "7c138a93-5a0f-4b1d-ab43-0f58a119ed9b"
+	},
+	"type": "RELATIONSHIP"
+}

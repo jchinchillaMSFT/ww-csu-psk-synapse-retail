@@ -1,0 +1,54 @@
+{
+	"name": "Load Order from Raw",
+	"properties": {
+		"folder": {
+			"name": "Retail Lake DB"
+		},
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"linkedService": {
+						"referenceName": "azrawdatalakego2d3",
+						"type": "LinkedServiceReference"
+					},
+					"name": "OrdercsvSource"
+				}
+			],
+			"sinks": [
+				{
+					"name": "OrderSink"
+				}
+			],
+			"transformations": [],
+			"scriptLines": [
+				"source(output(",
+				"          OrderId as short,",
+				"          CustomerId as string,",
+				"          OrderEnteredByEmployeeId as short,",
+				"          OrderReceivedTimestamp as date,",
+				"          OrderCommittedDeliveryDate as date,",
+				"          PoNumber as short,",
+				"          OrderTotalAmount as double",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false,",
+				"     format: 'delimited',",
+				"     fileSystem: 'raw',",
+				"     fileName: 'Order.csv',",
+				"     columnDelimiter: ',',",
+				"     escapeChar: '\\\\',",
+				"     quoteChar: '\\\"',",
+				"     columnNamesAsHeader: true) ~> OrdercsvSource",
+				"OrdercsvSource sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     store: 'synapse',",
+				"     databaseType: 'spark',",
+				"     format: 'table',",
+				"     database: 'RetailTemplateDB',",
+				"     tableName: 'Order') ~> OrderSink"
+			]
+		}
+	}
+}

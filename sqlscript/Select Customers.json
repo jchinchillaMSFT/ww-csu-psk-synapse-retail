@@ -1,0 +1,17 @@
+{
+	"name": "Select Customers",
+	"properties": {
+		"content": {
+			"query": "SELECT [CustomerId]\n,[CustomerEstablishedDate]\n,[CustomerTypeId]\n,[PartyId]\n FROM [RetailTemplateDB].[dbo].[Customer]",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "RetailTemplateDB",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

@@ -1,0 +1,33 @@
+{
+	"name": "relationship-jkqvwioxoi",
+	"properties": {
+		"Name": "relationship-jkqvwioxoi",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "RetailTemplateDB"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "OrderLine",
+		"ToTableName": "OrderLine",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "OrderId",
+				"ToColumnName": "ReturnOrderId"
+			},
+			{
+				"FromColumnName": "OrderLineNumber",
+				"ToColumnName": "ReturnOrderLineNumber"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"OrderLine.cdm.json/OrderLine\",\"toEntity\":\"OrderLine.cdm.json/OrderLine\",\"joinPairs\":[{\"fromAttribute\":\"OrderId\",\"toAttribute\":\"ReturnOrderId\"},{\"fromAttribute\":\"OrderLineNumber\",\"toAttribute\":\"ReturnOrderLineNumber\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 2,
+		"ObjectId": "c2985978-d6e3-4bd1-a1ca-dc4d137fdaaf"
+	},
+	"type": "RELATIONSHIP"
+}

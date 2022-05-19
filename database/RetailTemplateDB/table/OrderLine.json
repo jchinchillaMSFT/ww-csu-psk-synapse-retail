@@ -1,0 +1,1006 @@
+{
+	"name": "OrderLine",
+	"properties": {
+		"Name": "OrderLine",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "RetailTemplateDB"
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "OrderId",
+					"Description": "The unique number that identifies an Order.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "OrderId"
+					}
+				},
+				{
+					"Name": "OrderLineNumber",
+					"Description": "The number that identifies the Order Line Item.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "OrderLineNumber"
+					}
+				},
+				{
+					"Name": "ProductId",
+					"Description": "The unique identifier of a Product.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "ProductId"
+					}
+				},
+				{
+					"Name": "ItemSku",
+					"Description": "The Stock Keeping Unit identifier, which is typically used for inventory-related activities.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 20,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "ItemSku"
+					}
+				},
+				{
+					"Name": "Quantity",
+					"Description": "The quantity of Product ordered on the order line item.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "Quantity"
+					}
+				},
+				{
+					"Name": "ProductListPriceAmount",
+					"Description": "The current per unit list price of the Order Line Item products.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "ProductListPriceAmount"
+					}
+				},
+				{
+					"Name": "ProductSalesPriceAmount",
+					"Description": "The actual per unit selling price of the Order Line Item products.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "ProductSalesPriceAmount"
+					}
+				},
+				{
+					"Name": "ProductAdjustmentAmount",
+					"Description": "The per product unit adjustment amount applied to each product unit.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "ProductAdjustmentAmount"
+					}
+				},
+				{
+					"Name": "ProductAdjustmentPercentage",
+					"Description": "The per product unit adjustment percentage applied to each product unit.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "ProductAdjustmentPercentage"
+					}
+				},
+				{
+					"Name": "TotalOrderLineAdjustmentAmount",
+					"Description": "The amount of adjustment for all order line items.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "TotalOrderLineAdjustmentAmount"
+					}
+				},
+				{
+					"Name": "TotalOrderLineAmount",
+					"Description": "The total amount of line item charges related to the quantity of products sold at the actual selling price less rebates and discounts.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "TotalOrderLineAmount"
+					}
+				},
+				{
+					"Name": "OrderLineNote",
+					"Description": "A note, comment or additional information regarding the Order Line.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 1024,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "OrderLineNote"
+					}
+				},
+				{
+					"Name": "QuantityBooked",
+					"Description": "The quantity of Product booked.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "QuantityBooked"
+					}
+				},
+				{
+					"Name": "QuantityBilled",
+					"Description": "The quantity billed.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "QuantityBilled"
+					}
+				},
+				{
+					"Name": "QuantityBacklog",
+					"Description": "The quantity on backlog.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "QuantityBacklog"
+					}
+				},
+				{
+					"Name": "AcceptedQuantity",
+					"Description": "The quantity of Order Line Item products accepted.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "AcceptedQuantity"
+					}
+				},
+				{
+					"Name": "QuantityCancelled",
+					"Description": "The quantity of Order Line Items cancelled.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "QuantityCancelled"
+					}
+				},
+				{
+					"Name": "QuantityReturned",
+					"Description": "The quantity of Order Line Items returned.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "QuantityReturned"
+					}
+				},
+				{
+					"Name": "BookedDate",
+					"Description": "The booked date of the Order Line Items.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "BookedDate"
+					}
+				},
+				{
+					"Name": "BilledDate",
+					"Description": "The billed date of the Order Line Items.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "BilledDate"
+					}
+				},
+				{
+					"Name": "CancelledTimestamp",
+					"Description": "The date  and time that Order Line Items were cancelled.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "CancelledTimestamp"
+					}
+				},
+				{
+					"Name": "ReturnedDate",
+					"Description": "The date that Order Line Items were returned.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "ReturnedDate"
+					}
+				},
+				{
+					"Name": "RequestedDeliveryDate",
+					"Description": "The date for delivery of the Order Line Item requested by the Customer/Customer Account.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "RequestedDeliveryDate"
+					}
+				},
+				{
+					"Name": "CommittedDeliveryDate",
+					"Description": "The date committed for delivery of the Order Line Item.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "CommittedDeliveryDate"
+					}
+				},
+				{
+					"Name": "PlannedPickDate",
+					"Description": "The planned inventory pick date for the Order Line Items.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "PlannedPickDate"
+					}
+				},
+				{
+					"Name": "ActualPickTimestamp",
+					"Description": "The actual inventory pick timestamp for the Order Line Items.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "ActualPickTimestamp"
+					}
+				},
+				{
+					"Name": "PlannedShipmentDate",
+					"Description": "The planned shipment date of the Order Line Items.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "PlannedShipmentDate"
+					}
+				},
+				{
+					"Name": "ActualShipmentTimestamp",
+					"Description": "The actual shipment timestamp of the Order Line Items.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "ActualShipmentTimestamp"
+					}
+				},
+				{
+					"Name": "PlannedDeliveryDate",
+					"Description": "The planned delivery date of the Order Line Items.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "PlannedDeliveryDate"
+					}
+				},
+				{
+					"Name": "ActualDeliveryTimestamp",
+					"Description": "The actual delivery timestamp of the Order Line Items.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "ActualDeliveryTimestamp"
+					}
+				},
+				{
+					"Name": "ShipmentConfirmationTimestamp",
+					"Description": "The timestamp that the shipment confirmation notice was sent to the Customer/Customer Account.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "ShipmentConfirmationTimestamp"
+					}
+				},
+				{
+					"Name": "DropShipOrderLineItemIndicator",
+					"Description": "Indicates that the Order Line Item(s) are to be drop shipped.",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "DropShipOrderLineItemIndicator"
+					}
+				},
+				{
+					"Name": "WaybillNumber",
+					"Description": "The shipment waybill number.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "WaybillNumber"
+					}
+				},
+				{
+					"Name": "TareWeight",
+					"Description": "The weight of the line items excluding packaging.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "TareWeight"
+					}
+				},
+				{
+					"Name": "NetWeight",
+					"Description": "The weight of the line items including packaging.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "NetWeight"
+					}
+				},
+				{
+					"Name": "WeightUomId",
+					"Description": "The unique identifier of a Unit Of Measure.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "WeightUomId"
+					}
+				},
+				{
+					"Name": "EarliestDeliveryWindowTimestamp",
+					"Description": "The earliest timestamp that the order should be made available for delivery.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "EarliestDeliveryWindowTimestamp"
+					}
+				},
+				{
+					"Name": "LatestDeliveryWindowTimestamp",
+					"Description": "The latest timestamp that the order should be made available for delivery.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "LatestDeliveryWindowTimestamp"
+					}
+				},
+				{
+					"Name": "ReturnOrderId",
+					"Description": "The unique number that identifies an Order.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "ReturnOrderId"
+					}
+				},
+				{
+					"Name": "ReturnOrderLineNumber",
+					"Description": "The number that identifies the Order Line Item.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "ReturnOrderLineNumber"
+					}
+				},
+				{
+					"Name": "ReturnToStockIndicator",
+					"Description": "Indicates that the Line Item(s) were returned to stock.",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "ReturnToStockIndicator"
+					}
+				},
+				{
+					"Name": "ReturnToStoreIndicator",
+					"Description": "Indicates that the Line Item(s) were returned to the store from which they were purchased.",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "ReturnToStoreIndicator"
+					}
+				},
+				{
+					"Name": "OrderLineTypeId",
+					"Description": "The unique identifier of an Order Line Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "OrderLineTypeId"
+					}
+				},
+				{
+					"Name": "RejectionReasonId",
+					"Description": "The unique identifier of a Rejection Reason.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "RejectionReasonId"
+					}
+				},
+				{
+					"Name": "WorkOrderId",
+					"Description": "The unique identifier of a Work Order.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "WorkOrderId"
+					}
+				},
+				{
+					"Name": "TaskId",
+					"Description": "The unique identifier of a Task.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "TaskId"
+					}
+				},
+				{
+					"Name": "BuyClassId",
+					"Description": "The unique identifier of a Buy Class.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "BuyClassId"
+					}
+				},
+				{
+					"Name": "PromotionOfferId",
+					"Description": "The unique identifier of a Promotion Offer. The Promotion Offer ID is unique to each account or party that is offered to.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OrderLine.cdm.json/OrderLine",
+						"Name": "PromotionOfferId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "e9ec0584-984c-4872-8ae9-73e878ca765a",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/RetailLakeDB/OrderLine",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/RetailLakeDB/OrderLine",
+				"Properties": {
+					"LinkedServiceName": "azsynapsewksgo2d3-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"OrderId\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"OrderId\"},\"OrderLineNumber\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"OrderLineNumber\"},\"ProductId\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"ProductId\"},\"ItemSku\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"ItemSku\"},\"Quantity\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"Quantity\"},\"ProductListPriceAmount\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"ProductListPriceAmount\"},\"ProductSalesPriceAmount\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"ProductSalesPriceAmount\"},\"ProductAdjustmentAmount\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"ProductAdjustmentAmount\"},\"ProductAdjustmentPercentage\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"ProductAdjustmentPercentage\"},\"TotalOrderLineAdjustmentAmount\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"TotalOrderLineAdjustmentAmount\"},\"TotalOrderLineAmount\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"TotalOrderLineAmount\"},\"OrderLineNote\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"OrderLineNote\"},\"QuantityBooked\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"QuantityBooked\"},\"QuantityBilled\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"QuantityBilled\"},\"QuantityBacklog\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"QuantityBacklog\"},\"AcceptedQuantity\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"AcceptedQuantity\"},\"QuantityCancelled\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"QuantityCancelled\"},\"QuantityReturned\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"QuantityReturned\"},\"BookedDate\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"BookedDate\"},\"BilledDate\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"BilledDate\"},\"CancelledTimestamp\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"CancelledTimestamp\"},\"ReturnedDate\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"ReturnedDate\"},\"RequestedDeliveryDate\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"RequestedDeliveryDate\"},\"CommittedDeliveryDate\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"CommittedDeliveryDate\"},\"PlannedPickDate\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"PlannedPickDate\"},\"ActualPickTimestamp\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"ActualPickTimestamp\"},\"PlannedShipmentDate\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"PlannedShipmentDate\"},\"ActualShipmentTimestamp\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"ActualShipmentTimestamp\"},\"PlannedDeliveryDate\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"PlannedDeliveryDate\"},\"ActualDeliveryTimestamp\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"ActualDeliveryTimestamp\"},\"ShipmentConfirmationTimestamp\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"ShipmentConfirmationTimestamp\"},\"DropShipOrderLineItemIndicator\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"DropShipOrderLineItemIndicator\"},\"WaybillNumber\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"WaybillNumber\"},\"TareWeight\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"TareWeight\"},\"NetWeight\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"NetWeight\"},\"WeightUomId\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"WeightUomId\"},\"EarliestDeliveryWindowTimestamp\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"EarliestDeliveryWindowTimestamp\"},\"LatestDeliveryWindowTimestamp\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"LatestDeliveryWindowTimestamp\"},\"ReturnOrderId\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"ReturnOrderId\"},\"ReturnOrderLineNumber\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"ReturnOrderLineNumber\"},\"ReturnToStockIndicator\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"ReturnToStockIndicator\"},\"ReturnToStoreIndicator\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"ReturnToStoreIndicator\"},\"OrderLineTypeId\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"OrderLineTypeId\"},\"RejectionReasonId\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"RejectionReasonId\"},\"WorkOrderId\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"WorkOrderId\"},\"TaskId\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"TaskId\"},\"BuyClassId\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"BuyClassId\"},\"PromotionOfferId\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"PromotionOfferId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"OrderLine\",\"path\":\"OrderLine.cdm.json/OrderLine\"},\"description\":\"The components of an Order broken down by Product and Quantity, one per line item.\",\"primaryKey\":[\"OrderId\",\"OrderLineNumber\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"OrderId\"},\"dataType\":\"long\",\"description\":\"The unique number that identifies an Order.\",\"isNullable\":false,\"name\":\"OrderId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"OrderLineNumber\"},\"dataType\":\"integer\",\"description\":\"The number that identifies the Order Line Item.\",\"isNullable\":false,\"name\":\"OrderLineNumber\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"ProductId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Product.\",\"isNullable\":true,\"name\":\"ProductId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"ItemSku\"},\"dataType\":\"string\",\"dataTypeLength\":20,\"description\":\"The Stock Keeping Unit identifier, which is typically used for inventory-related activities.\",\"isNullable\":true,\"name\":\"ItemSku\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"Quantity\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The quantity of Product ordered on the order line item.\",\"isNullable\":true,\"scale\":2,\"name\":\"Quantity\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"ProductListPriceAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The current per unit list price of the Order Line Item products.\",\"isNullable\":true,\"scale\":2,\"name\":\"ProductListPriceAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"ProductSalesPriceAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The actual per unit selling price of the Order Line Item products.\",\"isNullable\":true,\"scale\":2,\"name\":\"ProductSalesPriceAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"ProductAdjustmentAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The per product unit adjustment amount applied to each product unit.\",\"isNullable\":true,\"scale\":2,\"name\":\"ProductAdjustmentAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"ProductAdjustmentPercentage\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The per product unit adjustment percentage applied to each product unit.\",\"isNullable\":true,\"scale\":8,\"name\":\"ProductAdjustmentPercentage\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"TotalOrderLineAdjustmentAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount of adjustment for all order line items.\",\"isNullable\":true,\"scale\":2,\"name\":\"TotalOrderLineAdjustmentAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"TotalOrderLineAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The total amount of line item charges related to the quantity of products sold at the actual selling price less rebates and discounts.\",\"isNullable\":true,\"scale\":2,\"name\":\"TotalOrderLineAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"OrderLineNote\"},\"dataType\":\"string\",\"dataTypeLength\":1024,\"description\":\"A note, comment or additional information regarding the Order Line.\",\"isNullable\":true,\"name\":\"OrderLineNote\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"QuantityBooked\"},\"dataType\":\"integer\",\"description\":\"The quantity of Product booked.\",\"isNullable\":true,\"name\":\"QuantityBooked\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"QuantityBilled\"},\"dataType\":\"integer\",\"description\":\"The quantity billed.\",\"isNullable\":true,\"name\":\"QuantityBilled\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"QuantityBacklog\"},\"dataType\":\"integer\",\"description\":\"The quantity on backlog.\",\"isNullable\":true,\"name\":\"QuantityBacklog\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"AcceptedQuantity\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The quantity of Order Line Item products accepted.\",\"isNullable\":true,\"scale\":2,\"name\":\"AcceptedQuantity\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"QuantityCancelled\"},\"dataType\":\"integer\",\"description\":\"The quantity of Order Line Items cancelled.\",\"isNullable\":true,\"name\":\"QuantityCancelled\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"QuantityReturned\"},\"dataType\":\"integer\",\"description\":\"The quantity of Order Line Items returned.\",\"isNullable\":true,\"name\":\"QuantityReturned\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"BookedDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The booked date of the Order Line Items.\",\"isNullable\":true,\"name\":\"BookedDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"BilledDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The billed date of the Order Line Items.\",\"isNullable\":true,\"name\":\"BilledDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"CancelledTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The date  and time that Order Line Items were cancelled.\",\"isNullable\":true,\"name\":\"CancelledTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"ReturnedDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date that Order Line Items were returned.\",\"isNullable\":true,\"name\":\"ReturnedDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"RequestedDeliveryDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date for delivery of the Order Line Item requested by the Customer/Customer Account.\",\"isNullable\":true,\"name\":\"RequestedDeliveryDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"CommittedDeliveryDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date committed for delivery of the Order Line Item.\",\"isNullable\":true,\"name\":\"CommittedDeliveryDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"PlannedPickDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The planned inventory pick date for the Order Line Items.\",\"isNullable\":true,\"name\":\"PlannedPickDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"ActualPickTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The actual inventory pick timestamp for the Order Line Items.\",\"isNullable\":true,\"name\":\"ActualPickTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"PlannedShipmentDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The planned shipment date of the Order Line Items.\",\"isNullable\":true,\"name\":\"PlannedShipmentDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"ActualShipmentTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The actual shipment timestamp of the Order Line Items.\",\"isNullable\":true,\"name\":\"ActualShipmentTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"PlannedDeliveryDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The planned delivery date of the Order Line Items.\",\"isNullable\":true,\"name\":\"PlannedDeliveryDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"ActualDeliveryTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The actual delivery timestamp of the Order Line Items.\",\"isNullable\":true,\"name\":\"ActualDeliveryTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"ShipmentConfirmationTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp that the shipment confirmation notice was sent to the Customer/Customer Account.\",\"isNullable\":true,\"name\":\"ShipmentConfirmationTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"DropShipOrderLineItemIndicator\"},\"dataType\":\"boolean\",\"description\":\"Indicates that the Order Line Item(s) are to be drop shipped.\",\"isNullable\":true,\"name\":\"DropShipOrderLineItemIndicator\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"WaybillNumber\"},\"dataType\":\"integer\",\"description\":\"The shipment waybill number.\",\"isNullable\":true,\"name\":\"WaybillNumber\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"TareWeight\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The weight of the line items excluding packaging.\",\"isNullable\":true,\"scale\":8,\"name\":\"TareWeight\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"NetWeight\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The weight of the line items including packaging.\",\"isNullable\":true,\"scale\":8,\"name\":\"NetWeight\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"WeightUomId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Unit Of Measure.\",\"isNullable\":true,\"name\":\"WeightUomId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"EarliestDeliveryWindowTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The earliest timestamp that the order should be made available for delivery.\",\"isNullable\":true,\"name\":\"EarliestDeliveryWindowTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"LatestDeliveryWindowTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The latest timestamp that the order should be made available for delivery.\",\"isNullable\":true,\"name\":\"LatestDeliveryWindowTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"ReturnOrderId\"},\"dataType\":\"long\",\"description\":\"The unique number that identifies an Order.\",\"isNullable\":true,\"name\":\"ReturnOrderId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"ReturnOrderLineNumber\"},\"dataType\":\"integer\",\"description\":\"The number that identifies the Order Line Item.\",\"isNullable\":true,\"name\":\"ReturnOrderLineNumber\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"ReturnToStockIndicator\"},\"dataType\":\"boolean\",\"description\":\"Indicates that the Line Item(s) were returned to stock.\",\"isNullable\":true,\"name\":\"ReturnToStockIndicator\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"ReturnToStoreIndicator\"},\"dataType\":\"boolean\",\"description\":\"Indicates that the Line Item(s) were returned to the store from which they were purchased.\",\"isNullable\":true,\"name\":\"ReturnToStoreIndicator\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"OrderLineTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Order Line Type.\",\"isNullable\":true,\"name\":\"OrderLineTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"RejectionReasonId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Rejection Reason.\",\"isNullable\":true,\"name\":\"RejectionReasonId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"WorkOrderId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Work Order.\",\"isNullable\":true,\"name\":\"WorkOrderId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"TaskId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Task.\",\"isNullable\":true,\"name\":\"TaskId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"BuyClassId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Buy Class.\",\"isNullable\":true,\"name\":\"BuyClassId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OrderLine.cdm.json/OrderLine\",\"name\":\"PromotionOfferId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Promotion Offer. The Promotion Offer ID is unique to each account or party that is offered to.\",\"isNullable\":true,\"name\":\"PromotionOfferId\"}]}}}",
+			"Description": "The components of an Order broken down by Product and Quantity, one per line item.",
+			"DisplayFolderInfo": "{\"name\":\"Order\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "OrderId,OrderLineNumber",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"OrderId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"OrderLineNumber\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ProductId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ItemSku\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"Quantity\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProductListPriceAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProductSalesPriceAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProductAdjustmentAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProductAdjustmentPercentage\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TotalOrderLineAdjustmentAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TotalOrderLineAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"OrderLineNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"QuantityBooked\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"QuantityBilled\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"QuantityBacklog\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AcceptedQuantity\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"QuantityCancelled\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"QuantityReturned\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"BookedDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"BilledDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CancelledTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ReturnedDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"RequestedDeliveryDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CommittedDeliveryDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PlannedPickDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ActualPickTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PlannedShipmentDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ActualShipmentTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PlannedDeliveryDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ActualDeliveryTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ShipmentConfirmationTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DropShipOrderLineItemIndicator\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}},{\"name\":\"WaybillNumber\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TareWeight\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"NetWeight\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"WeightUomId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"EarliestDeliveryWindowTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LatestDeliveryWindowTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ReturnOrderId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ReturnOrderLineNumber\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ReturnToStockIndicator\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ReturnToStoreIndicator\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}},{\"name\":\"OrderLineTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"RejectionReasonId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"WorkOrderId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TaskId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"BuyClassId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PromotionOfferId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}",
+			"x-ms-usageinfo": "AzureSynapseDatabaseTemplate"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "d18f08c6-488b-4a32-952e-68ffb292473b",
+		"Description": "The components of an Order broken down by Product and Quantity, one per line item."
+	},
+	"type": "TABLE"
+}

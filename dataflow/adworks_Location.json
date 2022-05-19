@@ -1,0 +1,46 @@
+{
+	"name": "adworks_Location",
+	"properties": {
+		"folder": {
+			"name": "AdventureWorksDataFlows"
+		},
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"name": "LocationCSV"
+				}
+			],
+			"sinks": [
+				{
+					"name": "Location"
+				}
+			],
+			"transformations": [],
+			"scriptLines": [
+				"source(output(",
+				"          LocationId as long,",
+				"          LocationZip as string,",
+				"          LocationState as string,",
+				"          LocationCity as string,",
+				"          CountryId as integer",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     store: 'synapse',",
+				"     databaseType: 'spark',",
+				"     format: 'table',",
+				"     database: 'adworks',",
+				"     tableName: 'Location') ~> LocationCSV",
+				"LocationCSV sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     store: 'synapse',",
+				"     databaseType: 'spark',",
+				"     format: 'table',",
+				"     database: 'adworks',",
+				"     tableName: 'Location',",
+				"     recreate:true) ~> Location"
+			]
+		}
+	}
+}

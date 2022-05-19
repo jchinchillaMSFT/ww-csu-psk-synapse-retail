@@ -1,0 +1,65 @@
+{
+	"name": "adworksRaw",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "azrawdatalakego2d3",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"FileName": {
+				"type": "string"
+			}
+		},
+		"folder": {
+			"name": "adworks"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().FileName",
+					"type": "Expression"
+				},
+				"folderPath": "AdventureWorks/CSV-Source",
+				"fileSystem": "raw"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "-1",
+				"type": "String"
+			},
+			{
+				"name": "[Not Applicable]1",
+				"type": "String"
+			},
+			{
+				"name": "[Not Applicable]2",
+				"type": "String"
+			},
+			{
+				"name": "[Not Applicable]3",
+				"type": "String"
+			},
+			{
+				"name": "[Not Applicable]4",
+				"type": "String"
+			},
+			{
+				"name": "[Not Applicable]5",
+				"type": "String"
+			},
+			{
+				"name": "[Not Applicable]6",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}
