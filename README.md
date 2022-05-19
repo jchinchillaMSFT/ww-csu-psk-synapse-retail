@@ -1,1 +1,1 @@
-# wwcsu-psk-synapse-retail
+# Partner Solution Kit for Retail
