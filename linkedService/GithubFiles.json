@@ -16,7 +16,7 @@
 		"annotations": [],
 		"type": "HttpServer",
 		"typeProperties": {
-			"url": "https://raw.githubusercontent.com/jchinchillaMSFT/ww-csu-psk-synapse-retail/main/Sample",
+			"url": "@{concat('https://raw.githubusercontent.com/',linkedService().githubAccount,'/',linkedService().projectName,'/',linkedService().branch)}",
 			"enableServerCertificateValidation": true,
 			"authenticationType": "Anonymous"
 		},
