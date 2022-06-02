@@ -76,10 +76,18 @@
 								}
 							},
 							"LocationCSV": {
-								"fileName": "Location.csv"
+								"fileName": "Location.csv",
+								"folderName": {
+									"value": "@variables('adworksSourceFolderName')",
+									"type": "Expression"
+								}
 							},
 							"ChannelTypeCSV": {
-								"fileName": "ChannelType.csv"
+								"fileName": "ChannelType.csv",
+								"folderName": {
+									"value": "@variables('adworksSourceFolderName')",
+									"type": "Expression"
+								}
 							}
 						}
 					},
