@@ -134,7 +134,10 @@
 											"value": "@variables('githubFileName')",
 											"type": "Expression"
 										},
-										"folderPath": "AdventureWorks/Source1/"
+										"folderPath": {
+											"value": "@variables('sinkFolderPath')",
+											"type": "Expression"
+										}
 									}
 								}
 							]
