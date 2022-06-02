@@ -22,9 +22,6 @@
 						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": false,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "long"
 						}
@@ -41,9 +38,6 @@
 						"TypeName": "timestamp",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
 							"HIVE_TYPE_STRING": "timestamp"
@@ -61,9 +55,6 @@
 						"TypeName": "timestamp",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
 							"HIVE_TYPE_STRING": "timestamp"
@@ -82,8 +73,6 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 512,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -101,8 +90,6 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 1024,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -120,8 +107,6 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 256,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -139,8 +124,6 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 256,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -157,9 +140,6 @@
 						"TypeName": "boolean",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "boolean"
 						}
@@ -177,8 +157,6 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 1024,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -195,9 +173,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -214,9 +189,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -233,9 +205,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -252,9 +221,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -271,9 +237,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -293,8 +256,8 @@
 				"Properties": {
 					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/RetailLakeDB/Communication",
 					"delimiter": ",",
-					"firstRowAsHeader": "false",
 					"multiLine": "false",
+					"firstRowAsHeader": "false",
 					"serialization.format": "1",
 					"FormatTypeSetToDatabaseDefault": true,
 					"header": "false"
@@ -310,7 +273,7 @@
 			},
 			"Properties": {
 				"textinputformat.record.delimiter": ",",
-				"compression": "",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
 				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"CommunicationId\":{\"entity\":\"Communication.cdm.json/Communication\",\"name\":\"CommunicationId\"},\"CommunicationStartTimestamp\":{\"entity\":\"Communication.cdm.json/Communication\",\"name\":\"CommunicationStartTimestamp\"},\"CommunicationEndTimestamp\":{\"entity\":\"Communication.cdm.json/Communication\",\"name\":\"CommunicationEndTimestamp\"},\"CommunicationDescription\":{\"entity\":\"Communication.cdm.json/Communication\",\"name\":\"CommunicationDescription\"},\"CommunicationNote\":{\"entity\":\"Communication.cdm.json/Communication\",\"name\":\"CommunicationNote\"},\"CommunicationQueueTime\":{\"entity\":\"Communication.cdm.json/Communication\",\"name\":\"CommunicationQueueTime\"},\"CommunicationHoldTime\":{\"entity\":\"Communication.cdm.json/Communication\",\"name\":\"CommunicationHoldTime\"},\"InboundOutboundCommunicationIndicator\":{\"entity\":\"Communication.cdm.json/Communication\",\"name\":\"InboundOutboundCommunicationIndicator\"},\"CommunicationText\":{\"entity\":\"Communication.cdm.json/Communication\",\"name\":\"CommunicationText\"},\"CommunicationMethodId\":{\"entity\":\"Communication.cdm.json/Communication\",\"name\":\"CommunicationMethodId\"},\"CommunicationTypeId\":{\"entity\":\"Communication.cdm.json/Communication\",\"name\":\"CommunicationTypeId\"},\"CommunicationStatusId\":{\"entity\":\"Communication.cdm.json/Communication\",\"name\":\"CommunicationStatusId\"},\"CommunicationPriorityId\":{\"entity\":\"Communication.cdm.json/Communication\",\"name\":\"CommunicationPriorityId\"},\"IsoLanguageId\":{\"entity\":\"Communication.cdm.json/Communication\",\"name\":\"IsoLanguageId\"}}}"
 			},
 			"Compressed": false,

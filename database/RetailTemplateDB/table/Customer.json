@@ -18,9 +18,6 @@
 						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": false,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "long"
 						}
@@ -37,9 +34,6 @@
 						"TypeName": "date",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"DateFormat": "YYYY-MM-DD",
 							"HIVE_TYPE_STRING": "date"
@@ -57,9 +51,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -76,9 +67,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -95,9 +83,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -115,8 +100,6 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 16,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -134,8 +117,6 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 1024,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -152,9 +133,6 @@
 						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "long"
 						}
@@ -171,7 +149,6 @@
 						"TypeName": "decimal",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
 						"Precision": 13,
 						"Scale": 0,
 						"Properties": {
@@ -193,8 +170,8 @@
 				"Properties": {
 					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/RetailLakeDB/Customer",
 					"delimiter": ",",
-					"firstRowAsHeader": "false",
 					"multiLine": "false",
+					"firstRowAsHeader": "false",
 					"serialization.format": "1",
 					"escape": "\\",
 					"quote": "\"",

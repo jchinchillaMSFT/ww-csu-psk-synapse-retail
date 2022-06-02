@@ -22,9 +22,6 @@
 						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": false,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "long"
 						}
@@ -42,8 +39,6 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 128,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -61,8 +56,6 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 512,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -80,8 +73,6 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 30,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -99,8 +90,6 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 2048,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -117,9 +106,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -136,9 +122,6 @@
 						"TypeName": "timestamp",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
 							"HIVE_TYPE_STRING": "timestamp"
@@ -156,9 +139,6 @@
 						"TypeName": "timestamp",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
 							"HIVE_TYPE_STRING": "timestamp"
@@ -176,9 +156,6 @@
 						"TypeName": "timestamp",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
 							"HIVE_TYPE_STRING": "timestamp"
@@ -196,9 +173,6 @@
 						"TypeName": "timestamp",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
 							"HIVE_TYPE_STRING": "timestamp"
@@ -216,9 +190,6 @@
 						"TypeName": "timestamp",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
 							"HIVE_TYPE_STRING": "timestamp"
@@ -236,9 +207,6 @@
 						"TypeName": "timestamp",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
 							"HIVE_TYPE_STRING": "timestamp"
@@ -256,9 +224,6 @@
 						"TypeName": "timestamp",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
 							"HIVE_TYPE_STRING": "timestamp"
@@ -276,9 +241,6 @@
 						"TypeName": "binary",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "binary"
 						}
@@ -296,8 +258,6 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 1024,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -315,8 +275,6 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 1024,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -333,9 +291,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -353,8 +308,6 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 1024,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -372,8 +325,6 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 2083,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -390,9 +341,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -409,9 +357,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -428,9 +373,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -447,9 +389,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -466,9 +405,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -485,9 +421,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -504,9 +437,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -523,9 +453,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -545,8 +472,8 @@
 				"Properties": {
 					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/RetailLakeDB/Document",
 					"delimiter": ",",
-					"firstRowAsHeader": "false",
 					"multiLine": "false",
+					"firstRowAsHeader": "false",
 					"serialization.format": "1",
 					"FormatTypeSetToDatabaseDefault": true,
 					"header": "false"
@@ -562,7 +489,7 @@
 			},
 			"Properties": {
 				"textinputformat.record.delimiter": ",",
-				"compression": "",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
 				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"DocumentId\":{\"entity\":\"Document.cdm.json/Document\",\"name\":\"DocumentId\"},\"DocumentName\":{\"entity\":\"Document.cdm.json/Document\",\"name\":\"DocumentName\"},\"DocumentDescription\":{\"entity\":\"Document.cdm.json/Document\",\"name\":\"DocumentDescription\"},\"GlobalDocumentTypeIdentifier\":{\"entity\":\"Document.cdm.json/Document\",\"name\":\"GlobalDocumentTypeIdentifier\"},\"DocumentScopeStatement\":{\"entity\":\"Document.cdm.json/Document\",\"name\":\"DocumentScopeStatement\"},\"DocumentRevisionNumber\":{\"entity\":\"Document.cdm.json/Document\",\"name\":\"DocumentRevisionNumber\"},\"DocumentCreatedTimestamp\":{\"entity\":\"Document.cdm.json/Document\",\"name\":\"DocumentCreatedTimestamp\"},\"DocumentCompletedTimestamp\":{\"entity\":\"Document.cdm.json/Document\",\"name\":\"DocumentCompletedTimestamp\"},\"DocumentFiledTimestamp\":{\"entity\":\"Document.cdm.json/Document\",\"name\":\"DocumentFiledTimestamp\"},\"DocumentFirstPublishedTimestamp\":{\"entity\":\"Document.cdm.json/Document\",\"name\":\"DocumentFirstPublishedTimestamp\"},\"DocumentMinimumRetentionTimestamp\":{\"entity\":\"Document.cdm.json/Document\",\"name\":\"DocumentMinimumRetentionTimestamp\"},\"DocumentCopyrightTimestamp\":{\"entity\":\"Document.cdm.json/Document\",\"name\":\"DocumentCopyrightTimestamp\"},\"DocumentDeletedTimestamp\":{\"entity\":\"Document.cdm.json/Document\",\"name\":\"DocumentDeletedTimestamp\"},\"DocumentImage\":{\"entity\":\"Document.cdm.json/Document\",\"name\":\"DocumentImage\"},\"DocumentText\":{\"entity\":\"Document.cdm.json/Document\",\"name\":\"DocumentText\"},\"DocumentNote\":{\"entity\":\"Document.cdm.json/Document\",\"name\":\"DocumentNote\"},\"NumberOfPages\":{\"entity\":\"Document.cdm.json/Document\",\"name\":\"NumberOfPages\"},\"PageSize\":{\"entity\":\"Document.cdm.json/Document\",\"name\":\"PageSize\"},\"DocumentUrl\":{\"entity\":\"Document.cdm.json/Document\",\"name\":\"DocumentUrl\"},\"IsoLanguageId\":{\"entity\":\"Document.cdm.json/Document\",\"name\":\"IsoLanguageId\"},\"DeliveryMethodId\":{\"entity\":\"Document.cdm.json/Document\",\"name\":\"DeliveryMethodId\"},\"DocumentFormatTypeId\":{\"entity\":\"Document.cdm.json/Document\",\"name\":\"DocumentFormatTypeId\"},\"DocumentTypeId\":{\"entity\":\"Document.cdm.json/Document\",\"name\":\"DocumentTypeId\"},\"MediaTypeId\":{\"entity\":\"Document.cdm.json/Document\",\"name\":\"MediaTypeId\"},\"CountryId\":{\"entity\":\"Document.cdm.json/Document\",\"name\":\"CountryId\"},\"StateId\":{\"entity\":\"Document.cdm.json/Document\",\"name\":\"StateId\"},\"IdentificationId\":{\"entity\":\"Document.cdm.json/Document\",\"name\":\"IdentificationId\"}}}"
 			},
 			"Compressed": false,

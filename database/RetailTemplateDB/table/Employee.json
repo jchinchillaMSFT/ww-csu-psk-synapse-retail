@@ -22,9 +22,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": false,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -42,8 +39,6 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 128,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -60,9 +55,6 @@
 						"TypeName": "date",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"DateFormat": "YYYY-MM-DD",
 							"HIVE_TYPE_STRING": "date"
@@ -80,9 +72,6 @@
 						"TypeName": "date",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"DateFormat": "YYYY-MM-DD",
 							"HIVE_TYPE_STRING": "date"
@@ -100,7 +89,6 @@
 						"TypeName": "decimal",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
 						"Precision": 18,
 						"Scale": 2,
 						"Properties": {
@@ -119,7 +107,6 @@
 						"TypeName": "decimal",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
 						"Precision": 18,
 						"Scale": 2,
 						"Properties": {
@@ -138,9 +125,6 @@
 						"TypeName": "date",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"DateFormat": "YYYY-MM-DD",
 							"HIVE_TYPE_STRING": "date"
@@ -158,9 +142,6 @@
 						"TypeName": "boolean",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "boolean"
 						}
@@ -177,9 +158,6 @@
 						"TypeName": "boolean",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "boolean"
 						}
@@ -196,9 +174,6 @@
 						"TypeName": "boolean",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "boolean"
 						}
@@ -215,9 +190,6 @@
 						"TypeName": "boolean",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "boolean"
 						}
@@ -234,9 +206,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -253,9 +222,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -272,9 +238,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -291,9 +254,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -310,9 +270,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -329,9 +286,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -348,9 +302,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -367,9 +318,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -386,9 +334,6 @@
 						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "long"
 						}
@@ -408,8 +353,8 @@
 				"Properties": {
 					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/RetailLakeDB/Employee",
 					"delimiter": ",",
-					"firstRowAsHeader": "false",
 					"multiLine": "false",
+					"firstRowAsHeader": "false",
 					"serialization.format": "1",
 					"FormatTypeSetToDatabaseDefault": true,
 					"header": "false"
@@ -425,7 +370,7 @@
 			},
 			"Properties": {
 				"textinputformat.record.delimiter": ",",
-				"compression": "",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
 				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"EmployeeId\":{\"entity\":\"Employee.cdm.json/Employee\",\"name\":\"EmployeeId\"},\"EmployeeName\":{\"entity\":\"Employee.cdm.json/Employee\",\"name\":\"EmployeeName\"},\"DateOfBirth\":{\"entity\":\"Employee.cdm.json/Employee\",\"name\":\"DateOfBirth\"},\"DateOfDeath\":{\"entity\":\"Employee.cdm.json/Employee\",\"name\":\"DateOfDeath\"},\"EmployeeStandardCostAmount\":{\"entity\":\"Employee.cdm.json/Employee\",\"name\":\"EmployeeStandardCostAmount\"},\"EmployeeOvertimeCostAmount\":{\"entity\":\"Employee.cdm.json/Employee\",\"name\":\"EmployeeOvertimeCostAmount\"},\"EmployeeHireDate\":{\"entity\":\"Employee.cdm.json/Employee\",\"name\":\"EmployeeHireDate\"},\"HighlyCompensatedEmployeeIndicator\":{\"entity\":\"Employee.cdm.json/Employee\",\"name\":\"HighlyCompensatedEmployeeIndicator\"},\"KeyEmployeeIndicator\":{\"entity\":\"Employee.cdm.json/Employee\",\"name\":\"KeyEmployeeIndicator\"},\"ExemptEmployeeIndicator\":{\"entity\":\"Employee.cdm.json/Employee\",\"name\":\"ExemptEmployeeIndicator\"},\"NonexemptEmployeeIndicator\":{\"entity\":\"Employee.cdm.json/Employee\",\"name\":\"NonexemptEmployeeIndicator\"},\"AlienStatusId\":{\"entity\":\"Employee.cdm.json/Employee\",\"name\":\"AlienStatusId\"},\"SexId\":{\"entity\":\"Employee.cdm.json/Employee\",\"name\":\"SexId\"},\"GenderId\":{\"entity\":\"Employee.cdm.json/Employee\",\"name\":\"GenderId\"},\"RacialCategoryId\":{\"entity\":\"Employee.cdm.json/Employee\",\"name\":\"RacialCategoryId\"},\"EthnicCategoryId\":{\"entity\":\"Employee.cdm.json/Employee\",\"name\":\"EthnicCategoryId\"},\"EmploymentLeadSourceId\":{\"entity\":\"Employee.cdm.json/Employee\",\"name\":\"EmploymentLeadSourceId\"},\"SecurityClearanceId\":{\"entity\":\"Employee.cdm.json/Employee\",\"name\":\"SecurityClearanceId\"},\"SecurityLevelId\":{\"entity\":\"Employee.cdm.json/Employee\",\"name\":\"SecurityLevelId\"},\"PartyId\":{\"entity\":\"Employee.cdm.json/Employee\",\"name\":\"PartyId\"}}}"
 			},
 			"Compressed": false,

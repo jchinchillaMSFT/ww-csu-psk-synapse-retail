@@ -22,9 +22,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": false,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -42,8 +39,6 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 128,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -60,9 +55,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -79,9 +71,6 @@
 						"TypeName": "binary",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "binary"
 						}
@@ -98,7 +87,6 @@
 						"TypeName": "decimal",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
 						"Precision": 15,
 						"Scale": 0,
 						"Properties": {
@@ -117,7 +105,6 @@
 						"TypeName": "decimal",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
 						"Precision": 15,
 						"Scale": 0,
 						"Properties": {
@@ -137,8 +124,6 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 256,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -155,9 +140,6 @@
 						"TypeName": "date",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"DateFormat": "YYYY-MM-DD",
 							"HIVE_TYPE_STRING": "date"
@@ -175,9 +157,6 @@
 						"TypeName": "date",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"DateFormat": "YYYY-MM-DD",
 							"HIVE_TYPE_STRING": "date"
@@ -195,9 +174,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -214,9 +190,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -233,9 +206,6 @@
 						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "long"
 						}
@@ -252,7 +222,6 @@
 						"TypeName": "decimal",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
 						"Precision": 9,
 						"Scale": 0,
 						"Properties": {
@@ -271,9 +240,6 @@
 						"TypeName": "boolean",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "boolean"
 						}
@@ -290,9 +256,6 @@
 						"TypeName": "boolean",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "boolean"
 						}
@@ -309,9 +272,6 @@
 						"TypeName": "boolean",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "boolean"
 						}
@@ -328,9 +288,6 @@
 						"TypeName": "boolean",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "boolean"
 						}
@@ -347,9 +304,6 @@
 						"TypeName": "boolean",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "boolean"
 						}
@@ -366,9 +320,6 @@
 						"TypeName": "boolean",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "boolean"
 						}
@@ -385,9 +336,6 @@
 						"TypeName": "boolean",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "boolean"
 						}
@@ -404,9 +352,6 @@
 						"TypeName": "boolean",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "boolean"
 						}
@@ -423,7 +368,6 @@
 						"TypeName": "decimal",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
 						"Precision": 4,
 						"Scale": 0,
 						"Properties": {
@@ -442,7 +386,6 @@
 						"TypeName": "decimal",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
 						"Precision": 6,
 						"Scale": 0,
 						"Properties": {
@@ -461,7 +404,6 @@
 						"TypeName": "decimal",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
 						"Precision": 4,
 						"Scale": 0,
 						"Properties": {
@@ -480,9 +422,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -499,9 +438,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -518,9 +454,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -537,9 +470,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -556,9 +486,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -575,9 +502,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -597,8 +521,8 @@
 				"Properties": {
 					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/RetailLakeDB/Channel",
 					"delimiter": ",",
-					"firstRowAsHeader": "false",
 					"multiLine": "false",
+					"firstRowAsHeader": "false",
 					"serialization.format": "1",
 					"FormatTypeSetToDatabaseDefault": true,
 					"header": "false"
@@ -614,7 +538,7 @@
 			},
 			"Properties": {
 				"textinputformat.record.delimiter": ",",
-				"compression": "",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
 				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ChannelId\":{\"entity\":\"Channel.cdm.json/Channel\",\"name\":\"ChannelId\"},\"ChannelName\":{\"entity\":\"Channel.cdm.json/Channel\",\"name\":\"ChannelName\"},\"LocationId\":{\"entity\":\"Channel.cdm.json/Channel\",\"name\":\"LocationId\"},\"ChannelLogo\":{\"entity\":\"Channel.cdm.json/Channel\",\"name\":\"ChannelLogo\"},\"TelephoneNumber\":{\"entity\":\"Channel.cdm.json/Channel\",\"name\":\"TelephoneNumber\"},\"FaxNumber\":{\"entity\":\"Channel.cdm.json/Channel\",\"name\":\"FaxNumber\"},\"EmailAddress\":{\"entity\":\"Channel.cdm.json/Channel\",\"name\":\"EmailAddress\"},\"ChannelCommencementDate\":{\"entity\":\"Channel.cdm.json/Channel\",\"name\":\"ChannelCommencementDate\"},\"ChannelCloseDate\":{\"entity\":\"Channel.cdm.json/Channel\",\"name\":\"ChannelCloseDate\"},\"ChannelCategoryId\":{\"entity\":\"Channel.cdm.json/Channel\",\"name\":\"ChannelCategoryId\"},\"ChannelTypeId\":{\"entity\":\"Channel.cdm.json/Channel\",\"name\":\"ChannelTypeId\"},\"PartyId\":{\"entity\":\"Channel.cdm.json/Channel\",\"name\":\"PartyId\"},\"DunsNumber\":{\"entity\":\"Channel.cdm.json/Channel\",\"name\":\"DunsNumber\"},\"DunBradstreetSingleLocationSubsidiary\":{\"entity\":\"Channel.cdm.json/Channel\",\"name\":\"DunBradstreetSingleLocationSubsidiary\"},\"DunBradstreetHeadquarters\":{\"entity\":\"Channel.cdm.json/Channel\",\"name\":\"DunBradstreetHeadquarters\"},\"DunBradstreetBranch\":{\"entity\":\"Channel.cdm.json/Channel\",\"name\":\"DunBradstreetBranch\"},\"DunBradstreetDivision\":{\"entity\":\"Channel.cdm.json/Channel\",\"name\":\"DunBradstreetDivision\"},\"DunBradstreetSubsidiary\":{\"entity\":\"Channel.cdm.json/Channel\",\"name\":\"DunBradstreetSubsidiary\"},\"DunBradstreetParent\":{\"entity\":\"Channel.cdm.json/Channel\",\"name\":\"DunBradstreetParent\"},\"DunBradstreetUltimate\":{\"entity\":\"Channel.cdm.json/Channel\",\"name\":\"DunBradstreetUltimate\"},\"DunBradstreetGlobalUltimate\":{\"entity\":\"Channel.cdm.json/Channel\",\"name\":\"DunBradstreetGlobalUltimate\"},\"SicIndustryCode\":{\"entity\":\"Channel.cdm.json/Channel\",\"name\":\"SicIndustryCode\"},\"NaicsNationalIndustryCode\":{\"entity\":\"Channel.cdm.json/Channel\",\"name\":\"NaicsNationalIndustryCode\"},\"AnzsicClassCode\":{\"entity\":\"Channel.cdm.json/Channel\",\"name\":\"AnzsicClassCode\"},\"TerritoryId\":{\"entity\":\"Channel.cdm.json/Channel\",\"name\":\"TerritoryId\"},\"AreaId\":{\"entity\":\"Channel.cdm.json/Channel\",\"name\":\"AreaId\"},\"RegionId\":{\"entity\":\"Channel.cdm.json/Channel\",\"name\":\"RegionId\"},\"DistrictId\":{\"entity\":\"Channel.cdm.json/Channel\",\"name\":\"DistrictId\"},\"BrandId\":{\"entity\":\"Channel.cdm.json/Channel\",\"name\":\"BrandId\"},\"FranchiseeId\":{\"entity\":\"Channel.cdm.json/Channel\",\"name\":\"FranchiseeId\"}}}"
 			},
 			"Compressed": false,

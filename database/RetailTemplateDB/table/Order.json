@@ -22,9 +22,6 @@
 						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": false,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "long"
 						}
@@ -42,8 +39,6 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 16,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -60,9 +55,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -79,9 +71,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -98,9 +87,6 @@
 						"TypeName": "timestamp",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
 							"HIVE_TYPE_STRING": "timestamp"
@@ -118,9 +104,6 @@
 						"TypeName": "timestamp",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
 							"HIVE_TYPE_STRING": "timestamp"
@@ -138,9 +121,6 @@
 						"TypeName": "timestamp",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
 							"HIVE_TYPE_STRING": "timestamp"
@@ -158,9 +138,6 @@
 						"TypeName": "timestamp",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
 							"HIVE_TYPE_STRING": "timestamp"
@@ -178,9 +155,6 @@
 						"TypeName": "date",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"DateFormat": "YYYY-MM-DD",
 							"HIVE_TYPE_STRING": "date"
@@ -198,9 +172,6 @@
 						"TypeName": "date",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"DateFormat": "YYYY-MM-DD",
 							"HIVE_TYPE_STRING": "date"
@@ -218,9 +189,6 @@
 						"TypeName": "timestamp",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
 							"HIVE_TYPE_STRING": "timestamp"
@@ -238,9 +206,6 @@
 						"TypeName": "timestamp",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
 							"HIVE_TYPE_STRING": "timestamp"
@@ -258,7 +223,6 @@
 						"TypeName": "decimal",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
 						"Precision": 18,
 						"Scale": 2,
 						"Properties": {
@@ -277,7 +241,6 @@
 						"TypeName": "decimal",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
 						"Precision": 18,
 						"Scale": 2,
 						"Properties": {
@@ -296,7 +259,6 @@
 						"TypeName": "decimal",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
 						"Precision": 18,
 						"Scale": 8,
 						"Properties": {
@@ -315,7 +277,6 @@
 						"TypeName": "decimal",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
 						"Precision": 18,
 						"Scale": 2,
 						"Properties": {
@@ -334,7 +295,6 @@
 						"TypeName": "decimal",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
 						"Precision": 18,
 						"Scale": 2,
 						"Properties": {
@@ -353,7 +313,6 @@
 						"TypeName": "decimal",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
 						"Precision": 18,
 						"Scale": 2,
 						"Properties": {
@@ -372,7 +331,6 @@
 						"TypeName": "decimal",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
 						"Precision": 18,
 						"Scale": 2,
 						"Properties": {
@@ -391,7 +349,6 @@
 						"TypeName": "decimal",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
 						"Precision": 18,
 						"Scale": 2,
 						"Properties": {
@@ -410,7 +367,6 @@
 						"TypeName": "decimal",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
 						"Precision": 18,
 						"Scale": 2,
 						"Properties": {
@@ -429,7 +385,6 @@
 						"TypeName": "decimal",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
 						"Precision": 18,
 						"Scale": 2,
 						"Properties": {
@@ -448,7 +403,6 @@
 						"TypeName": "decimal",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
 						"Precision": 18,
 						"Scale": 2,
 						"Properties": {
@@ -467,9 +421,6 @@
 						"TypeName": "boolean",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "boolean"
 						}
@@ -486,9 +437,6 @@
 						"TypeName": "date",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"DateFormat": "YYYY-MM-DD",
 							"HIVE_TYPE_STRING": "date"
@@ -506,9 +454,6 @@
 						"TypeName": "date",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"DateFormat": "YYYY-MM-DD",
 							"HIVE_TYPE_STRING": "date"
@@ -526,9 +471,6 @@
 						"TypeName": "date",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"DateFormat": "YYYY-MM-DD",
 							"HIVE_TYPE_STRING": "date"
@@ -546,9 +488,6 @@
 						"TypeName": "date",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"DateFormat": "YYYY-MM-DD",
 							"HIVE_TYPE_STRING": "date"
@@ -566,9 +505,6 @@
 						"TypeName": "date",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"DateFormat": "YYYY-MM-DD",
 							"HIVE_TYPE_STRING": "date"
@@ -586,9 +522,6 @@
 						"TypeName": "date",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"DateFormat": "YYYY-MM-DD",
 							"HIVE_TYPE_STRING": "date"
@@ -607,8 +540,6 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 128,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -625,9 +556,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -644,9 +572,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -663,9 +588,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -682,9 +604,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -702,8 +621,6 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 128,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -720,9 +637,6 @@
 						"TypeName": "boolean",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "boolean"
 						}
@@ -740,8 +654,6 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 128,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -758,9 +670,6 @@
 						"TypeName": "boolean",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "boolean"
 						}
@@ -777,7 +686,6 @@
 						"TypeName": "decimal",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
 						"Precision": 18,
 						"Scale": 8,
 						"Properties": {
@@ -796,9 +704,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -815,7 +720,6 @@
 						"TypeName": "decimal",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
 						"Precision": 18,
 						"Scale": 2,
 						"Properties": {
@@ -834,9 +738,6 @@
 						"TypeName": "timestamp",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
 							"HIVE_TYPE_STRING": "timestamp"
@@ -854,9 +755,6 @@
 						"TypeName": "timestamp",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
 							"HIVE_TYPE_STRING": "timestamp"
@@ -874,9 +772,6 @@
 						"TypeName": "boolean",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "boolean"
 						}
@@ -893,9 +788,6 @@
 						"TypeName": "boolean",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "boolean"
 						}
@@ -912,9 +804,6 @@
 						"TypeName": "boolean",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "boolean"
 						}
@@ -931,9 +820,6 @@
 						"TypeName": "boolean",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "boolean"
 						}
@@ -950,9 +836,6 @@
 						"TypeName": "boolean",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "boolean"
 						}
@@ -970,8 +853,6 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 2048,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -989,8 +870,6 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 1024,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -1008,8 +887,6 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 2048,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -1026,9 +903,6 @@
 						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "long"
 						}
@@ -1045,9 +919,6 @@
 						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "long"
 						}
@@ -1064,9 +935,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -1083,9 +951,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -1102,9 +967,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -1122,8 +984,6 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 18,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -1140,9 +1000,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -1159,9 +1016,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -1178,9 +1032,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -1197,9 +1048,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -1216,9 +1064,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -1235,9 +1080,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -1254,9 +1096,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -1273,9 +1112,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -1292,9 +1128,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -1311,9 +1144,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -1330,9 +1160,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -1349,9 +1176,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -1369,8 +1193,6 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 3,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -1387,9 +1209,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -1406,9 +1225,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -1425,9 +1241,6 @@
 						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "long"
 						}
@@ -1444,9 +1257,6 @@
 						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "long"
 						}
@@ -1463,9 +1273,6 @@
 						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "long"
 						}
@@ -1482,9 +1289,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -1501,9 +1305,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -1523,8 +1324,8 @@
 				"Properties": {
 					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/RetailLakeDB/Order",
 					"delimiter": ",",
-					"firstRowAsHeader": "false",
 					"multiLine": "false",
+					"firstRowAsHeader": "false",
 					"serialization.format": "1",
 					"FormatTypeSetToDatabaseDefault": true,
 					"header": "false"
@@ -1540,7 +1341,7 @@
 			},
 			"Properties": {
 				"textinputformat.record.delimiter": ",",
-				"compression": "",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
 				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"OrderId\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"OrderId\"},\"OrderConfirmationNumber\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"OrderConfirmationNumber\"},\"OrderEnteredByEmployeeId\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"OrderEnteredByEmployeeId\"},\"NumberOfOrderLines\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"NumberOfOrderLines\"},\"OrderReceivedTimestamp\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"OrderReceivedTimestamp\"},\"OrderEntryTimestamp\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"OrderEntryTimestamp\"},\"CustomerCreditCheckTimestamp\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"CustomerCreditCheckTimestamp\"},\"OrderConfirmationTimestamp\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"OrderConfirmationTimestamp\"},\"OrderRequestedDeliveryDate\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"OrderRequestedDeliveryDate\"},\"OrderCommittedDeliveryDate\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"OrderCommittedDeliveryDate\"},\"ShipmentConfirmationTimestamp\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"ShipmentConfirmationTimestamp\"},\"OrderActualDeliveryTimestamp\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"OrderActualDeliveryTimestamp\"},\"OrderTotalRetailPriceAmount\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"OrderTotalRetailPriceAmount\"},\"OrderTotalActualSalesPriceAmount\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"OrderTotalActualSalesPriceAmount\"},\"OrderTotalAdjustmentPercentage\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"OrderTotalAdjustmentPercentage\"},\"OrderTotalAdjustmentAmount\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"OrderTotalAdjustmentAmount\"},\"OrderTotalAmount\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"OrderTotalAmount\"},\"TotalShippingChargeAmount\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"TotalShippingChargeAmount\"},\"OrderTotalTaxAmount\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"OrderTotalTaxAmount\"},\"OrderTotalInvoicedAmount\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"OrderTotalInvoicedAmount\"},\"TotalGratuityAmount\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"TotalGratuityAmount\"},\"TotalPaidAmount\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"TotalPaidAmount\"},\"TotalCommissionsPayableAmount\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"TotalCommissionsPayableAmount\"},\"SplitCommissionsIndicator\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"SplitCommissionsIndicator\"},\"OrderBookedDate\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"OrderBookedDate\"},\"OrderBilledDate\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"OrderBilledDate\"},\"OrderBacklogReportedDate\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"OrderBacklogReportedDate\"},\"OrderBacklogReleasedDate\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"OrderBacklogReleasedDate\"},\"OrderCancellationDate\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"OrderCancellationDate\"},\"OrderReturnedDate\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"OrderReturnedDate\"},\"ShipmentToName\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"ShipmentToName\"},\"ShipmentToLocationId\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"ShipmentToLocationId\"},\"ShipmentId\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"ShipmentId\"},\"CarrierId\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"CarrierId\"},\"ShipmentMethodId\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"ShipmentMethodId\"},\"RequestedShipmentCarrierName\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"RequestedShipmentCarrierName\"},\"AlternateCarrierAcceptableIndicator\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"AlternateCarrierAcceptableIndicator\"},\"ActualShipmentCarrierName\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"ActualShipmentCarrierName\"},\"ShipOrderCompleteIndicator\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"ShipOrderCompleteIndicator\"},\"TotalOrderWeight\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"TotalOrderWeight\"},\"WeightUomId\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"WeightUomId\"},\"TotalOrderFreightChargeAmount\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"TotalOrderFreightChargeAmount\"},\"EarliestDeliveryWindowTimestamp\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"EarliestDeliveryWindowTimestamp\"},\"LatestDeliveryWindowTimestamp\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"LatestDeliveryWindowTimestamp\"},\"AcknowledgementRequiredIndicator\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"AcknowledgementRequiredIndicator\"},\"ExpediteOrderIndicator\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"ExpediteOrderIndicator\"},\"DropShipmentIndicator\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"DropShipmentIndicator\"},\"ServiceOrderIndicator\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"ServiceOrderIndicator\"},\"ProductOrderIndicator\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"ProductOrderIndicator\"},\"OrderDeliveryInstructions\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"OrderDeliveryInstructions\"},\"CustomerCreditCheckNote\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"CustomerCreditCheckNote\"},\"MessageToCustomer\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"MessageToCustomer\"},\"CustomerId\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"CustomerId\"},\"CustomerAccountId\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"CustomerAccountId\"},\"WarehouseId\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"WarehouseId\"},\"StoreId\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"StoreId\"},\"CustomerIdentificationMethodId\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"CustomerIdentificationMethodId\"},\"PoNumber\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"PoNumber\"},\"MarketingEventId\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"MarketingEventId\"},\"AdvertisingEventId\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"AdvertisingEventId\"},\"SalesMethodId\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"SalesMethodId\"},\"PaymentMethodId\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"PaymentMethodId\"},\"BillingCycleId\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"BillingCycleId\"},\"ContractId\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"ContractId\"},\"SalesChannelId\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"SalesChannelId\"},\"DistributionChannelId\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"DistributionChannelId\"},\"OrderTypeId\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"OrderTypeId\"},\"OrderClassificationId\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"OrderClassificationId\"},\"RejectionReasonId\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"RejectionReasonId\"},\"OrderProcessingStatusId\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"OrderProcessingStatusId\"},\"IsoCurrencyCode\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"IsoCurrencyCode\"},\"PointOfSaleId\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"PointOfSaleId\"},\"ResponsibilityCenterId\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"ResponsibilityCenterId\"},\"VendorId\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"VendorId\"},\"DeviceId\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"DeviceId\"},\"SoftwareProductId\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"SoftwareProductId\"},\"SoftwareProductVersionNumber\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"SoftwareProductVersionNumber\"},\"PromotionOfferId\":{\"entity\":\"Order.cdm.json/Order\",\"name\":\"PromotionOfferId\"}}}"
 			},
 			"Compressed": false,
