@@ -62,7 +62,11 @@
 				"outputs": [
 					{
 						"referenceName": "adworksRaw",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"fileName": "Country.csv",
+							"folderPath": "raw/AdventureWorks/Source1/"
+						}
 					}
 				]
 			}
@@ -72,7 +76,7 @@
 				"type": "String",
 				"defaultValue": "/Sample/AdventureWorks/"
 			},
-			"githubFilrName": {
+			"githubFileName": {
 				"type": "String"
 			}
 		},
