@@ -2,7 +2,7 @@
 	"name": "adworksCSV",
 	"properties": {
 		"folder": {
-			"name": "Source adworks"
+			"name": "adworks"
 		},
 		"type": "MappingDataFlow",
 		"typeProperties": {
