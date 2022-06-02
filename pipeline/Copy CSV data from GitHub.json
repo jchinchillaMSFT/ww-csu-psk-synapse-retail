@@ -1,5 +1,5 @@
 {
-	"name": "Copy Source Retail files from GitHub_copy1",
+	"name": "Copy CSV data from GitHub",
 	"properties": {
 		"activities": [
 			{
@@ -160,7 +160,7 @@
 			}
 		},
 		"folder": {
-			"name": "2. Source"
+			"name": "2. adworks"
 		},
 		"annotations": []
 	}
