@@ -40,7 +40,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Web1').output.name",
+						"value": "@activity('Web1').output.Response",
 						"type": "Expression"
 					},
 					"activities": [
@@ -52,7 +52,7 @@
 							"typeProperties": {
 								"variableName": "githubFileName",
 								"value": {
-									"value": "@item()",
+									"value": "@item().name",
 									"type": "Expression"
 								}
 							}
