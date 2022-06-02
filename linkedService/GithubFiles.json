@@ -1,6 +1,21 @@
 {
 	"name": "GithubFiles",
 	"properties": {
+		"parameters": {
+			"githubAccount": {
+				"type": "string"
+			},
+			"projectName": {
+				"type": "string"
+			},
+			"branch": {
+				"type": "string",
+				"defaultValue": "main"
+			},
+			"folderName": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "HttpServer",
 		"typeProperties": {
