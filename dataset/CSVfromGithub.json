@@ -7,8 +7,15 @@
 			"parameters": {
 				"githubAccount": "jchinchillaMSFT",
 				"projectName": "ww-csu-psk-synapse-retail",
-				"branch": "main",
-				"folderName": "Sample"
+				"branch": "main"
+			}
+		},
+		"parameters": {
+			"folderPath": {
+				"type": "string"
+			},
+			"fileName": {
+				"type": "string"
 			}
 		},
 		"annotations": [],
