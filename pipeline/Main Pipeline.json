@@ -7,7 +7,7 @@
 				"type": "ExecutePipeline",
 				"dependsOn": [
 					{
-						"activity": "adworks Source Pipelines",
+						"activity": "adworks Pipelines",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -23,7 +23,7 @@
 				}
 			},
 			{
-				"name": "adworks Source Pipelines",
+				"name": "adworks Pipelines",
 				"type": "ExecutePipeline",
 				"dependsOn": [],
 				"userProperties": [],
