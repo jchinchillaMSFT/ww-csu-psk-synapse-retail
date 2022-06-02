@@ -13,9 +13,6 @@
 				"type": "string"
 			}
 		},
-		"folder": {
-			"name": "adworks"
-		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
