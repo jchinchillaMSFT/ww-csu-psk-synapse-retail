@@ -128,7 +128,14 @@
 							"outputs": [
 								{
 									"referenceName": "adworksRaw",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"fileName": {
+											"value": "@variables('githubFileName')",
+											"type": "Expression"
+										},
+										"folderPath": "raw/AdventureWorks/Source1"
+									}
 								}
 							]
 						}
