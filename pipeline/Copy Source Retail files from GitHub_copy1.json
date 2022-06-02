@@ -40,7 +40,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Web1').output.Response",
+						"value": "@activity('Web1').output",
 						"type": "Expression"
 					},
 					"activities": [
