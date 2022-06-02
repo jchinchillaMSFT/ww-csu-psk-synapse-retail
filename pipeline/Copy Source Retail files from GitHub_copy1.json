@@ -67,7 +67,7 @@
 				"defaultValue": "/Sample/AdventureWorks/"
 			},
 			"githubFileName": {
-				"type": "String"
+				"type": "Array"
 			}
 		},
 		"folder": {
