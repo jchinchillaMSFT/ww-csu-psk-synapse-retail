@@ -43,7 +43,7 @@
 						"value": "@json(activity('Web1').output.Response)",
 						"type": "Expression"
 					},
-					"isSequential": false,
+					"isSequential": true,
 					"activities": [
 						{
 							"name": "Set variable1",
