@@ -3,7 +3,13 @@
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "GithubFiles",
-			"type": "LinkedServiceReference"
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"githubAccount": "jchinchillaMSFT",
+				"projectName": "ww-csu-psk-synapse-retail",
+				"branch": "main",
+				"folderName": "Sample"
+			}
 		},
 		"annotations": [],
 		"type": "DelimitedText",
