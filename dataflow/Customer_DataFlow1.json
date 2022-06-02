@@ -2,7 +2,7 @@
 	"name": "Customer_DataFlow1",
 	"properties": {
 		"folder": {
-			"name": "AdventureWorksDataFlows"
+			"name": "AdventureWorks"
 		},
 		"type": "MappingDataFlow",
 		"typeProperties": {
