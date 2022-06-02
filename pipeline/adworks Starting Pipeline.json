@@ -20,34 +20,66 @@
 						"type": "DataFlowReference",
 						"datasetParameters": {
 							"CustomerDataCSV": {
-								"FileName": "CustomerData.csv"
+								"fileName": "Customer.csv",
+								"folderName": {
+									"value": "@variables('adworksSourceFolderName')",
+									"type": "Expression"
+								}
 							},
 							"ResellerCSV": {
-								"FileName": "Reseller.csv"
+								"fileName": "Reseller.csv",
+								"folderName": {
+									"value": "@variables('adworksSourceFolderName')",
+									"type": "Expression"
+								}
 							},
 							"SalesTerritoryCSV": {
-								"FileName": "SalesTerritory.csv"
+								"fileName": "SalesTerritory.csv",
+								"folderName": {
+									"value": "@variables('adworksSourceFolderName')",
+									"type": "Expression"
+								}
 							},
 							"SalesOrderCSV": {
-								"FileName": "SalesOrder.csv"
+								"fileName": "SalesOrder.csv",
+								"folderName": {
+									"value": "@variables('adworksSourceFolderName')",
+									"type": "Expression"
+								}
 							},
 							"SalesCSV": {
-								"FileName": "Sales.csv"
+								"fileName": "Sales.csv",
+								"folderName": {
+									"value": "@variables('adworksSourceFolderName')",
+									"type": "Expression"
+								}
 							},
 							"ProductDataCSV": {
-								"FileName": "ProductData.csv"
+								"fileName": "ProductData.csv",
+								"folderName": {
+									"value": "@variables('adworksSourceFolderName')",
+									"type": "Expression"
+								}
 							},
 							"DateCSV": {
-								"FileName": "Date.csv"
+								"fileName": "Date.csv",
+								"folderName": {
+									"value": "@variables('adworksSourceFolderName')",
+									"type": "Expression"
+								}
 							},
 							"CountryCSV": {
-								"FileName": "Country.csv"
+								"fileName": "Country.csv",
+								"folderName": {
+									"value": "@variables('adworksSourceFolderName')",
+									"type": "Expression"
+								}
 							},
 							"LocationCSV": {
-								"FileName": "Location.csv"
+								"fileName": "Location.csv"
 							},
 							"ChannelTypeCSV": {
-								"FileName": "ChannelType"
+								"fileName": "ChannelType.csv"
 							}
 						}
 					},
@@ -59,8 +91,14 @@
 				}
 			}
 		],
+		"variables": {
+			"adworksSourceFolderName": {
+				"type": "String",
+				"defaultValue": "AdventureWorks/CSV-Source"
+			}
+		},
 		"folder": {
-			"name": "2. adworks"
+			"name": "3. adworks"
 		},
 		"annotations": [],
 		"lastPublishTime": "2022-04-12T04:49:18Z"
