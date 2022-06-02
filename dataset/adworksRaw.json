@@ -26,7 +26,7 @@
 					"type": "Expression"
 				},
 				"folderPath": {
-					"value": "@dataset().folderName",
+					"value": "@dataset().folderPath",
 					"type": "Expression"
 				},
 				"fileSystem": "raw"
