@@ -2,7 +2,7 @@
 	"name": "adworks_ChannelType",
 	"properties": {
 		"folder": {
-			"name": "AdventureWorks"
+			"name": "adworkstarget"
 		},
 		"type": "MappingDataFlow",
 		"typeProperties": {

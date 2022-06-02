@@ -2,7 +2,7 @@
 	"name": "adworks_Country",
 	"properties": {
 		"folder": {
-			"name": "AdventureWorks"
+			"name": "adworkstarget"
 		},
 		"type": "MappingDataFlow",
 		"typeProperties": {

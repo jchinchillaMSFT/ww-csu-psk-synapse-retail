@@ -2,7 +2,7 @@
 	"name": "ProductCategoryDim_DataFlow1",
 	"properties": {
 		"folder": {
-			"name": "AdventureWorks"
+			"name": "adworkstarget"
 		},
 		"type": "MappingDataFlow",
 		"typeProperties": {
