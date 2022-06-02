@@ -1,0 +1,71 @@
+{
+	"name": "Copy Source Retail files from GitHub_copy1",
+	"properties": {
+		"activities": [
+			{
+				"name": "Web1",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"url": "https://api.github.com/repos/jchinchillaMSFT/ww-csu-psk-synapse-retail/contents/Sample/AdventureWorks/",
+					"connectVia": {
+						"referenceName": "AutoResolveIntegrationRuntime",
+						"type": "IntegrationRuntimeReference"
+					},
+					"method": "GET",
+					"headers": {
+						"User-Agent": "AzureSynapse"
+					}
+				}
+			},
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "Web1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('Web1').output.name",
+						"type": "Expression"
+					},
+					"activities": [
+						{
+							"name": "Set variable1",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"userProperties": []
+						}
+					]
+				}
+			}
+		],
+		"variables": {
+			"githubSourceFolderPath": {
+				"type": "String",
+				"defaultValue": "/Sample/AdventureWorks/"
+			},
+			"githubFileName": {
+				"type": "String"
+			}
+		},
+		"folder": {
+			"name": "2, Source"
+		},
+		"annotations": []
+	}
+}
