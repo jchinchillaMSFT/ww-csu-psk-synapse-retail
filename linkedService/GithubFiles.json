@@ -4,7 +4,7 @@
 		"annotations": [],
 		"type": "HttpServer",
 		"typeProperties": {
-			"url": "https://raw.githubusercontent.com/jchinchillaMSFT/ww-csu-psk-synapse-retail/main/Sample/AdventureWorks/ChannelType.csv",
+			"url": "https://raw.githubusercontent.com/jchinchillaMSFT/ww-csu-psk-synapse-retail/main/Sample",
 			"enableServerCertificateValidation": true,
 			"authenticationType": "Anonymous"
 		},
