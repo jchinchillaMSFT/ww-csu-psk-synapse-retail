@@ -8,8 +8,14 @@
 				"githubAccount": "jchinchillaMSFT",
 				"projectName": "ww-csu-psk-synapse-retail",
 				"branch": "main",
-				"folderPath": "Sample/AdventureWorks",
-				"fileName": "Country.csv"
+				"folderPath": {
+					"value": "@dataset().folderPath",
+					"type": "Expression"
+				},
+				"fileName": {
+					"value": "@dataset().fileName",
+					"type": "Expression"
+				}
 			}
 		},
 		"parameters": {
