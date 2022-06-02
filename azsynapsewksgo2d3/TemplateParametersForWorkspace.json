@@ -1,0 +1,45 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"workspaceName": {
+			"value": "azsynapsewksgo2d3"
+		},
+		"azsynapsewksgo2d3-WorkspaceDefaultSqlServer_connectionString": {
+			"value": ""
+		},
+		"e2eanalytics01_connectionString": {
+			"value": ""
+		},
+		"githubsynaoseretail_credential": {
+			"value": ""
+		},
+		"AzureMLService01_properties_typeProperties_subscriptionId": {
+			"value": "18fe7d2e-5a63-474d-b00b-7dc28b16f41a"
+		},
+		"AzureMLService01_properties_typeProperties_resourceGroupName": {
+			"value": "jchinchilla-rg"
+		},
+		"GithubFiles_properties_typeProperties_url": {
+			"value": "@{concat('https://raw.githubusercontent.com/',linkedService().githubAccount,'/',linkedService().projectName,'/',linkedService().branch,'/',linkedService().folderPath,'/',linkedService().fileName)}"
+		},
+		"azcurateddatalakego2d3_properties_typeProperties_url": {
+			"value": "https://azcurateddatalakego2d3.dfs.core.windows.net"
+		},
+		"azkeyvaultgo2d3_properties_typeProperties_baseUrl": {
+			"value": "https://azkeyvaultgo2d3.vault.azure.net/"
+		},
+		"azrawdatalakego2d3_properties_typeProperties_url": {
+			"value": "https://azrawdatalakego2d3.dfs.core.windows.net"
+		},
+		"azsynapsewksgo2d3-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://azwksdatalakego2d3.dfs.core.windows.net"
+		},
+		"azwksdatalakego2d3_properties_typeProperties_url": {
+			"value": "https://azwksdatalakego2d3.dfs.core.windows.net"
+		},
+		"githubsynaoseretail_properties_typeProperties_username": {
+			"value": "x"
+		}
+	}
+}
