@@ -111,7 +111,7 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "CSVfromGithub",
+									"referenceName": "GithubCSVFiles",
 									"type": "DatasetReference",
 									"parameters": {
 										"fileName": {

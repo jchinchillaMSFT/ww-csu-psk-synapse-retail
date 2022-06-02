@@ -1,5 +1,5 @@
 {
-	"name": "CSVfromGithub",
+	"name": "GithubCSVFiles",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "GithubFiles",
