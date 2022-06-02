@@ -25,16 +25,51 @@
 							"type": "DelimitedTextReadSettings"
 						}
 					},
-					"enableStaging": false
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
 				},
 				"inputs": [
 					{
 						"referenceName": "CSVfromGithub",
+						"type": "DatasetReference",
+						"parameters": {
+							"folderPath": "/Sample/AdventureWorks/",
+							"fileName": "Country.csv"
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "adworksRaw",
 						"type": "DatasetReference"
 					}
 				]
 			}
 		],
+		"variables": {
+			"githubSourceFolderPath": {
+				"type": "String",
+				"defaultValue": "/Sample/AdventureWorks/"
+			}
+		},
 		"folder": {
 			"name": "2, Source"
 		},
