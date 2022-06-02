@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "adworks CSV Source DF",
+				"name": "DF - adworks CSV from Raw",
 				"type": "ExecuteDataFlow",
 				"dependsOn": [
 					{
