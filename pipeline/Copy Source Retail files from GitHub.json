@@ -65,7 +65,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"fileName": "Country.csv",
-							"folderPath": "raw/AdventureWorks/Source1/"
+							"folderPath": "raw/AdventureWorks/"
 						}
 					}
 				]
@@ -74,7 +74,7 @@
 		"variables": {
 			"githubSourceFolderPath": {
 				"type": "String",
-				"defaultValue": "/Sample/AdventureWorks/"
+				"defaultValue": "Sample/AdventureWorks/"
 			},
 			"githubFileName": {
 				"type": "String"
