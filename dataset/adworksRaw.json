@@ -6,7 +6,10 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"FileName": {
+			"fileName": {
+				"type": "string"
+			},
+			"folderName": {
 				"type": "string"
 			}
 		},
@@ -22,7 +25,10 @@
 					"value": "@dataset().FileName",
 					"type": "Expression"
 				},
-				"folderPath": "AdventureWorks/CSV-Source",
+				"folderPath": {
+					"value": "@dataset().folderName",
+					"type": "Expression"
+				},
 				"fileSystem": "raw"
 			},
 			"columnDelimiter": ",",
