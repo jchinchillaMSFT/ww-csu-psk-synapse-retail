@@ -5,7 +5,14 @@
 			{
 				"name": "adworks CSV Source DF",
 				"type": "ExecuteDataFlow",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Execute Copy CSV data from Github",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "1.00:00:00",
 					"retry": 0,
@@ -97,6 +104,19 @@
 					},
 					"traceLevel": "Fine"
 				}
+			},
+			{
+				"name": "Execute Copy CSV data from Github",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "Copy CSV data from GitHub",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
 			}
 		],
 		"variables": {
@@ -106,7 +126,7 @@
 			}
 		},
 		"folder": {
-			"name": "3. adworks"
+			"name": "2. adworks"
 		},
 		"annotations": [],
 		"lastPublishTime": "2022-04-12T04:49:18Z"
