@@ -150,6 +150,10 @@
 			},
 			"githubFileName": {
 				"type": "String"
+			},
+			"rawFolderPath": {
+				"type": "String",
+				"defaultValue": "AdventureWorks/CSV-Source"
 			}
 		},
 		"folder": {
