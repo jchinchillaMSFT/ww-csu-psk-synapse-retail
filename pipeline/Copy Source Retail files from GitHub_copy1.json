@@ -134,7 +134,7 @@
 											"value": "@variables('githubFileName')",
 											"type": "Expression"
 										},
-										"folderPath": "/raw/AdventureWorks/Source1/"
+										"folderPath": "AdventureWorks/Source1/"
 									}
 								}
 							]
