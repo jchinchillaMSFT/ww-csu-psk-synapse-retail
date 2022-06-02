@@ -7,7 +7,9 @@
 			"parameters": {
 				"githubAccount": "jchinchillaMSFT",
 				"projectName": "ww-csu-psk-synapse-retail",
-				"branch": "main"
+				"branch": "main",
+				"folderPath": "Sample/AdventureWorks",
+				"fileName": "Country.csv"
 			}
 		},
 		"parameters": {
