@@ -40,7 +40,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Web1').output.Response",
+						"value": "@json(activity('Web1').output.Response)",
 						"type": "Expression"
 					},
 					"isSequential": true,
@@ -53,7 +53,7 @@
 							"typeProperties": {
 								"variableName": "githubFileName",
 								"value": {
-									"value": "@item()",
+									"value": "@item().name",
 									"type": "Expression"
 								}
 							}
