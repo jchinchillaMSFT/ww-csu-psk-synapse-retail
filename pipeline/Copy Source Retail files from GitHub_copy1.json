@@ -52,7 +52,7 @@
 							"typeProperties": {
 								"variableName": "githubFileName",
 								"value": {
-									"value": "@item().name",
+									"value": "\"x\"",
 									"type": "Expression"
 								}
 							}
