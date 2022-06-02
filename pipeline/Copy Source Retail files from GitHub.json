@@ -1,0 +1,9 @@
+{
+	"name": "Copy Source Retail files from GitHub",
+	"properties": {
+		"folder": {
+			"name": "2, Source"
+		},
+		"annotations": []
+	}
+}
