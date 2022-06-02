@@ -146,7 +146,7 @@
 		"variables": {
 			"githubSourceFolderPath": {
 				"type": "String",
-				"defaultValue": "/Sample/AdventureWorks/"
+				"defaultValue": "Sample/AdventureWorks"
 			},
 			"githubFileName": {
 				"type": "String"
