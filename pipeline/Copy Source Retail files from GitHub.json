@@ -51,7 +51,6 @@
 						"referenceName": "CSVfromGithub",
 						"type": "DatasetReference",
 						"parameters": {
-							"folderPath": "/Sample/AdventureWorks/",
 							"fileName": "Country.csv"
 						}
 					}
