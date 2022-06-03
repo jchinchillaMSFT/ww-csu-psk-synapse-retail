@@ -1,5 +1,5 @@
 {
-	"name": "Load CSV data to adworks",
+	"name": "Load_adworks",
 	"properties": {
 		"folder": {
 			"name": "adworks"
