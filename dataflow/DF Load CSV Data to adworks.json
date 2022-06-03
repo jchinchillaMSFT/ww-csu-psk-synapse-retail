@@ -9,17 +9,17 @@
 						"referenceName": "adworksRaw",
 						"type": "DatasetReference"
 					},
-					"name": "source1"
+					"name": "CSVSource"
 				}
 			],
 			"sinks": [
 				{
-					"name": "sink1"
+					"name": "adworksTable"
 				}
 			],
 			"transformations": [
 				{
-					"name": "derivedColumn1"
+					"name": "derivedColumn"
 				}
 			],
 			"scriptLines": [
@@ -32,16 +32,16 @@
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> source1",
-				"source1 derive(ModifiedUTCTimestamp = currentUTC()) ~> derivedColumn1",
-				"derivedColumn1 sink(allowSchemaDrift: true,",
+				"     ignoreNoFilesFound: false) ~> CSVSource",
+				"CSVSource derive(ModifiedUTCTimestamp = currentUTC()) ~> derivedColumn",
+				"derivedColumn sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     store: 'synapse',",
 				"     databaseType: 'spark',",
 				"     format: 'table',",
 				"     database: 'adworkstarget',",
 				"     tableName: ($param_tableName),",
-				"     recreate:true) ~> sink1"
+				"     recreate:true) ~> adworksTable"
 			]
 		}
 	}
