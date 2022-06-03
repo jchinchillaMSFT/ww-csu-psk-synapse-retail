@@ -1,0 +1,352 @@
+{
+	"name": "adworksCSV_copy1",
+	"properties": {
+		"folder": {
+			"name": "adworks"
+		},
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "adworksRaw",
+						"type": "DatasetReference"
+					},
+					"name": "CustomerDataCSV"
+				},
+				{
+					"dataset": {
+						"referenceName": "adworksRaw",
+						"type": "DatasetReference"
+					},
+					"name": "ResellerCSV"
+				},
+				{
+					"dataset": {
+						"referenceName": "adworksRaw",
+						"type": "DatasetReference"
+					},
+					"name": "SalesTerritoryCSV"
+				},
+				{
+					"dataset": {
+						"referenceName": "adworksRaw",
+						"type": "DatasetReference"
+					},
+					"name": "SalesOrderCSV"
+				},
+				{
+					"dataset": {
+						"referenceName": "adworksRaw",
+						"type": "DatasetReference"
+					},
+					"name": "SalesCSV"
+				},
+				{
+					"dataset": {
+						"referenceName": "adworksRaw",
+						"type": "DatasetReference"
+					},
+					"name": "ProductDataCSV"
+				},
+				{
+					"dataset": {
+						"referenceName": "adworksRaw",
+						"type": "DatasetReference"
+					},
+					"name": "DateCSV"
+				},
+				{
+					"dataset": {
+						"referenceName": "adworksRaw",
+						"type": "DatasetReference"
+					},
+					"name": "CountryCSV"
+				},
+				{
+					"dataset": {
+						"referenceName": "adworksRaw",
+						"type": "DatasetReference"
+					},
+					"name": "LocationCSV"
+				},
+				{
+					"dataset": {
+						"referenceName": "adworksRaw",
+						"type": "DatasetReference"
+					},
+					"name": "ChannelTypeCSV"
+				}
+			],
+			"sinks": [
+				{
+					"name": "CustomerData"
+				},
+				{
+					"name": "Reseller"
+				},
+				{
+					"name": "SalesTerritory"
+				},
+				{
+					"name": "SalesOrder"
+				},
+				{
+					"name": "Sales"
+				},
+				{
+					"name": "ProductData"
+				},
+				{
+					"name": "Date"
+				},
+				{
+					"name": "Country"
+				},
+				{
+					"name": "Location"
+				},
+				{
+					"name": "ChannelType"
+				}
+			],
+			"transformations": [
+				{
+					"name": "derivedColumn1"
+				},
+				{
+					"name": "derivedColumn2"
+				},
+				{
+					"name": "derivedColumn3"
+				},
+				{
+					"name": "derivedColumn4"
+				},
+				{
+					"name": "derivedColumn5"
+				},
+				{
+					"name": "derivedColumn6"
+				},
+				{
+					"name": "derivedColumn7"
+				},
+				{
+					"name": "derivedColumn8"
+				},
+				{
+					"name": "derivedColumn9"
+				},
+				{
+					"name": "derivedColumn10"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          CustomerKey as short,",
+				"          CustomerId as string,",
+				"          Customer as string,",
+				"          City as string,",
+				"          StateProvince as string,",
+				"          CountryRegion as string,",
+				"          PostalCode as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> CustomerDataCSV",
+				"source(output(",
+				"          PostalCode as string,",
+				"          CountryRegion as string,",
+				"          StateProvince as string,",
+				"          City as string,",
+				"          Reseller as string,",
+				"          BusinessType as string,",
+				"          ResellerId as string,",
+				"          ResellerKey as short",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> ResellerCSV",
+				"source(output(",
+				"          SalesTerritoryKey as short,",
+				"          Region as string,",
+				"          Country as string,",
+				"          Group as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> SalesTerritoryCSV",
+				"source(output(",
+				"          SalesOrderLine as string,",
+				"          SalesOrder as string,",
+				"          SalesOrderLineKey as integer,",
+				"          Channel as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> SalesOrderCSV",
+				"source(output(",
+				"          SalesAmount as double,",
+				"          TotalProductCost as double,",
+				"          ProductStandardCost as double,",
+				"          UnitPriceDiscountPct as boolean,",
+				"          ExtendedAmount as double,",
+				"          UnitPrice as double,",
+				"          OrderQuantity as short,",
+				"          SalesTerritoryKey as short,",
+				"          ShipDateKey as date,",
+				"          DueDateKey as date,",
+				"          OrderDateKey as date,",
+				"          ProductKey as short,",
+				"          CustomerKey as short,",
+				"          ResellerKey as short,",
+				"          SalesOrderLineKey as integer",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> SalesCSV",
+				"source(output(",
+				"          Category as string,",
+				"          Subcategory as string,",
+				"          Model as string,",
+				"          ListPrice as double,",
+				"          Color as string,",
+				"          StandardCost as double,",
+				"          Product as string,",
+				"          SKU as string,",
+				"          ProductKey as short",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> ProductDataCSV",
+				"source(output(",
+				"          DateKey as date,",
+				"          Date as date,",
+				"          FiscalYear as string,",
+				"          FiscalQuarter as string,",
+				"          Month as string,",
+				"          FullDate as string,",
+				"          MonthKey as integer",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> DateCSV",
+				"source(output(",
+				"          CountryId as short,",
+				"          IsoCountryName as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> CountryCSV",
+				"source(output(",
+				"          LocationId as short,",
+				"          LocationZip as short,",
+				"          LocationState as string,",
+				"          LocationCity as string,",
+				"          CountryId as boolean",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> LocationCSV",
+				"source(output(",
+				"          ChannelTypeId as short,",
+				"          ChannelTypeName as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> ChannelTypeCSV",
+				"CustomerDataCSV derive(ModifiedUTCDate = currentUTC()) ~> derivedColumn1",
+				"ResellerCSV derive(ModifiedUTCDate = currentUTC()) ~> derivedColumn2",
+				"SalesTerritoryCSV derive(ModifiedUTCDate = currentUTC()) ~> derivedColumn3",
+				"SalesOrderCSV derive(ModifiedUTCDate = currentUTC()) ~> derivedColumn4",
+				"SalesCSV derive(ModifiedUTCDate = currentUTC()) ~> derivedColumn5",
+				"ProductDataCSV derive(ModifiedUTCDate = currentUTC()) ~> derivedColumn6",
+				"CountryCSV derive(ModifiedUTCDate = currentUTC()) ~> derivedColumn7",
+				"LocationCSV derive(ModifiedUTCDate = currentUTC()) ~> derivedColumn8",
+				"ChannelTypeCSV derive(ModifiedUTCDate = currentUTC()) ~> derivedColumn9",
+				"DateCSV derive(ModifiedUTCDate = currentUTC()) ~> derivedColumn10",
+				"derivedColumn1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     store: 'synapse',",
+				"     databaseType: 'spark',",
+				"     format: 'table',",
+				"     database: 'adworks',",
+				"     tableName: 'CustomerData',",
+				"     recreate:true) ~> CustomerData",
+				"derivedColumn2 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     store: 'synapse',",
+				"     databaseType: 'spark',",
+				"     format: 'table',",
+				"     database: 'adworks',",
+				"     tableName: 'Reseller',",
+				"     recreate:true) ~> Reseller",
+				"derivedColumn3 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     store: 'synapse',",
+				"     databaseType: 'spark',",
+				"     format: 'table',",
+				"     database: 'adworks',",
+				"     tableName: 'SalesTerritory',",
+				"     recreate:true) ~> SalesTerritory",
+				"derivedColumn4 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     store: 'synapse',",
+				"     databaseType: 'spark',",
+				"     format: 'table',",
+				"     database: 'adworks',",
+				"     tableName: 'SalesOrder',",
+				"     recreate:true) ~> SalesOrder",
+				"derivedColumn5 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     store: 'synapse',",
+				"     databaseType: 'spark',",
+				"     format: 'table',",
+				"     database: 'adworks',",
+				"     tableName: 'Sales',",
+				"     recreate:true) ~> Sales",
+				"derivedColumn6 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     store: 'synapse',",
+				"     databaseType: 'spark',",
+				"     format: 'table',",
+				"     database: 'adworks',",
+				"     tableName: 'ProductData',",
+				"     recreate:true) ~> ProductData",
+				"derivedColumn10 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     store: 'synapse',",
+				"     databaseType: 'spark',",
+				"     format: 'table',",
+				"     database: 'adworks',",
+				"     tableName: 'Date',",
+				"     recreate:true) ~> Date",
+				"derivedColumn7 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     store: 'synapse',",
+				"     databaseType: 'spark',",
+				"     format: 'table',",
+				"     database: 'adworks',",
+				"     tableName: 'Country',",
+				"     recreate:true) ~> Country",
+				"derivedColumn8 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     store: 'synapse',",
+				"     databaseType: 'spark',",
+				"     format: 'table',",
+				"     database: 'adworks',",
+				"     tableName: 'Location',",
+				"     recreate:true) ~> Location",
+				"derivedColumn9 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     store: 'synapse',",
+				"     databaseType: 'spark',",
+				"     format: 'table',",
+				"     database: 'adworks',",
+				"     tableName: 'ChannelType',",
+				"     recreate:true) ~> ChannelType"
+			]
+		}
+	}
+}
