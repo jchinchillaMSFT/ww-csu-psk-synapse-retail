@@ -110,7 +110,35 @@
 					"name": "ChannelType"
 				}
 			],
-			"transformations": [],
+			"transformations": [
+				{
+					"name": "derivedColumn1"
+				},
+				{
+					"name": "derivedColumn2"
+				},
+				{
+					"name": "derivedColumn3"
+				},
+				{
+					"name": "derivedColumn4"
+				},
+				{
+					"name": "derivedColumn5"
+				},
+				{
+					"name": "derivedColumn6"
+				},
+				{
+					"name": "derivedColumn7"
+				},
+				{
+					"name": "derivedColumn8"
+				},
+				{
+					"name": "derivedColumn9"
+				}
+			],
 			"scriptLines": [
 				"source(output(",
 				"          CustomerKey as integer,",
@@ -225,7 +253,16 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> ChannelTypeCSV",
-				"CustomerDataCSV sink(allowSchemaDrift: true,",
+				"CustomerDataCSV derive(ModifiedUTCDate = currentUTC()) ~> derivedColumn1",
+				"ResellerCSV derive(ModifiedUTCDate = currentUTC()) ~> derivedColumn2",
+				"SalesTerritoryCSV derive(ModifiedUTCDate = currentUTC()) ~> derivedColumn3",
+				"SalesOrderCSV derive(ModifiedUTCDate = currentUTC()) ~> derivedColumn4",
+				"SalesCSV derive(ModifiedUTCDate = currentUTC()) ~> derivedColumn5",
+				"ProductDataCSV derive(ModifiedUTCDate = currentUTC()) ~> derivedColumn6",
+				"CountryCSV derive(ModifiedUTCDate = currentUTC()) ~> derivedColumn7",
+				"LocationCSV derive(ModifiedUTCDate = currentUTC()) ~> derivedColumn8",
+				"ChannelTypeCSV derive(ModifiedUTCDate = currentUTC()) ~> derivedColumn9",
+				"derivedColumn1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     store: 'synapse',",
 				"     databaseType: 'spark',",
@@ -233,7 +270,7 @@
 				"     database: 'adworks',",
 				"     tableName: 'CustomerData',",
 				"     recreate:true) ~> CustomerData",
-				"ResellerCSV sink(allowSchemaDrift: true,",
+				"derivedColumn2 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     store: 'synapse',",
 				"     databaseType: 'spark',",
@@ -241,7 +278,7 @@
 				"     database: 'adworks',",
 				"     tableName: 'Reseller',",
 				"     recreate:true) ~> Reseller",
-				"SalesTerritoryCSV sink(allowSchemaDrift: true,",
+				"derivedColumn3 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     store: 'synapse',",
 				"     databaseType: 'spark',",
@@ -249,7 +286,7 @@
 				"     database: 'adworks',",
 				"     tableName: 'SalesTerritory',",
 				"     recreate:true) ~> SalesTerritory",
-				"SalesOrderCSV sink(allowSchemaDrift: true,",
+				"derivedColumn4 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     store: 'synapse',",
 				"     databaseType: 'spark',",
@@ -257,7 +294,7 @@
 				"     database: 'adworks',",
 				"     tableName: 'SalesOrder',",
 				"     recreate:true) ~> SalesOrder",
-				"SalesCSV sink(allowSchemaDrift: true,",
+				"derivedColumn5 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     store: 'synapse',",
 				"     databaseType: 'spark',",
@@ -265,7 +302,7 @@
 				"     database: 'adworks',",
 				"     tableName: 'Sales',",
 				"     recreate:true) ~> Sales",
-				"ProductDataCSV sink(allowSchemaDrift: true,",
+				"derivedColumn6 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     store: 'synapse',",
 				"     databaseType: 'spark',",
@@ -281,7 +318,7 @@
 				"     database: 'adworks',",
 				"     tableName: 'Date',",
 				"     recreate:true) ~> Date",
-				"CountryCSV sink(allowSchemaDrift: true,",
+				"derivedColumn7 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     store: 'synapse',",
 				"     databaseType: 'spark',",
@@ -289,7 +326,7 @@
 				"     database: 'adworks',",
 				"     tableName: 'Country',",
 				"     recreate:true) ~> Country",
-				"LocationCSV sink(allowSchemaDrift: true,",
+				"derivedColumn8 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     store: 'synapse',",
 				"     databaseType: 'spark',",
@@ -297,7 +334,7 @@
 				"     database: 'adworks',",
 				"     tableName: 'Location',",
 				"     recreate:true) ~> Location",
-				"ChannelTypeCSV sink(allowSchemaDrift: true,",
+				"derivedColumn9 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     store: 'synapse',",
 				"     databaseType: 'spark',",
