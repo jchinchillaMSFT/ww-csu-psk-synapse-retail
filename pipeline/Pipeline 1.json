@@ -3,11 +3,11 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Data flow1",
-				"type": "ExecuteDataFlow",
+				"name": "Get Metadata1",
+				"type": "GetMetadata",
 				"dependsOn": [],
 				"policy": {
-					"timeout": "1.00:00:00",
+					"timeout": "7.00:00:00",
 					"retry": 0,
 					"retryIntervalInSeconds": 30,
 					"secureOutput": false,
@@ -15,24 +15,26 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"dataflow": {
-						"referenceName": "adworksCSV_copy1",
-						"type": "DataFlowReference",
-						"datasetParameters": {
-							"CustomerDataCSV": {
-								"fileName": "CustomerData.csv",
-								"folderPath": {
-									"value": "@variables('adworksSourceFolderPath')",
-									"type": "Expression"
-								}
+					"dataset": {
+						"referenceName": "Raw",
+						"type": "DatasetReference",
+						"parameters": {
+							"folderPath": {
+								"value": "@variables('adworksSourceFolderPath')",
+								"type": "Expression"
 							}
 						}
 					},
-					"compute": {
-						"coreCount": 8,
-						"computeType": "General"
+					"fieldList": [
+						"childItems"
+					],
+					"storeSettings": {
+						"type": "AzureBlobFSReadSettings",
+						"enablePartitionDiscovery": false
 					},
-					"traceLevel": "Fine"
+					"formatSettings": {
+						"type": "DelimitedTextReadSettings"
+					}
 				}
 			}
 		],
