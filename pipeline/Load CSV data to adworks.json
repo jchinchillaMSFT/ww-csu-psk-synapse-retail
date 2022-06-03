@@ -78,10 +78,10 @@
 							"userProperties": [],
 							"typeProperties": {
 								"dataflow": {
-									"referenceName": "Load CSV Data to adworks",
+									"referenceName": "Dataflow1",
 									"type": "DataFlowReference",
 									"parameters": {
-										"param_tableName": {
+										"tableName": {
 											"value": "'@{variables('tableName')}'",
 											"type": "Expression"
 										}
