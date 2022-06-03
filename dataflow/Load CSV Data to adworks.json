@@ -6,13 +6,33 @@
 		},
 		"type": "MappingDataFlow",
 		"typeProperties": {
-			"sources": [],
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "adworksRaw",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
 			"sinks": [],
 			"transformations": [],
 			"scriptLines": [
 				"parameters{",
 				"     param_tableName as string",
-				"}"
+				"}",
+				"source(output(",
+				"          {-1} as string,",
+				"          {[Not Applicable]1} as string,",
+				"          {[Not Applicable]2} as string,",
+				"          {[Not Applicable]3} as string,",
+				"          {[Not Applicable]4} as string,",
+				"          {[Not Applicable]5} as string,",
+				"          {[Not Applicable]6} as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source1"
 			]
 		}
 	}
