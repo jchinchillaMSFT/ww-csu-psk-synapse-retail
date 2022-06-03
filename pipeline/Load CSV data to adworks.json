@@ -62,7 +62,7 @@
 							"type": "ExecuteDataFlow",
 							"dependsOn": [
 								{
-									"activity": "Set tableName",
+									"activity": "Filter1",
 									"dependencyConditions": [
 										"Succeeded"
 									]
@@ -115,6 +115,29 @@
 								"variableName": "tableName",
 								"value": {
 									"value": "@replace(item().name,'.csv','')",
+									"type": "Expression"
+								}
+							}
+						},
+						{
+							"name": "Filter1",
+							"type": "Filter",
+							"dependsOn": [
+								{
+									"activity": "Set tableName",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"userProperties": [],
+							"typeProperties": {
+								"items": {
+									"value": "@item().name",
+									"type": "Expression"
+								},
+								"condition": {
+									"value": "@startswith(item().name,'Location')",
 									"type": "Expression"
 								}
 							}
