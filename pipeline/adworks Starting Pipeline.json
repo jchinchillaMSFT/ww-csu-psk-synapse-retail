@@ -3,8 +3,21 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "DF - adworks CSV from Raw",
-				"type": "ExecuteDataFlow",
+				"name": "Execute Copy CSV data from Github",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "Copy CSV data from GitHub",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "Execute Load CSV data to adworks",
+				"type": "ExecutePipeline",
 				"dependsOn": [
 					{
 						"activity": "Execute Copy CSV data from Github",
@@ -13,106 +26,10 @@
 						]
 					}
 				],
-				"policy": {
-					"timeout": "1.00:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"dataflow": {
-						"referenceName": "adworksCSV",
-						"type": "DataFlowReference",
-						"datasetParameters": {
-							"CustomerDataCSV": {
-								"fileName": "Customer.csv",
-								"folderPath": {
-									"value": "@variables('adworksSourceFolderPath')",
-									"type": "Expression"
-								}
-							},
-							"ResellerCSV": {
-								"fileName": "Reseller.csv",
-								"folderPath": {
-									"value": "@variables('adworksSourceFolderPath')",
-									"type": "Expression"
-								}
-							},
-							"SalesTerritoryCSV": {
-								"fileName": "SalesTerritory.csv",
-								"folderPath": {
-									"value": "@variables('adworksSourceFolderPath')",
-									"type": "Expression"
-								}
-							},
-							"SalesOrderCSV": {
-								"fileName": "SalesOrder.csv",
-								"folderPath": {
-									"value": "@variables('adworksSourceFolderPath')",
-									"type": "Expression"
-								}
-							},
-							"SalesCSV": {
-								"fileName": "Sales.csv",
-								"folderPath": {
-									"value": "@variables('adworksSourceFolderPath')",
-									"type": "Expression"
-								}
-							},
-							"ProductDataCSV": {
-								"fileName": "ProductData.csv",
-								"folderPath": {
-									"value": "@variables('adworksSourceFolderPath')",
-									"type": "Expression"
-								}
-							},
-							"DateCSV": {
-								"fileName": "Date.csv",
-								"folderPath": {
-									"value": "@variables('adworksSourceFolderPath')",
-									"type": "Expression"
-								}
-							},
-							"CountryCSV": {
-								"fileName": "Country.csv",
-								"folderPath": {
-									"value": "@variables('adworksSourceFolderPath')",
-									"type": "Expression"
-								}
-							},
-							"LocationCSV": {
-								"fileName": "Location.csv",
-								"folderPath": {
-									"value": "@variables('adworksSourceFolderPath')",
-									"type": "Expression"
-								}
-							},
-							"ChannelTypeCSV": {
-								"fileName": "ChannelType.csv",
-								"folderPath": {
-									"value": "@variables('adworksSourceFolderPath')",
-									"type": "Expression"
-								}
-							}
-						}
-					},
-					"compute": {
-						"coreCount": 8,
-						"computeType": "General"
-					},
-					"traceLevel": "Fine"
-				}
-			},
-			{
-				"name": "Execute Copy CSV data from Github",
-				"type": "ExecutePipeline",
-				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
-						"referenceName": "Copy CSV data from GitHub",
+						"referenceName": "Load CSV data to adworks",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true
