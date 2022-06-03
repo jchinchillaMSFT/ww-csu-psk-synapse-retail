@@ -55,6 +55,7 @@
 						"value": "@activity('Get File List').output.childItems",
 						"type": "Expression"
 					},
+					"isSequential": true,
 					"activities": [
 						{
 							"name": "Data flow1",
@@ -113,7 +114,7 @@
 							"typeProperties": {
 								"variableName": "tableName",
 								"value": {
-									"value": "@replace(item().name,'.csv','')",
+									"value": "@replace(item().name,'.csv','1')",
 									"type": "Expression"
 								}
 							}
