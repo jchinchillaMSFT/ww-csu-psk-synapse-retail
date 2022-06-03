@@ -37,7 +37,7 @@
 				"     store: 'synapse',",
 				"     databaseType: 'spark',",
 				"     format: 'table',",
-				"     database: 'default',",
+				"     database: 'adworkstarget',",
 				"     tableName: ($tableName),",
 				"     recreate:true) ~> sink1"
 			]
