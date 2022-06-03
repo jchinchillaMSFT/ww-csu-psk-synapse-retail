@@ -114,7 +114,7 @@
 							"typeProperties": {
 								"variableName": "tableName",
 								"value": {
-									"value": "@replace(item().name,'.csv','1')",
+									"value": "@replace(item().name,'.csv','')",
 									"type": "Expression"
 								}
 							}
