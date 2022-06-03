@@ -1,0 +1,47 @@
+{
+	"name": "Dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "adworksRaw",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [
+				{
+					"name": "sink1"
+				}
+			],
+			"transformations": [],
+			"scriptLines": [
+				"parameters{",
+				"     param_tableName as string",
+				"}",
+				"source(output(",
+				"          {-1} as string,",
+				"          {[Not Applicable]1} as string,",
+				"          {[Not Applicable]2} as string,",
+				"          {[Not Applicable]3} as string,",
+				"          {[Not Applicable]4} as string,",
+				"          {[Not Applicable]5} as string,",
+				"          {[Not Applicable]6} as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source1",
+				"source1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     store: 'synapse',",
+				"     databaseType: 'spark',",
+				"     format: 'table',",
+				"     database: 'default',",
+				"     tableName: ($param_tableName)) ~> sink1"
+			]
+		}
+	}
+}
