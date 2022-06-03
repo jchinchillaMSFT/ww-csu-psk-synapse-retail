@@ -38,7 +38,7 @@
 				"     databaseType: 'spark',",
 				"     format: 'table',",
 				"     database: 'default',",
-				"     tableName: 'test1',",
+				"     tableName: 'test2',",
 				"     recreate:true) ~> sink1"
 			]
 		}
