@@ -19,23 +19,6 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
-						"Properties": {
-							"HIVE_TYPE_STRING": "string"
-						}
-					}
-				},
-				{
-					"Name": "Channel",
-					"Description": null,
-					"OriginDataTypeName": {
-						"TypeName": "string",
-						"IsComplexType": false,
-						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -48,41 +31,8 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
-						}
-					}
-				},
-				{
-					"Name": "CustomerId",
-					"Description": null,
-					"OriginDataTypeName": {
-						"TypeName": "string",
-						"IsComplexType": false,
-						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
-						"Properties": {
-							"HIVE_TYPE_STRING": "string"
-						}
-					}
-				},
-				{
-					"Name": "Customer",
-					"Description": null,
-					"OriginDataTypeName": {
-						"TypeName": "string",
-						"IsComplexType": false,
-						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
-						"Properties": {
-							"HIVE_TYPE_STRING": "string"
 						}
 					}
 				},
@@ -93,9 +43,6 @@
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -109,23 +56,6 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
-						"Properties": {
-							"HIVE_TYPE_STRING": "string"
-						}
-					}
-				},
-				{
-					"Name": "Reseller",
-					"Description": null,
-					"OriginDataTypeName": {
-						"TypeName": "string",
-						"IsComplexType": false,
-						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -138,7 +68,6 @@
 						"TypeName": "decimal",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
 						"Precision": 28,
 						"Scale": 2,
 						"Properties": {
