@@ -40,7 +40,7 @@
 				"     databaseType: 'spark',",
 				"     format: 'table',",
 				"     database: 'default',",
-				"     tableName: ($param_tableName),",
+				"     tableName: 'test1',",
 				"     recreate:true) ~> sink1"
 			]
 		}
