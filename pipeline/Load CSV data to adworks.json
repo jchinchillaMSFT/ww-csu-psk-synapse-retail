@@ -78,7 +78,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"dataflow": {
-									"referenceName": "DF Load CSV Data to adworks",
+									"referenceName": "Load CSV Data to adworks",
 									"type": "DataFlowReference",
 									"parameters": {
 										"param_tableName": {
