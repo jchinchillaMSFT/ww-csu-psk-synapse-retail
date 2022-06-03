@@ -87,7 +87,7 @@
 										}
 									},
 									"datasetParameters": {
-										"CSVSource": {
+										"source1": {
 											"fileName": {
 												"value": "@item().name",
 												"type": "Expression"
