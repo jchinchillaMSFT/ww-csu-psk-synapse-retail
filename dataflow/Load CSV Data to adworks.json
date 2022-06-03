@@ -20,24 +20,24 @@
 					"name": "adworksTable"
 				}
 			],
-			"transformations": [
-				{
-					"name": "derivedColumn"
-				}
-			],
+			"transformations": [],
 			"scriptLines": [
 				"parameters{",
 				"     param_tableName as string",
 				"}",
 				"source(output(",
-				"          CountryId as short,",
-				"          IsoCountryName as string",
+				"          {-1} as string,",
+				"          {[Not Applicable]1} as string,",
+				"          {[Not Applicable]2} as string,",
+				"          {[Not Applicable]3} as string,",
+				"          {[Not Applicable]4} as string,",
+				"          {[Not Applicable]5} as string,",
+				"          {[Not Applicable]6} as string",
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> CSVSource",
-				"CSVSource derive(ModifiedUTCTimestamp = currentUTC()) ~> derivedColumn",
-				"derivedColumn sink(allowSchemaDrift: true,",
+				"CSVSource sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     store: 'synapse',",
 				"     databaseType: 'spark',",
