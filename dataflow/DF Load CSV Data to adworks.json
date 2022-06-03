@@ -39,7 +39,7 @@
 				"     store: 'synapse',",
 				"     databaseType: 'spark',",
 				"     format: 'table',",
-				"     database: 'adworkstarget',",
+				"     database: 'default',",
 				"     tableName: ($param_tableName),",
 				"     recreate:true) ~> adworksTable"
 			]
