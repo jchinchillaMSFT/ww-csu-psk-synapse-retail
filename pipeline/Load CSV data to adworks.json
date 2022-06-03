@@ -78,7 +78,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"dataflow": {
-									"referenceName": "Dataflow1",
+									"referenceName": "DF Load CSV Data to adworks",
 									"type": "DataFlowReference",
 									"parameters": {
 										"param_tableName": {
@@ -87,7 +87,7 @@
 										}
 									},
 									"datasetParameters": {
-										"source1": {
+										"CSVSource": {
 											"fileName": {
 												"value": "@item().name",
 												"type": "Expression"
