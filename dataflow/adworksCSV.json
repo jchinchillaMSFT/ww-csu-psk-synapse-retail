@@ -137,6 +137,9 @@
 				},
 				{
 					"name": "derivedColumn9"
+				},
+				{
+					"name": "derivedColumn10"
 				}
 			],
 			"scriptLines": [
@@ -262,6 +265,7 @@
 				"CountryCSV derive(ModifiedUTCDate = currentUTC()) ~> derivedColumn7",
 				"LocationCSV derive(ModifiedUTCDate = currentUTC()) ~> derivedColumn8",
 				"ChannelTypeCSV derive(ModifiedUTCDate = currentUTC()) ~> derivedColumn9",
+				"DateCSV derive(ModifiedUTCDate = currentUTC()) ~> derivedColumn10",
 				"derivedColumn1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     store: 'synapse',",
@@ -310,7 +314,7 @@
 				"     database: 'adworks',",
 				"     tableName: 'ProductData',",
 				"     recreate:true) ~> ProductData",
-				"DateCSV sink(allowSchemaDrift: true,",
+				"derivedColumn10 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     store: 'synapse',",
 				"     databaseType: 'spark',",
