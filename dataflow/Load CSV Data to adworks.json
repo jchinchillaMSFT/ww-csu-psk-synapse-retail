@@ -1,6 +1,9 @@
 {
 	"name": "Load CSV Data to adworks",
 	"properties": {
+		"folder": {
+			"name": "adworks"
+		},
 		"type": "MappingDataFlow",
 		"typeProperties": {
 			"sources": [
