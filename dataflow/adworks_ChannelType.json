@@ -16,7 +16,11 @@
 					"name": "ChannelType"
 				}
 			],
-			"transformations": [],
+			"transformations": [
+				{
+					"name": "SurrogateKey"
+				}
+			],
 			"scriptLines": [
 				"source(output(",
 				"          ChannelTypeId as short,",
@@ -29,14 +33,22 @@
 				"     format: 'table',",
 				"     database: 'adworks',",
 				"     tableName: 'ChannelType') ~> ChannelTypeSource",
-				"ChannelTypeSource sink(allowSchemaDrift: true,",
+				"ChannelTypeSource keyGenerate(output(ChannelTypeKey as long),",
+				"     startAt: 1L,",
+				"     stepValue: 1L) ~> SurrogateKey",
+				"SurrogateKey sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     store: 'synapse',",
 				"     databaseType: 'spark',",
 				"     format: 'table',",
 				"     database: 'adworkstarget',",
 				"     tableName: 'ChannelType',",
-				"     recreate:true) ~> ChannelType"
+				"     recreate:true,",
+				"     mapColumn(",
+				"          ChannelTypeId,",
+				"          ChannelTypeName,",
+				"          ChannelTypeKey",
+				"     )) ~> ChannelType"
 			]
 		}
 	}
