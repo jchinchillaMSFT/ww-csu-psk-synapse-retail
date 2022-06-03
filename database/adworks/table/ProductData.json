@@ -23,8 +23,6 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -38,8 +36,6 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -53,8 +49,6 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -67,9 +61,6 @@
 						"TypeName": "double",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "double"
 						}
@@ -83,8 +74,6 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -97,9 +86,6 @@
 						"TypeName": "double",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "double"
 						}
@@ -113,8 +99,6 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -128,8 +112,6 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -142,9 +124,6 @@
 						"TypeName": "short",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
-						"Precision": 0,
-						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "short"
 						}
