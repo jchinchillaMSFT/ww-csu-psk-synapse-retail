@@ -1,0 +1,50 @@
+{
+	"name": "Pipeline 1",
+	"properties": {
+		"activities": [
+			{
+				"name": "Data flow1",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "1.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "adworksCSV_copy1",
+						"type": "DataFlowReference",
+						"datasetParameters": {
+							"CustomerDataCSV": {
+								"fileName": "CustomerData.csv",
+								"folderPath": {
+									"value": "@variables('adworksSourceFolderPath')",
+									"type": "Expression"
+								}
+							}
+						}
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			}
+		],
+		"variables": {
+			"adworksSourceFolderPath": {
+				"type": "String",
+				"defaultValue": "AdventureWorks/CSV-Source"
+			}
+		},
+		"folder": {
+			"name": "2. adworks"
+		},
+		"annotations": []
+	}
+}
