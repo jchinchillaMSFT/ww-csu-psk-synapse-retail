@@ -19,6 +19,9 @@
 			],
 			"transformations": [],
 			"scriptLines": [
+				"parameters{",
+				"     tableName as string",
+				"}",
 				"source(output(",
 				"          CountryId as short,",
 				"          IsoCountryName as string",
@@ -32,7 +35,8 @@
 				"     databaseType: 'spark',",
 				"     format: 'table',",
 				"     database: 'default',",
-				"     tableName: 'test1') ~> sink1"
+				"     tableName: 'test1',",
+				"     recreate:true) ~> sink1"
 			]
 		}
 	}
