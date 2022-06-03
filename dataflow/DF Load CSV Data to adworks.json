@@ -1,5 +1,5 @@
 {
-	"name": "Dataflow1",
+	"name": "DF Load CSV Data to adworks",
 	"properties": {
 		"type": "MappingDataFlow",
 		"typeProperties": {
