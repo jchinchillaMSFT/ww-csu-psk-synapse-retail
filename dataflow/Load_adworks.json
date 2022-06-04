@@ -12,12 +12,12 @@
 						"referenceName": "adworksRaw",
 						"type": "DatasetReference"
 					},
-					"name": "source1"
+					"name": "CSVSource"
 				}
 			],
 			"sinks": [
 				{
-					"name": "sink1"
+					"name": "adworksSink"
 				}
 			],
 			"transformations": [],
@@ -31,15 +31,15 @@
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> source1",
-				"source1 sink(allowSchemaDrift: true,",
+				"     ignoreNoFilesFound: false) ~> CSVSource",
+				"CSVSource sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     store: 'synapse',",
 				"     databaseType: 'spark',",
 				"     format: 'table',",
 				"     database: 'adworks',",
 				"     tableName: ($tableName),",
-				"     recreate:true) ~> sink1"
+				"     recreate:true) ~> adworksSink"
 			]
 		}
 	}
