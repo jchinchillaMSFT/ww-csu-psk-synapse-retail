@@ -1,8 +1,8 @@
 {
-	"name": "SQL script 3",
+	"name": "adworks Row Counts",
 	"properties": {
 		"content": {
-			"query": "SELECT count(*) as RowCount\n FROM [adworks].[dbo].[ChannelType]\n\n SELECT count(*) as RowCount\n FROM [adworks].[dbo].[Country]\n\n SELECT count(*) as RowCount\n FROM [adworks].[dbo].[CustomerData]\n\n SELECT count(*) as [Date_cnt]\n FROM [adworks].[dbo].[Date]\n\n SELECT count(*) as ProductData_cnt\n FROM [adworks].[dbo].[ProductData]\n\n SELECT count(*) as Reseller_cnt\n FROM [adworks].[dbo].[Reseller]\n\n SELECT count(*) as Sales_cnt\n FROM [adworks].[dbo].[Sales]\n \n SELECT count(*) as SalesOrder_cnt\n FROM [adworks].[dbo].[SalesOrder]\n\n SELECT count(*) as SalesTerritory_cnt\n FROM [adworks].[dbo].[SalesTerritory]",
+			"query": "SELECT 'ChannelType' as [TableName], count(*) as [RowCount]\n FROM [adworks].[dbo].[ChannelType]\nUNION ALL\n SELECT 'Country' as [TableName], count(*) as [RowCount]\n FROM [adworks].[dbo].[Country]\nUNION ALL\n SELECT 'CustomerData' as [TableName], count(*) as [RowCount]\n FROM [adworks].[dbo].[CustomerData]\nUNION ALL\n SELECT 'Date' as [TableName], count(*) as [RowCount]\n FROM [adworks].[dbo].[Date]\nUNION ALL\n SELECT 'ProductData' as [TableName], count(*) as [RowCount]\n FROM [adworks].[dbo].[ProductData]\nUNION ALL\n SELECT 'Reseller' as [TableName], count(*) as [RowCount]\n FROM [adworks].[dbo].[Reseller]\nUNION ALL\n SELECT 'Sales' as [TableName], count(*) as [RowCount]\n FROM [adworks].[dbo].[Sales]\n UNION ALL\n SELECT 'SalesOrder' as [TableName], count(*) as [RowCount]\n FROM [adworks].[dbo].[SalesOrder]\nUNION ALL\n SELECT 'SalesTerritory' as [TableName], count(*) as [RowCount]\n FROM [adworks].[dbo].[SalesTerritory]",
 			"metadata": {
 				"language": "sql"
 			},
