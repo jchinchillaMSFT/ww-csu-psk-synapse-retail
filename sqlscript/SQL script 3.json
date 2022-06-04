@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 3",
+	"properties": {
+		"content": {
+			"query": "SELECT count(*) as RowCount\n FROM [adworks].[dbo].[ChannelType]\n\n SELECT count(*) as RowCount\n FROM [adworks].[dbo].[Country]\n\n SELECT count(*) as RowCount\n FROM [adworks].[dbo].[CustomerData]\n\n SELECT count(*) as [Date_cnt]\n FROM [adworks].[dbo].[Date]\n\n SELECT count(*) as ProductData_cnt\n FROM [adworks].[dbo].[ProductData]\n\n SELECT count(*) as Reseller_cnt\n FROM [adworks].[dbo].[Reseller]\n\n SELECT count(*) as Sales_cnt\n FROM [adworks].[dbo].[Sales]\n \n SELECT count(*) as SalesOrder_cnt\n FROM [adworks].[dbo].[SalesOrder]\n\n SELECT count(*) as SalesTerritory_cnt\n FROM [adworks].[dbo].[SalesTerritory]",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "adworks",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
