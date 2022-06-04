@@ -58,7 +58,7 @@
 					"isSequential": true,
 					"activities": [
 						{
-							"name": "Data flow1",
+							"name": "Load adworks",
 							"type": "ExecuteDataFlow",
 							"dependsOn": [
 								{
@@ -87,7 +87,7 @@
 										}
 									},
 									"datasetParameters": {
-										"source1": {
+										"CSVSource": {
 											"fileName": {
 												"value": "@item().name",
 												"type": "Expression"
