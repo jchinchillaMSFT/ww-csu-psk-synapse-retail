@@ -19,12 +19,22 @@
 			"transformations": [
 				{
 					"name": "SurrogateKey"
+				},
+				{
+					"name": "aggregate1"
+				},
+				{
+					"name": "select1"
 				}
 			],
 			"scriptLines": [
 				"source(output(",
-				"          ChannelTypeId as short,",
-				"          ChannelTypeName as string",
+				"          CountryId as short,",
+				"          IsoCountryName as string,",
+				"          SalesOrderLine as string,",
+				"          SalesOrder as string,",
+				"          SalesOrderLineKey as string,",
+				"          Channel as string",
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
@@ -32,10 +42,17 @@
 				"     databaseType: 'spark',",
 				"     format: 'table',",
 				"     database: 'adworks',",
-				"     tableName: 'ChannelType') ~> ChannelTypeSource",
-				"ChannelTypeSource keyGenerate(output(ChannelTypeKey as long),",
+				"     tableName: 'SalesOrder') ~> ChannelTypeSource",
+				"select1 keyGenerate(output(ChannelTypeKey as long),",
 				"     startAt: 1L,",
 				"     stepValue: 1L) ~> SurrogateKey",
+				"ChannelTypeSource aggregate(groupBy(Channel),",
+				"     firstValue = first(Channel)) ~> aggregate1",
+				"aggregate1 select(mapColumn(",
+				"          Channel",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select1",
 				"SurrogateKey sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     store: 'synapse',",
@@ -45,8 +62,7 @@
 				"     tableName: 'ChannelType',",
 				"     recreate:true,",
 				"     mapColumn(",
-				"          ChannelTypeId,",
-				"          ChannelTypeName,",
+				"          Channel,",
 				"          ChannelTypeKey",
 				"     )) ~> ChannelType"
 			]
