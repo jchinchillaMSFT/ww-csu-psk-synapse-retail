@@ -1,0 +1,113 @@
+{
+	"name": "ProductCategory",
+	"properties": {
+		"Name": "ProductCategory",
+		"EntityType": "TABLE",
+		"Namespace": {
+			"DatabaseName": "RetailTemplateDB"
+		},
+		"Description": "A means of categorizing retail products by functions performed, characteristics or similar common characteristics.\n\nEx:\n\n- Baby\n- Beer, Wine & Spirits\n- Beverages\n- Bread & Bakery\n- Breakfast & Cereal\n- Canned Goods & Soups\n- Clothing & Apparel\n- Condiments / Spices & Bake\n- Cookies, Snacks & Candy\n- Dairy, Eggs & Cheese\n- Deli & Signature Cafe\n- Frozen Foods\n- Fruits & Vegetables\n- Grains, Pasta & Sides\n- International Cuisine\n- Meat & Seafood\n- Paper, Cleaning & Home\n- Personal Care & Pharmacy\n- Pet Care\n- Tobacco",
+		"TableType": "EXTERNAL",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"StorageDescriptor": {
+			"Columns": [
+				{
+					"Name": "ProductCategoryId",
+					"Description": "The unique identifier of a Product Category.",
+					"BaseAttributeReference": {
+						"Entity": "ProductCategory.cdm.json/ProductCategory",
+						"Name": "ProductCategoryId"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					}
+				},
+				{
+					"Name": "ProductCategoryName",
+					"Description": "The name of a Product Category.",
+					"BaseAttributeReference": {
+						"Entity": "ProductCategory.cdm.json/ProductCategory",
+						"Name": "ProductCategoryName"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 128,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					}
+				},
+				{
+					"Name": "ProductCategoryDescription",
+					"Description": "The description of a Product Category.",
+					"BaseAttributeReference": {
+						"Entity": "ProductCategory.cdm.json/ProductCategory",
+						"Name": "ProductCategoryDescription"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 512,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					}
+				}
+			],
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/RetailTemplateDB/ProductCategory",
+					"delimiter": ",",
+					"multiLine": "false",
+					"firstRowAsHeader": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/RetailTemplateDB/ProductCategory",
+				"Properties": {
+					"LinkedServiceName": "azsynapsewksgo2d3-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ProductCategoryId\":{\"entity\":\"ProductCategory.cdm.json/ProductCategory\",\"name\":\"ProductCategoryId\"},\"ProductCategoryName\":{\"entity\":\"ProductCategory.cdm.json/ProductCategory\",\"name\":\"ProductCategoryName\"},\"ProductCategoryDescription\":{\"entity\":\"ProductCategory.cdm.json/ProductCategory\",\"name\":\"ProductCategoryDescription\"}}}"
+			},
+			"Compressed": false,
+			"IsStoredAsSubdirectories": false
+		},
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ProductCategory\",\"path\":\"ProductCategory.cdm.json/ProductCategory\"},\"description\":\"A means of categorizing retail products by functions performed, characteristics or similar common characteristics.\\n\\nEx:\\n\\n- Baby\\n- Beer, Wine & Spirits\\n- Beverages\\n- Bread & Bakery\\n- Breakfast & Cereal\\n- Canned Goods & Soups\\n- Clothing & Apparel\\n- Condiments / Spices & Bake\\n- Cookies, Snacks & Candy\\n- Dairy, Eggs & Cheese\\n- Deli & Signature Cafe\\n- Frozen Foods\\n- Fruits & Vegetables\\n- Grains, Pasta & Sides\\n- International Cuisine\\n- Meat & Seafood\\n- Paper, Cleaning & Home\\n- Personal Care & Pharmacy\\n- Pet Care\\n- Tobacco\",\"primaryKey\":[\"ProductCategoryId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductCategory.cdm.json/ProductCategory\",\"name\":\"ProductCategoryId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Product Category.\",\"isNullable\":false,\"name\":\"ProductCategoryId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductCategory.cdm.json/ProductCategory\",\"name\":\"ProductCategoryName\"},\"dataType\":\"string\",\"dataTypeLength\":128,\"description\":\"The name of a Product Category.\",\"isNullable\":true,\"name\":\"ProductCategoryName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductCategory.cdm.json/ProductCategory\",\"name\":\"ProductCategoryDescription\"},\"dataType\":\"string\",\"dataTypeLength\":512,\"description\":\"The description of a Product Category.\",\"isNullable\":true,\"name\":\"ProductCategoryDescription\"}]}}}",
+			"Description": "A means of categorizing retail products by functions performed, characteristics or similar common characteristics.\n\nEx:\n\n- Baby\n- Beer, Wine & Spirits\n- Beverages\n- Bread & Bakery\n- Breakfast & Cereal\n- Canned Goods & Soups\n- Clothing & Apparel\n- Condiments / Spices & Bake\n- Cookies, Snacks & Candy\n- Dairy, Eggs & Cheese\n- Deli & Signature Cafe\n- Frozen Foods\n- Fruits & Vegetables\n- Grains, Pasta & Sides\n- International Cuisine\n- Meat & Seafood\n- Paper, Cleaning & Home\n- Personal Care & Pharmacy\n- Pet Care\n- Tobacco",
+			"DisplayFolderInfo": "{\"name\":\"Product\",\"colorCode\":\"#BD4B37\"}",
+			"PrimaryKeys": "ProductCategoryId",
+			"spark.sql.sources.provider": "csv",
+			"sql:IsAppendOnly": false
+		},
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false
+	},
+	"type": "TABLE"
+}
