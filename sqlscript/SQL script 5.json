@@ -1,0 +1,20 @@
+{
+	"name": "SQL script 5",
+	"properties": {
+		"folder": {
+			"name": "adworkstarget"
+		},
+		"content": {
+			"query": "CREATE TABLE IndividualCustomer\n(\nCustomerId [integer], \nIndividualCustomerName [string]\n)\n\nCREATE TABLE Customer\n(\n[CustomerId] [integer], \n[CustomerKey] [string], \n[LocationId] [integer]\n)\n\nCREATE TABLE ProductDimCategory\n(\n[ProductId] [integer], \n[Model] [string], \n[Category] [string], \n[Subcategory] [string]    \n)\n\n\nCREATE TABLE Item\n\n(\n\n    \n)\n\n\nCREATE TABLE\n(\n\n    \n)\n\nCREATE TABLE\n(\n\n    \n)\n\nCREATE TABLE\n(\n\n    \n)\n\nCREATE TABLE\n(\n\n    \n)",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "adworkstarget",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
