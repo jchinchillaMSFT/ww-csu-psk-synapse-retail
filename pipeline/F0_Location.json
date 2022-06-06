@@ -17,7 +17,19 @@
 				"typeProperties": {
 					"dataflow": {
 						"referenceName": "adworks_Location",
-						"type": "DataFlowReference"
+						"type": "DataFlowReference",
+						"datasetParameters": {
+							"LocationCSV": {
+								"fileName": {
+									"value": "@variables('fileName')",
+									"type": "Expression"
+								},
+								"folderPath": {
+									"value": "@variables('folderPath')",
+									"type": "Expression"
+								}
+							}
+						}
 					},
 					"compute": {
 						"coreCount": 8,
@@ -27,6 +39,14 @@
 				}
 			}
 		],
+		"variables": {
+			"fileName": {
+				"type": "String"
+			},
+			"folderPath": {
+				"type": "String"
+			}
+		},
 		"folder": {
 			"name": "3. adworkstarget"
 		},
