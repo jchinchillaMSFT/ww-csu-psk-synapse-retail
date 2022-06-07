@@ -1,0 +1,23 @@
+{
+	"name": "relationship-iqsbhahcrz",
+	"properties": {
+		"Name": "relationship-iqsbhahcrz",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "adworks"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Sales",
+		"ToTableName": "SalesTerritory",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "SalesTerritoryKey",
+				"ToColumnName": "SalesTerritoryKey"
+			}
+		],
+		"RelationshipType": 0
+	},
+	"type": "RELATIONSHIP"
+}
