@@ -45,15 +45,15 @@
 				"SerializeLib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
 				"Properties": {
 					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/ChannelType",
-					"FormatTypeSetToDatabaseDefault": false
+					"FormatTypeSetToDatabaseDefault": true
 				}
 			},
 			"Source": {
 				"Provider": "ADLS",
 				"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/ChannelType",
 				"Properties": {
-					"LinkedServiceName": "",
-					"LocationSetToDatabaseDefault": false
+					"LinkedServiceName": "azwksdatalakego2d3",
+					"LocationSetToDatabaseDefault": true
 				}
 			},
 			"Properties": {
@@ -82,11 +82,11 @@
 		"Properties": {
 			"Transient_lastDdlTime": "1649737605",
 			"PrimaryKeys": "",
+			"DisplayFolderInfo": "{\"name\":\"Others\",\"colorCode\":\"\"}",
 			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ChannelTypeId\",\"type\":\"short\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ChannelTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}",
 			"spark.sql.sources.schema.numParts": "1",
 			"spark.sql.create.version": "2.4.8.2.6.99.201-58153078",
-			"spark.sql.sources.provider": "parquet",
-			"DisplayFolderInfo": "{\"name\":\"Others\",\"colorCode\":\"\"}"
+			"spark.sql.sources.provider": "parquet"
 		},
 		"ObjectVersion": 1,
 		"ObjectId": "492826d3-e3e7-4a46-8bc7-6299214072d4"

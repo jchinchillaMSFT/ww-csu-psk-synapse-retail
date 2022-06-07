@@ -110,15 +110,15 @@
 				"SerializeLib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
 				"Properties": {
 					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/CustomerData",
-					"FormatTypeSetToDatabaseDefault": "true"
+					"FormatTypeSetToDatabaseDefault": true
 				}
 			},
 			"Source": {
 				"Provider": "ADLS",
 				"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/CustomerData",
 				"Properties": {
-					"LinkedServiceName": "",
-					"LocationSetToDatabaseDefault": false
+					"LinkedServiceName": "azwksdatalakego2d3",
+					"LocationSetToDatabaseDefault": true
 				}
 			},
 			"Properties": {
@@ -147,11 +147,11 @@
 		"Properties": {
 			"Transient_lastDdlTime": "1648792212",
 			"PrimaryKeys": "",
+			"DisplayFolderInfo": "{\"name\":\"Others\",\"colorCode\":\"\"}",
 			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"CustomerKey\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CustomerId\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"Customer\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"City\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StateProvince\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CountryRegion\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PostalCode\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}",
 			"spark.sql.sources.schema.numParts": "1",
 			"spark.sql.sources.provider": "parquet",
-			"spark.sql.create.version": "2.4.8.2.6.99.201-58153078",
-			"DisplayFolderInfo": "{\"name\":\"Others\",\"colorCode\":\"\"}"
+			"spark.sql.create.version": "2.4.8.2.6.99.201-58153078"
 		},
 		"ObjectVersion": 1,
 		"ObjectId": "e4e11b0f-f266-444b-8b0e-80adfae0f106"
