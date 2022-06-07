@@ -1,0 +1,23 @@
+{
+	"name": "relationship-todujuafws",
+	"properties": {
+		"Name": "relationship-todujuafws",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "adworks"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Sales",
+		"ToTableName": "Date",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "DueDateKey",
+				"ToColumnName": "DateKey"
+			}
+		],
+		"RelationshipType": 0
+	},
+	"type": "RELATIONSHIP"
+}
