@@ -1697,7 +1697,7 @@
 						"type": "ExecutePipeline",
 						"dependsOn": [
 							{
-								"activity": "F0_ChannelType",
+								"activity": "L0_IndividualCustomer",
 								"dependencyConditions": [
 									"Succeeded"
 								]
@@ -1831,27 +1831,6 @@
 							"waitOnCompletion": true,
 							"parameters": {}
 						}
-					},
-					{
-						"name": "F0_ChannelType",
-						"type": "ExecutePipeline",
-						"dependsOn": [
-							{
-								"activity": "L0_IndividualCustomer",
-								"dependencyConditions": [
-									"Succeeded"
-								]
-							}
-						],
-						"userProperties": [],
-						"typeProperties": {
-							"pipeline": {
-								"referenceName": "F0_ChannelType",
-								"type": "PipelineReference"
-							},
-							"waitOnCompletion": true,
-							"parameters": {}
-						}
 					}
 				],
 				"policy": {
@@ -1871,8 +1850,7 @@
 				"[concat(variables('workspaceId'), '/pipelines/F3_Item_ProductCategoryDim_Product_TransactionLineItem')]",
 				"[concat(variables('workspaceId'), '/pipelines/L0_IndividualCustomer')]",
 				"[concat(variables('workspaceId'), '/pipelines/F0_Country')]",
-				"[concat(variables('workspaceId'), '/pipelines/F0_Location')]",
-				"[concat(variables('workspaceId'), '/pipelines/F0_ChannelType')]"
+				"[concat(variables('workspaceId'), '/pipelines/F0_Location')]"
 			]
 		},
 		{
@@ -5823,104 +5801,6 @@
 						"ActionType": "CREATE",
 						"OldEntity": null,
 						"NewEntity": {
-							"Name": "ChannelType",
-							"EntityType": "TABLE",
-							"TableType": "EXTERNAL",
-							"Namespace": {
-								"SchemaName": null,
-								"DatabaseName": "adworks"
-							},
-							"StorageDescriptor": {
-								"Distribution": null,
-								"Columns": [
-									{
-										"Name": "ChannelTypeId",
-										"Description": null,
-										"OriginDataTypeName": {
-											"TypeName": "short",
-											"IsComplexType": false,
-											"IsNullable": true,
-											"Properties": {
-												"HIVE_TYPE_STRING": "short"
-											}
-										}
-									},
-									{
-										"Name": "ChannelTypeName",
-										"Description": null,
-										"OriginDataTypeName": {
-											"TypeName": "string",
-											"IsComplexType": false,
-											"IsNullable": true,
-											"Length": 0,
-											"Properties": {
-												"HIVE_TYPE_STRING": "string"
-											}
-										}
-									}
-								],
-								"ColumnSetEntityName": "23abb8b5-dbbe-4042-ac35-69a5e13a0425",
-								"Format": {
-									"InputFormat": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
-									"OutputFormat": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
-									"FormatType": "parquet",
-									"SerializeLib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
-									"Properties": {
-										"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/ChannelType",
-										"FormatTypeSetToDatabaseDefault": false
-									}
-								},
-								"Source": {
-									"Provider": "ADLS",
-									"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/ChannelType",
-									"Properties": {
-										"LinkedServiceName": "",
-										"LocationSetToDatabaseDefault": false
-									}
-								},
-								"Properties": {
-									"textinputformat.record.delimiter": ",",
-									"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
-									"derivedModelAttributeInfo": "{\"attributeReferences\":{}}"
-								},
-								"Compressed": false,
-								"SerDeInfo": null,
-								"IsStoredAsSubdirectories": false
-							},
-							"Owner": "trusted-service-user",
-							"CreateTime": 1649737605,
-							"LastAccessTime": 0,
-							"Retention": 0,
-							"Temporary": false,
-							"IsRewriteEnabled": false,
-							"ViewOriginalText": null,
-							"ViewExpandedText": null,
-							"Origin": {
-								"Type": "SPARK"
-							},
-							"OriginObjectId": null,
-							"IsSharedEntity": false,
-							"PublishStatus": "PUBLISHED",
-							"Properties": {
-								"Transient_lastDdlTime": "1649737605",
-								"PrimaryKeys": "",
-								"DisplayFolderInfo": "{\"name\":\"Others\",\"colorCode\":\"\"}",
-								"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ChannelTypeId\",\"type\":\"short\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ChannelTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}",
-								"spark.sql.sources.schema.numParts": "1",
-								"spark.sql.create.version": "2.4.8.2.6.99.201-58153078",
-								"spark.sql.sources.provider": "parquet"
-							},
-							"ObjectVersion": 1,
-							"ObjectId": "492826d3-e3e7-4a46-8bc7-6299214072d4"
-						},
-						"Source": {
-							"Type": "SPARK"
-						}
-					},
-					{
-						"ActionType": "CREATE",
-						"OldEntity": null,
-						"NewEntity": {
 							"Name": "Country",
 							"EntityType": "TABLE",
 							"TableType": "EXTERNAL",
@@ -5965,15 +5845,15 @@
 									"SerializeLib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
 									"Properties": {
 										"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/Country",
-										"FormatTypeSetToDatabaseDefault": false
+										"FormatTypeSetToDatabaseDefault": true
 									}
 								},
 								"Source": {
 									"Provider": "ADLS",
 									"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/Country",
 									"Properties": {
-										"LinkedServiceName": "",
-										"LocationSetToDatabaseDefault": false
+										"LinkedServiceName": "azwksdatalakego2d3",
+										"LocationSetToDatabaseDefault": true
 									}
 								},
 								"Properties": {
@@ -6009,7 +5889,8 @@
 								"spark.sql.sources.provider": "parquet"
 							},
 							"ObjectVersion": 1,
-							"ObjectId": "47b9db82-43a7-4e42-9885-772e66cf77fb"
+							"ObjectId": "47b9db82-43a7-4e42-9885-772e66cf77fb",
+							"Partitioning": {}
 						},
 						"Source": {
 							"Type": "SPARK"
@@ -6128,15 +6009,15 @@
 									"SerializeLib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
 									"Properties": {
 										"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/CustomerData",
-										"FormatTypeSetToDatabaseDefault": "true"
+										"FormatTypeSetToDatabaseDefault": true
 									}
 								},
 								"Source": {
 									"Provider": "ADLS",
 									"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/CustomerData",
 									"Properties": {
-										"LinkedServiceName": "",
-										"LocationSetToDatabaseDefault": false
+										"LinkedServiceName": "azwksdatalakego2d3",
+										"LocationSetToDatabaseDefault": true
 									}
 								},
 								"Properties": {
@@ -6172,7 +6053,8 @@
 								"spark.sql.create.version": "2.4.8.2.6.99.201-58153078"
 							},
 							"ObjectVersion": 1,
-							"ObjectId": "e4e11b0f-f266-444b-8b0e-80adfae0f106"
+							"ObjectId": "e4e11b0f-f266-444b-8b0e-80adfae0f106",
+							"Partitioning": {}
 						},
 						"Source": {
 							"Type": "SPARK"
@@ -6200,11 +6082,11 @@
 										"Name": "DateKey",
 										"Description": null,
 										"OriginDataTypeName": {
-											"TypeName": "date",
+											"TypeName": "integer",
 											"IsComplexType": false,
 											"IsNullable": true,
 											"Properties": {
-												"HIVE_TYPE_STRING": "date"
+												"HIVE_TYPE_STRING": "integer"
 											}
 										}
 									},
@@ -6469,11 +6351,11 @@
 										"Name": "ProductKey",
 										"Description": null,
 										"OriginDataTypeName": {
-											"TypeName": "short",
+											"TypeName": "integer",
 											"IsComplexType": false,
 											"IsNullable": true,
 											"Properties": {
-												"HIVE_TYPE_STRING": "short"
+												"HIVE_TYPE_STRING": "integer"
 											}
 										}
 									}
@@ -6651,11 +6533,11 @@
 										"Name": "ResellerKey",
 										"Description": null,
 										"OriginDataTypeName": {
-											"TypeName": "short",
+											"TypeName": "integer",
 											"IsComplexType": false,
-											"IsNullable": true,
+											"IsNullable": false,
 											"Properties": {
-												"HIVE_TYPE_STRING": "short"
+												"HIVE_TYPE_STRING": "integer"
 											}
 										}
 									}
@@ -6707,7 +6589,7 @@
 								"NumFiles": "2",
 								"TotalSize": "55570",
 								"DisplayFolderInfo": "{\"name\":\"Others\",\"colorCode\":\"\"}",
-								"PrimaryKeys": "",
+								"PrimaryKeys": "ResellerKey",
 								"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PostalCode\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CountryRegion\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StateProvince\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"City\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"Reseller\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"BusinessType\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ResellerId\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ResellerKey\",\"type\":\"short\",\"nullable\":true,\"metadata\":{}}]}",
 								"spark.sql.sources.schema.numParts": "1",
 								"spark.sql.create.version": "2.4.8.2.6.99.201-58153078",
@@ -6935,15 +6817,15 @@
 									"SerializeLib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
 									"Properties": {
 										"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/Sales",
-										"FormatTypeSetToDatabaseDefault": "true"
+										"FormatTypeSetToDatabaseDefault": true
 									}
 								},
 								"Source": {
 									"Provider": "ADLS",
 									"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/Sales",
 									"Properties": {
-										"LinkedServiceName": "",
-										"LocationSetToDatabaseDefault": false
+										"LinkedServiceName": "azwksdatalakego2d3",
+										"LocationSetToDatabaseDefault": true
 									}
 								},
 								"Properties": {
@@ -6979,7 +6861,8 @@
 								"spark.sql.create.version": "2.4.8.2.6.99.201-58153078"
 							},
 							"ObjectVersion": 1,
-							"ObjectId": "ceef3d7e-407b-4782-bdb8-9c79b26c039a"
+							"ObjectId": "ceef3d7e-407b-4782-bdb8-9c79b26c039a",
+							"Partitioning": {}
 						},
 						"Source": {
 							"Type": "SPARK"
@@ -7137,11 +7020,11 @@
 										"Name": "SalesTerritoryKey",
 										"Description": null,
 										"OriginDataTypeName": {
-											"TypeName": "short",
+											"TypeName": "integer",
 											"IsComplexType": false,
 											"IsNullable": true,
 											"Properties": {
-												"HIVE_TYPE_STRING": "short"
+												"HIVE_TYPE_STRING": "integer"
 											}
 										}
 									},
@@ -7240,6 +7123,168 @@
 							},
 							"ObjectVersion": 4,
 							"ObjectId": "7b3f68de-35b9-4a7c-812e-356d2620a893"
+						},
+						"Source": {
+							"Type": "SPARK"
+						}
+					},
+					{
+						"ActionType": "CREATE",
+						"OldEntity": null,
+						"NewEntity": {
+							"Name": "relationship-bhbvnxbtwp",
+							"EntityType": "RELATIONSHIP",
+							"Namespace": {
+								"DatabaseName": "adworks"
+							},
+							"Origin": {
+								"Type": "SPARK"
+							},
+							"FromTableName": "Sales",
+							"ToTableName": "SalesOrder",
+							"ColumnRelationshipInformations": [
+								{
+									"FromColumnName": "SalesOrderLineKey",
+									"ToColumnName": "SalesOrderLineKey"
+								}
+							],
+							"RelationshipType": 0,
+							"Properties": {}
+						},
+						"Source": {
+							"Type": "SPARK"
+						}
+					},
+					{
+						"ActionType": "CREATE",
+						"OldEntity": null,
+						"NewEntity": {
+							"Name": "relationship-lilgowjpqh",
+							"EntityType": "RELATIONSHIP",
+							"Namespace": {
+								"DatabaseName": "adworks"
+							},
+							"Origin": {
+								"Type": "SPARK"
+							},
+							"FromTableName": "Sales",
+							"ToTableName": "Reseller",
+							"ColumnRelationshipInformations": [
+								{
+									"FromColumnName": "ResellerKey",
+									"ToColumnName": "ResellerKey"
+								}
+							],
+							"RelationshipType": 0,
+							"Properties": {}
+						},
+						"Source": {
+							"Type": "SPARK"
+						}
+					},
+					{
+						"ActionType": "CREATE",
+						"OldEntity": null,
+						"NewEntity": {
+							"Name": "relationship-aotbcwriuh",
+							"EntityType": "RELATIONSHIP",
+							"Namespace": {
+								"DatabaseName": "adworks"
+							},
+							"Origin": {
+								"Type": "SPARK"
+							},
+							"FromTableName": "Sales",
+							"ToTableName": "ProductData",
+							"ColumnRelationshipInformations": [
+								{
+									"FromColumnName": "ProductKey",
+									"ToColumnName": "ProductKey"
+								}
+							],
+							"RelationshipType": 0,
+							"Properties": {}
+						},
+						"Source": {
+							"Type": "SPARK"
+						}
+					},
+					{
+						"ActionType": "CREATE",
+						"OldEntity": null,
+						"NewEntity": {
+							"Name": "relationship-iqsbhahcrz",
+							"EntityType": "RELATIONSHIP",
+							"Namespace": {
+								"DatabaseName": "adworks"
+							},
+							"Origin": {
+								"Type": "SPARK"
+							},
+							"FromTableName": "Sales",
+							"ToTableName": "SalesTerritory",
+							"ColumnRelationshipInformations": [
+								{
+									"FromColumnName": "SalesTerritoryKey",
+									"ToColumnName": "SalesTerritoryKey"
+								}
+							],
+							"RelationshipType": 0,
+							"Properties": {}
+						},
+						"Source": {
+							"Type": "SPARK"
+						}
+					},
+					{
+						"ActionType": "CREATE",
+						"OldEntity": null,
+						"NewEntity": {
+							"Name": "relationship-urhrjkletb",
+							"EntityType": "RELATIONSHIP",
+							"Namespace": {
+								"DatabaseName": "adworks"
+							},
+							"Origin": {
+								"Type": "SPARK"
+							},
+							"FromTableName": "Sales",
+							"ToTableName": "Date",
+							"ColumnRelationshipInformations": [
+								{
+									"FromColumnName": "OrderDateKey",
+									"ToColumnName": "DateKey"
+								}
+							],
+							"RelationshipType": 0,
+							"Properties": {}
+						},
+						"Source": {
+							"Type": "SPARK"
+						}
+					},
+					{
+						"ActionType": "CREATE",
+						"OldEntity": null,
+						"NewEntity": {
+							"Name": "relationship-todujuafws",
+							"EntityType": "RELATIONSHIP",
+							"Namespace": {
+								"DatabaseName": "adworks"
+							},
+							"Origin": {
+								"Type": "SPARK"
+							},
+							"FromTableName": "Sales",
+							"ToTableName": "Date",
+							"ColumnRelationshipInformations": [
+								{
+									"FromColumnName": "DueDateKey",
+									"ToColumnName": "DateKey"
+								}
+							],
+							"RelationshipType": 0,
+							"Properties": {}
 						},
 						"Source": {
 							"Type": "SPARK"
