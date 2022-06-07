@@ -77,6 +77,22 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
+								"dataflow": {
+									"referenceName": "Load_adworks",
+									"type": "DataFlowReference",
+									"datasetParameters": {
+										"CSVSource": {
+											"fileName": {
+												"value": "@item().name",
+												"type": "Expression"
+											},
+											"folderPath": {
+												"value": "@variables('adworksSourceFolderPath')",
+												"type": "Expression"
+											}
+										}
+									}
+								},
 								"compute": {
 									"coreCount": 8,
 									"computeType": "General"
