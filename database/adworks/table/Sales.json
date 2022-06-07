@@ -212,15 +212,15 @@
 				"SerializeLib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
 				"Properties": {
 					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/Sales",
-					"FormatTypeSetToDatabaseDefault": "true"
+					"FormatTypeSetToDatabaseDefault": true
 				}
 			},
 			"Source": {
 				"Provider": "ADLS",
 				"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/Sales",
 				"Properties": {
-					"LinkedServiceName": "",
-					"LocationSetToDatabaseDefault": false
+					"LinkedServiceName": "azwksdatalakego2d3",
+					"LocationSetToDatabaseDefault": true
 				}
 			},
 			"Properties": {
@@ -249,11 +249,11 @@
 		"Properties": {
 			"Transient_lastDdlTime": "1648791781",
 			"PrimaryKeys": "",
+			"DisplayFolderInfo": "{\"name\":\"Others\",\"colorCode\":\"\"}",
 			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"SalesAmount\",\"type\":\"decimal(10,0)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TotalProductCost\",\"type\":\"decimal(10,0)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProductStandardCost\",\"type\":\"decimal(10,0)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"UnitPriceDiscountPct\",\"type\":\"decimal(10,0)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ExtendedAmount\",\"type\":\"decimal(10,0)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"UnitPrice\",\"type\":\"decimal(10,0)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"OrderQuantity\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SalesTerritoryKey\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ShipDateKey\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DueDateKey\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"OrderDateKey\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProductKey\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CustomerKey\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ResellerKey\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SalesOrderLineKey\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}",
 			"spark.sql.sources.schema.numParts": "1",
 			"spark.sql.sources.provider": "parquet",
-			"spark.sql.create.version": "2.4.8.2.6.99.201-58153078",
-			"DisplayFolderInfo": "{\"name\":\"Others\",\"colorCode\":\"\"}"
+			"spark.sql.create.version": "2.4.8.2.6.99.201-58153078"
 		},
 		"ObjectVersion": 1,
 		"ObjectId": "ceef3d7e-407b-4782-bdb8-9c79b26c039a"

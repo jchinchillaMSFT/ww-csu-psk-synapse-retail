@@ -1,0 +1,23 @@
+{
+	"name": "relationship-urhrjkletb",
+	"properties": {
+		"Name": "relationship-urhrjkletb",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "adworks"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Sales",
+		"ToTableName": "Date",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "OrderDateKey",
+				"ToColumnName": "DateKey"
+			}
+		],
+		"RelationshipType": 0
+	},
+	"type": "RELATIONSHIP"
+}

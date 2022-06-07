@@ -19,11 +19,11 @@
 					"Name": "DateKey",
 					"Description": null,
 					"OriginDataTypeName": {
-						"TypeName": "date",
+						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Properties": {
-							"HIVE_TYPE_STRING": "date"
+							"HIVE_TYPE_STRING": "integer"
 						}
 					}
 				},

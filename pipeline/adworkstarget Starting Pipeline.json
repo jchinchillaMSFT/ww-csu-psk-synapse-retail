@@ -7,7 +7,7 @@
 				"type": "ExecutePipeline",
 				"dependsOn": [
 					{
-						"activity": "F0_ChannelType",
+						"activity": "L0_IndividualCustomer",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -130,26 +130,6 @@
 				"typeProperties": {
 					"pipeline": {
 						"referenceName": "F0_Location",
-						"type": "PipelineReference"
-					},
-					"waitOnCompletion": true
-				}
-			},
-			{
-				"name": "F0_ChannelType",
-				"type": "ExecutePipeline",
-				"dependsOn": [
-					{
-						"activity": "L0_IndividualCustomer",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
-				"userProperties": [],
-				"typeProperties": {
-					"pipeline": {
-						"referenceName": "F0_ChannelType",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true

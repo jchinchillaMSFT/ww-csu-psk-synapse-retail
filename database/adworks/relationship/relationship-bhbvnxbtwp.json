@@ -1,0 +1,23 @@
+{
+	"name": "relationship-bhbvnxbtwp",
+	"properties": {
+		"Name": "relationship-bhbvnxbtwp",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "adworks"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Sales",
+		"ToTableName": "SalesOrder",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "SalesOrderLineKey",
+				"ToColumnName": "SalesOrderLineKey"
+			}
+		],
+		"RelationshipType": 0
+	},
+	"type": "RELATIONSHIP"
+}
