@@ -80,6 +80,12 @@
 								"dataflow": {
 									"referenceName": "Load_adworks",
 									"type": "DataFlowReference",
+									"parameters": {
+										"tableName": {
+											"value": "'@{variables('tableName')}'",
+											"type": "Expression"
+										}
+									},
 									"datasetParameters": {
 										"CSVSource": {
 											"fileName": {
