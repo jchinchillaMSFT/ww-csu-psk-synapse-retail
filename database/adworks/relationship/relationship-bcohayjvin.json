@@ -1,0 +1,23 @@
+{
+	"name": "relationship-bcohayjvin",
+	"properties": {
+		"Name": "relationship-bcohayjvin",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "adworks"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Sales",
+		"ToTableName": "",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "",
+				"ToColumnName": ""
+			}
+		],
+		"RelationshipType": 0
+	},
+	"type": "RELATIONSHIP"
+}
