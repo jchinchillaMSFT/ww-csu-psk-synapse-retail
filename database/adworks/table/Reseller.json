@@ -112,7 +112,7 @@
 					"OriginDataTypeName": {
 						"TypeName": "integer",
 						"IsComplexType": false,
-						"IsNullable": true,
+						"IsNullable": false,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
@@ -166,7 +166,7 @@
 			"NumFiles": "2",
 			"TotalSize": "55570",
 			"DisplayFolderInfo": "{\"name\":\"Others\",\"colorCode\":\"\"}",
-			"PrimaryKeys": "",
+			"PrimaryKeys": "ResellerKey",
 			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PostalCode\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CountryRegion\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StateProvince\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"City\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"Reseller\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"BusinessType\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ResellerId\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ResellerKey\",\"type\":\"short\",\"nullable\":true,\"metadata\":{}}]}",
 			"spark.sql.sources.schema.numParts": "1",
 			"spark.sql.create.version": "2.4.8.2.6.99.201-58153078",
