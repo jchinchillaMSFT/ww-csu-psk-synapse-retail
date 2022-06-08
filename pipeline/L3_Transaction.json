@@ -14,12 +14,8 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "Transaction_DataFlow1",
-						"type": "DataFlowReference",
-						"parameters": {
-							"modifiedAfter": "toTimestamp(\"01-01-1900\")",
-							"modifiedBefore": "currentTimestamp()"
-						}
+						"referenceName": "FactSales_DF",
+						"type": "DataFlowReference"
 					},
 					"compute": {
 						"coreCount": 8,
