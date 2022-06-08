@@ -108,7 +108,7 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Properties": {
-							"DateFormat": "dd/MM/yyyy",
+							"DateFormat": "YYYY-MM-DD",
 							"HIVE_TYPE_STRING": "date"
 						}
 					}
