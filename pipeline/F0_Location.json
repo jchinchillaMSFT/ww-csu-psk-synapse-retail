@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "adworks_Location",
+				"name": "DimLocation",
 				"type": "ExecuteDataFlow",
 				"dependsOn": [],
 				"policy": {
