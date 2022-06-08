@@ -1,5 +1,5 @@
 {
-	"name": "L0_Item_ProductCategoryDim",
+	"name": "DimProduct",
 	"properties": {
 		"activities": [
 			{
