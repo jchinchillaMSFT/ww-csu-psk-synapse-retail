@@ -42,7 +42,7 @@
 					"OriginDataTypeName": {
 						"TypeName": "long",
 						"IsComplexType": false,
-						"IsNullable": true,
+						"IsNullable": false,
 						"Properties": {
 							"HIVE_TYPE_STRING": "long"
 						}
@@ -78,7 +78,7 @@
 		"Properties": {
 			"Description": "",
 			"DisplayFolderInfo": "{\"name\":\"Others\",\"colorCode\":\"\"}",
-			"PrimaryKeys": "",
+			"PrimaryKeys": "ChannelKey",
 			"spark.sql.sources.provider": "parquet"
 		},
 		"Retention": 0,
