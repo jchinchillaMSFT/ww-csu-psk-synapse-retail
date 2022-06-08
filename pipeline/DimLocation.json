@@ -25,6 +25,34 @@
 					},
 					"traceLevel": "Fine"
 				}
+			},
+			{
+				"name": "DimProduct",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "1.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "DimProduct_DF",
+						"type": "DataFlowReference",
+						"parameters": {
+							"modifiedAfter": "toTimestamp(\"01-01-1900\")",
+							"modifiedBefore": "currentTimestamp()"
+						}
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
 			}
 		],
 		"variables": {
