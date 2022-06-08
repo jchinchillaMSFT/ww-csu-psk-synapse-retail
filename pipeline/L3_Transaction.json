@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "TransactionTransform",
+				"name": "FactSales",
 				"type": "ExecuteDataFlow",
 				"dependsOn": [],
 				"policy": {
