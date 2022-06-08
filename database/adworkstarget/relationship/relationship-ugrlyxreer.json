@@ -1,0 +1,23 @@
+{
+	"name": "relationship-ugrlyxreer",
+	"properties": {
+		"Name": "relationship-ugrlyxreer",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "adworkstarget"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "FactSales",
+		"ToTableName": "DimProduct",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ProductKey",
+				"ToColumnName": "ProductKey"
+			}
+		],
+		"RelationshipType": 0
+	},
+	"type": "RELATIONSHIP"
+}

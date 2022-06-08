@@ -3,21 +3,30 @@
 	"properties": {
 		"Name": "Date",
 		"EntityType": "TABLE",
-		"TableType": "EXTERNAL",
 		"Namespace": {
-			"SchemaName": null,
 			"DatabaseName": "adworks"
 		},
-		"Partitioning": {
-			"PartitionFunctionType": null,
-			"Keys": null
+		"Description": "",
+		"TableType": "EXTERNAL",
+		"Origin": {
+			"Type": "SPARK"
 		},
 		"StorageDescriptor": {
-			"Distribution": null,
 			"Columns": [
 				{
+					"Name": "Date",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					}
+				},
+				{
 					"Name": "DateKey",
-					"Description": null,
 					"OriginDataTypeName": {
 						"TypeName": "integer",
 						"IsComplexType": false,
@@ -28,38 +37,24 @@
 					}
 				},
 				{
-					"Name": "Date",
-					"Description": null,
-					"OriginDataTypeName": {
-						"TypeName": "date",
-						"IsComplexType": false,
-						"IsNullable": true,
-						"Properties": {
-							"HIVE_TYPE_STRING": "date"
-						}
-					}
-				},
-				{
-					"Name": "FiscalYear",
-					"Description": null,
+					"Name": "Year2",
 					"OriginDataTypeName": {
 						"TypeName": "string",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
+						"Length": 8000,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
 					}
 				},
 				{
-					"Name": "FiscalQuarter",
-					"Description": null,
+					"Name": "YYYYQ",
 					"OriginDataTypeName": {
 						"TypeName": "string",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
+						"Length": 8000,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -67,12 +62,11 @@
 				},
 				{
 					"Name": "Month",
-					"Description": null,
 					"OriginDataTypeName": {
 						"TypeName": "string",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
+						"Length": 8000,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -80,20 +74,18 @@
 				},
 				{
 					"Name": "FullDate",
-					"Description": null,
 					"OriginDataTypeName": {
 						"TypeName": "string",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 0,
+						"Length": 8000,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
 					}
 				},
 				{
-					"Name": "MonthKey",
-					"Description": null,
+					"Name": "YYYYMM",
 					"OriginDataTypeName": {
 						"TypeName": "integer",
 						"IsComplexType": false,
@@ -102,9 +94,76 @@
 							"HIVE_TYPE_STRING": "integer"
 						}
 					}
+				},
+				{
+					"Name": "MonthName",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 8000,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					}
+				},
+				{
+					"Name": "MonthNumber",
+					"OriginDataTypeName": {
+						"TypeName": "short",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"HIVE_TYPE_STRING": "short"
+						}
+					}
+				},
+				{
+					"Name": "MonthShort",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 8000,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					}
+				},
+				{
+					"Name": "Year10",
+					"OriginDataTypeName": {
+						"TypeName": "short",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"HIVE_TYPE_STRING": "short"
+						}
+					}
+				},
+				{
+					"Name": "QuarterNumber",
+					"OriginDataTypeName": {
+						"TypeName": "short",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"HIVE_TYPE_STRING": "short"
+						}
+					}
+				},
+				{
+					"Name": "DayNumber",
+					"OriginDataTypeName": {
+						"TypeName": "short",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"HIVE_TYPE_STRING": "short"
+						}
+					}
 				}
 			],
-			"ColumnSetEntityName": "0ae7b373-4f3c-48e4-940b-0c44acc2df4c",
 			"Format": {
 				"InputFormat": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
 				"OutputFormat": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
@@ -112,15 +171,15 @@
 				"SerializeLib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
 				"Properties": {
 					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/Date",
-					"FormatTypeSetToDatabaseDefault": true
+					"FormatTypeSetToDatabaseDefault": false
 				}
 			},
 			"Source": {
 				"Provider": "ADLS",
 				"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/Date",
 				"Properties": {
-					"LinkedServiceName": "azwksdatalakego2d3",
-					"LocationSetToDatabaseDefault": true
+					"LinkedServiceName": "azsynapsewksgo2d3-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": false
 				}
 			},
 			"Properties": {
@@ -129,36 +188,17 @@
 				"derivedModelAttributeInfo": "{\"attributeReferences\":{}}"
 			},
 			"Compressed": false,
-			"SerDeInfo": null,
 			"IsStoredAsSubdirectories": false
 		},
-		"Owner": "trusted-service-user",
-		"CreateTime": 1648743534,
-		"LastAccessTime": 0,
-		"Retention": 0,
-		"Temporary": false,
-		"IsRewriteEnabled": false,
-		"ViewOriginalText": null,
-		"ViewExpandedText": null,
-		"Origin": {
-			"Type": "SPARK"
-		},
-		"OriginObjectId": null,
-		"IsSharedEntity": false,
-		"PublishStatus": "PUBLISHED",
 		"Properties": {
-			"Transient_lastDdlTime": "1648744833",
-			"NumFiles": "2",
-			"TotalSize": "15603",
+			"Description": "",
 			"DisplayFolderInfo": "{\"name\":\"Others\",\"colorCode\":\"\"}",
-			"PrimaryKeys": "",
-			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"DateKey\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"Date\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FiscalYear\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FiscalQuarter\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"Month\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FullDate\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"MonthKey\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}",
-			"spark.sql.sources.schema.numParts": "1",
-			"spark.sql.create.version": "2.4.8.2.6.99.201-58153078",
+			"PrimaryKeys": "Date",
 			"spark.sql.sources.provider": "parquet"
 		},
-		"ObjectVersion": 4,
-		"ObjectId": "86da1878-72bb-4e0e-9615-ba029445983c"
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false
 	},
 	"type": "TABLE"
 }

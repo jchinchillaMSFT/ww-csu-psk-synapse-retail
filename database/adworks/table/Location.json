@@ -1,7 +1,7 @@
 {
-	"name": "CustomerData",
+	"name": "Location",
 	"properties": {
-		"Name": "CustomerData",
+		"Name": "Location",
 		"EntityType": "TABLE",
 		"Namespace": {
 			"DatabaseName": "adworks"
@@ -14,19 +14,29 @@
 		"StorageDescriptor": {
 			"Columns": [
 				{
-					"Name": "CustomerId",
+					"Name": "LocationId",
 					"OriginDataTypeName": {
-						"TypeName": "string",
+						"TypeName": "short",
 						"IsComplexType": false,
 						"IsNullable": false,
-						"Length": 8000,
 						"Properties": {
-							"HIVE_TYPE_STRING": "string"
+							"HIVE_TYPE_STRING": "short"
 						}
 					}
 				},
 				{
-					"Name": "Customer",
+					"Name": "LocationZip",
+					"OriginDataTypeName": {
+						"TypeName": "short",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"HIVE_TYPE_STRING": "short"
+						}
+					}
+				},
+				{
+					"Name": "LocationState",
 					"OriginDataTypeName": {
 						"TypeName": "string",
 						"IsComplexType": false,
@@ -38,7 +48,7 @@
 					}
 				},
 				{
-					"Name": "City",
+					"Name": "LocationCity",
 					"OriginDataTypeName": {
 						"TypeName": "string",
 						"IsComplexType": false,
@@ -50,31 +60,7 @@
 					}
 				},
 				{
-					"Name": "StateProvince",
-					"OriginDataTypeName": {
-						"TypeName": "string",
-						"IsComplexType": false,
-						"IsNullable": true,
-						"Length": 8000,
-						"Properties": {
-							"HIVE_TYPE_STRING": "string"
-						}
-					}
-				},
-				{
-					"Name": "PostalCode",
-					"OriginDataTypeName": {
-						"TypeName": "string",
-						"IsComplexType": false,
-						"IsNullable": true,
-						"Length": 8000,
-						"Properties": {
-							"HIVE_TYPE_STRING": "string"
-						}
-					}
-				},
-				{
-					"Name": "CountryRegion",
+					"Name": "Country",
 					"OriginDataTypeName": {
 						"TypeName": "string",
 						"IsComplexType": false,
@@ -92,13 +78,13 @@
 				"FormatType": "parquet",
 				"SerializeLib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
 				"Properties": {
-					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/CustomerData",
+					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/Location",
 					"FormatTypeSetToDatabaseDefault": false
 				}
 			},
 			"Source": {
 				"Provider": "ADLS",
-				"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/CustomerData",
+				"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/Location",
 				"Properties": {
 					"LinkedServiceName": "azsynapsewksgo2d3-WorkspaceDefaultStorage",
 					"LocationSetToDatabaseDefault": false
@@ -115,7 +101,7 @@
 		"Properties": {
 			"Description": "",
 			"DisplayFolderInfo": "{\"name\":\"Others\",\"colorCode\":\"\"}",
-			"PrimaryKeys": "CustomerId",
+			"PrimaryKeys": "LocationId",
 			"spark.sql.sources.provider": "parquet"
 		},
 		"Retention": 0,

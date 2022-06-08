@@ -1,10 +1,10 @@
 {
-	"name": "CustomerData",
+	"name": "DimGeography",
 	"properties": {
-		"Name": "CustomerData",
+		"Name": "DimGeography",
 		"EntityType": "TABLE",
 		"Namespace": {
-			"DatabaseName": "adworks"
+			"DatabaseName": "adworkstarget"
 		},
 		"Description": "",
 		"TableType": "EXTERNAL",
@@ -13,30 +13,6 @@
 		},
 		"StorageDescriptor": {
 			"Columns": [
-				{
-					"Name": "CustomerId",
-					"OriginDataTypeName": {
-						"TypeName": "string",
-						"IsComplexType": false,
-						"IsNullable": false,
-						"Length": 8000,
-						"Properties": {
-							"HIVE_TYPE_STRING": "string"
-						}
-					}
-				},
-				{
-					"Name": "Customer",
-					"OriginDataTypeName": {
-						"TypeName": "string",
-						"IsComplexType": false,
-						"IsNullable": true,
-						"Length": 8000,
-						"Properties": {
-							"HIVE_TYPE_STRING": "string"
-						}
-					}
-				},
 				{
 					"Name": "City",
 					"OriginDataTypeName": {
@@ -84,6 +60,17 @@
 							"HIVE_TYPE_STRING": "string"
 						}
 					}
+				},
+				{
+					"Name": "GeographyKey",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					}
 				}
 			],
 			"Format": {
@@ -92,15 +79,15 @@
 				"FormatType": "parquet",
 				"SerializeLib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
 				"Properties": {
-					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/CustomerData",
+					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworkstarget/DimGeography",
 					"FormatTypeSetToDatabaseDefault": false
 				}
 			},
 			"Source": {
 				"Provider": "ADLS",
-				"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/CustomerData",
+				"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworkstarget/DimGeography",
 				"Properties": {
-					"LinkedServiceName": "azsynapsewksgo2d3-WorkspaceDefaultStorage",
+					"LinkedServiceName": "azwksdatalakego2d3",
 					"LocationSetToDatabaseDefault": false
 				}
 			},
@@ -115,7 +102,7 @@
 		"Properties": {
 			"Description": "",
 			"DisplayFolderInfo": "{\"name\":\"Others\",\"colorCode\":\"\"}",
-			"PrimaryKeys": "CustomerId",
+			"PrimaryKeys": "GeographyKey",
 			"spark.sql.sources.provider": "parquet"
 		},
 		"Retention": 0,

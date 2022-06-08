@@ -1,10 +1,10 @@
 {
-	"name": "CustomerData",
+	"name": "DimCustomer",
 	"properties": {
-		"Name": "CustomerData",
+		"Name": "DimCustomer",
 		"EntityType": "TABLE",
 		"Namespace": {
-			"DatabaseName": "adworks"
+			"DatabaseName": "adworkstarget"
 		},
 		"Description": "",
 		"TableType": "EXTERNAL",
@@ -18,7 +18,7 @@
 					"OriginDataTypeName": {
 						"TypeName": "string",
 						"IsComplexType": false,
-						"IsNullable": false,
+						"IsNullable": true,
 						"Length": 8000,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
@@ -38,50 +38,35 @@
 					}
 				},
 				{
-					"Name": "City",
+					"Name": "ChannelKey",
 					"OriginDataTypeName": {
-						"TypeName": "string",
+						"TypeName": "long",
 						"IsComplexType": false,
-						"IsNullable": true,
-						"Length": 8000,
+						"IsNullable": false,
 						"Properties": {
-							"HIVE_TYPE_STRING": "string"
+							"HIVE_TYPE_STRING": "long"
 						}
 					}
 				},
 				{
-					"Name": "StateProvince",
+					"Name": "GeographyKey",
 					"OriginDataTypeName": {
-						"TypeName": "string",
+						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 8000,
 						"Properties": {
-							"HIVE_TYPE_STRING": "string"
+							"HIVE_TYPE_STRING": "long"
 						}
 					}
 				},
 				{
-					"Name": "PostalCode",
+					"Name": "CustomerKey",
 					"OriginDataTypeName": {
-						"TypeName": "string",
+						"TypeName": "long",
 						"IsComplexType": false,
-						"IsNullable": true,
-						"Length": 8000,
+						"IsNullable": false,
 						"Properties": {
-							"HIVE_TYPE_STRING": "string"
-						}
-					}
-				},
-				{
-					"Name": "CountryRegion",
-					"OriginDataTypeName": {
-						"TypeName": "string",
-						"IsComplexType": false,
-						"IsNullable": true,
-						"Length": 8000,
-						"Properties": {
-							"HIVE_TYPE_STRING": "string"
+							"HIVE_TYPE_STRING": "long"
 						}
 					}
 				}
@@ -92,15 +77,15 @@
 				"FormatType": "parquet",
 				"SerializeLib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
 				"Properties": {
-					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/CustomerData",
+					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworkstarget/DimCustomer",
 					"FormatTypeSetToDatabaseDefault": false
 				}
 			},
 			"Source": {
 				"Provider": "ADLS",
-				"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/CustomerData",
+				"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworkstarget/DimCustomer",
 				"Properties": {
-					"LinkedServiceName": "azsynapsewksgo2d3-WorkspaceDefaultStorage",
+					"LinkedServiceName": "azwksdatalakego2d3",
 					"LocationSetToDatabaseDefault": false
 				}
 			},
@@ -115,7 +100,7 @@
 		"Properties": {
 			"Description": "",
 			"DisplayFolderInfo": "{\"name\":\"Others\",\"colorCode\":\"\"}",
-			"PrimaryKeys": "CustomerId",
+			"PrimaryKeys": "CustomerKey",
 			"spark.sql.sources.provider": "parquet"
 		},
 		"Retention": 0,

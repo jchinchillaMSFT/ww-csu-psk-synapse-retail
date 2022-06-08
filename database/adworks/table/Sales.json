@@ -3,101 +3,95 @@
 	"properties": {
 		"Name": "Sales",
 		"EntityType": "TABLE",
-		"TableType": "EXTERNAL",
 		"Namespace": {
-			"SchemaName": null,
 			"DatabaseName": "adworks"
 		},
+		"Description": "",
+		"TableType": "EXTERNAL",
+		"Origin": {
+			"Type": "SPARK"
+		},
 		"StorageDescriptor": {
-			"Distribution": null,
 			"Columns": [
 				{
 					"Name": "SalesAmount",
-					"Description": null,
 					"OriginDataTypeName": {
-						"TypeName": "decimal",
+						"TypeName": "float",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Precision": 10,
-						"Scale": 0,
 						"Properties": {
-							"HIVE_TYPE_STRING": "decimal"
+							"HIVE_TYPE_STRING": "float"
 						}
 					}
 				},
 				{
 					"Name": "TotalProductCost",
-					"Description": null,
 					"OriginDataTypeName": {
-						"TypeName": "decimal",
+						"TypeName": "float",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Precision": 10,
-						"Scale": 0,
 						"Properties": {
-							"HIVE_TYPE_STRING": "decimal"
+							"HIVE_TYPE_STRING": "float"
 						}
 					}
 				},
 				{
 					"Name": "ProductStandardCost",
-					"Description": null,
 					"OriginDataTypeName": {
-						"TypeName": "decimal",
+						"TypeName": "float",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Precision": 10,
-						"Scale": 0,
 						"Properties": {
-							"HIVE_TYPE_STRING": "decimal"
+							"HIVE_TYPE_STRING": "float"
 						}
 					}
 				},
 				{
 					"Name": "UnitPriceDiscountPct",
-					"Description": null,
 					"OriginDataTypeName": {
-						"TypeName": "decimal",
+						"TypeName": "boolean",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Precision": 10,
-						"Scale": 0,
 						"Properties": {
-							"HIVE_TYPE_STRING": "decimal"
+							"HIVE_TYPE_STRING": "boolean"
 						}
 					}
 				},
 				{
 					"Name": "ExtendedAmount",
-					"Description": null,
 					"OriginDataTypeName": {
-						"TypeName": "decimal",
+						"TypeName": "float",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Precision": 10,
-						"Scale": 0,
 						"Properties": {
-							"HIVE_TYPE_STRING": "decimal"
+							"HIVE_TYPE_STRING": "float"
 						}
 					}
 				},
 				{
 					"Name": "UnitPrice",
-					"Description": null,
 					"OriginDataTypeName": {
-						"TypeName": "decimal",
+						"TypeName": "float",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Precision": 10,
-						"Scale": 0,
 						"Properties": {
-							"HIVE_TYPE_STRING": "decimal"
+							"HIVE_TYPE_STRING": "float"
 						}
 					}
 				},
 				{
 					"Name": "OrderQuantity",
-					"Description": null,
+					"OriginDataTypeName": {
+						"TypeName": "short",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"HIVE_TYPE_STRING": "short"
+						}
+					}
+				},
+				{
+					"Name": "SalesTerritoryId",
 					"OriginDataTypeName": {
 						"TypeName": "integer",
 						"IsComplexType": false,
@@ -108,8 +102,19 @@
 					}
 				},
 				{
-					"Name": "SalesTerritoryKey",
-					"Description": null,
+					"Name": "OrderDate",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					}
+				},
+				{
+					"Name": "ProductId",
 					"OriginDataTypeName": {
 						"TypeName": "integer",
 						"IsComplexType": false,
@@ -120,91 +125,65 @@
 					}
 				},
 				{
-					"Name": "ShipDateKey",
-					"Description": null,
+					"Name": "SalesOrderLineId",
 					"OriginDataTypeName": {
 						"TypeName": "integer",
 						"IsComplexType": false,
-						"IsNullable": true,
+						"IsNullable": false,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
 					}
 				},
 				{
-					"Name": "DueDateKey",
-					"Description": null,
+					"Name": "Channel",
 					"OriginDataTypeName": {
-						"TypeName": "integer",
+						"TypeName": "string",
 						"IsComplexType": false,
 						"IsNullable": true,
+						"Length": 8000,
 						"Properties": {
-							"HIVE_TYPE_STRING": "integer"
+							"HIVE_TYPE_STRING": "string"
 						}
 					}
 				},
 				{
-					"Name": "OrderDateKey",
-					"Description": null,
+					"Name": "SalesOrder",
 					"OriginDataTypeName": {
-						"TypeName": "integer",
+						"TypeName": "string",
 						"IsComplexType": false,
-						"IsNullable": true,
+						"IsNullable": false,
+						"Length": 8000,
 						"Properties": {
-							"HIVE_TYPE_STRING": "integer"
+							"HIVE_TYPE_STRING": "string"
 						}
 					}
 				},
 				{
-					"Name": "ProductKey",
-					"Description": null,
+					"Name": "CustomerId",
 					"OriginDataTypeName": {
-						"TypeName": "integer",
+						"TypeName": "string",
 						"IsComplexType": false,
 						"IsNullable": true,
+						"Length": 8000,
 						"Properties": {
-							"HIVE_TYPE_STRING": "integer"
+							"HIVE_TYPE_STRING": "string"
 						}
 					}
 				},
 				{
-					"Name": "CustomerKey",
-					"Description": null,
+					"Name": "ResellerId",
 					"OriginDataTypeName": {
-						"TypeName": "integer",
+						"TypeName": "string",
 						"IsComplexType": false,
 						"IsNullable": true,
+						"Length": 8000,
 						"Properties": {
-							"HIVE_TYPE_STRING": "integer"
-						}
-					}
-				},
-				{
-					"Name": "ResellerKey",
-					"Description": null,
-					"OriginDataTypeName": {
-						"TypeName": "integer",
-						"IsComplexType": false,
-						"IsNullable": true,
-						"Properties": {
-							"HIVE_TYPE_STRING": "integer"
-						}
-					}
-				},
-				{
-					"Name": "SalesOrderLineKey",
-					"Description": null,
-					"OriginDataTypeName": {
-						"TypeName": "integer",
-						"IsComplexType": false,
-						"IsNullable": true,
-						"Properties": {
-							"HIVE_TYPE_STRING": "integer"
+							"HIVE_TYPE_STRING": "string"
 						}
 					}
 				}
 			],
-			"ColumnSetEntityName": "22d610d9-af1f-45af-b46d-7d1175dcbda9",
 			"Format": {
 				"InputFormat": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
 				"OutputFormat": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
@@ -212,15 +191,15 @@
 				"SerializeLib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
 				"Properties": {
 					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/Sales",
-					"FormatTypeSetToDatabaseDefault": true
+					"FormatTypeSetToDatabaseDefault": false
 				}
 			},
 			"Source": {
 				"Provider": "ADLS",
 				"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/Sales",
 				"Properties": {
-					"LinkedServiceName": "azwksdatalakego2d3",
-					"LocationSetToDatabaseDefault": true
+					"LinkedServiceName": "azsynapsewksgo2d3-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": false
 				}
 			},
 			"Properties": {
@@ -229,34 +208,17 @@
 				"derivedModelAttributeInfo": "{\"attributeReferences\":{}}"
 			},
 			"Compressed": false,
-			"SerDeInfo": null,
 			"IsStoredAsSubdirectories": false
 		},
-		"Owner": "trusted-service-user",
-		"CreateTime": 1648791781,
-		"LastAccessTime": 0,
+		"Properties": {
+			"Description": "",
+			"DisplayFolderInfo": "{\"name\":\"Others\",\"colorCode\":\"\"}",
+			"PrimaryKeys": "SalesOrderLineId,SalesOrder",
+			"spark.sql.sources.provider": "parquet"
+		},
 		"Retention": 0,
 		"Temporary": false,
-		"IsRewriteEnabled": false,
-		"ViewOriginalText": null,
-		"ViewExpandedText": null,
-		"Origin": {
-			"Type": "SPARK"
-		},
-		"OriginObjectId": null,
-		"IsSharedEntity": false,
-		"PublishStatus": "PUBLISHED",
-		"Properties": {
-			"Transient_lastDdlTime": "1648791781",
-			"PrimaryKeys": "",
-			"DisplayFolderInfo": "{\"name\":\"Others\",\"colorCode\":\"\"}",
-			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"SalesAmount\",\"type\":\"decimal(10,0)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TotalProductCost\",\"type\":\"decimal(10,0)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProductStandardCost\",\"type\":\"decimal(10,0)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"UnitPriceDiscountPct\",\"type\":\"decimal(10,0)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ExtendedAmount\",\"type\":\"decimal(10,0)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"UnitPrice\",\"type\":\"decimal(10,0)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"OrderQuantity\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SalesTerritoryKey\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ShipDateKey\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DueDateKey\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"OrderDateKey\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProductKey\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CustomerKey\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ResellerKey\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SalesOrderLineKey\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}",
-			"spark.sql.sources.schema.numParts": "1",
-			"spark.sql.sources.provider": "parquet",
-			"spark.sql.create.version": "2.4.8.2.6.99.201-58153078"
-		},
-		"ObjectVersion": 1,
-		"ObjectId": "ceef3d7e-407b-4782-bdb8-9c79b26c039a"
+		"IsRewriteEnabled": false
 	},
 	"type": "TABLE"
 }
