@@ -17,19 +17,7 @@
 				"typeProperties": {
 					"dataflow": {
 						"referenceName": "adworks_Location",
-						"type": "DataFlowReference",
-						"datasetParameters": {
-							"LocationCSV": {
-								"fileName": {
-									"value": "@variables('fileName')",
-									"type": "Expression"
-								},
-								"folderPath": {
-									"value": "@variables('folderPath')",
-									"type": "Expression"
-								}
-							}
-						}
+						"type": "DataFlowReference"
 					},
 					"compute": {
 						"coreCount": 8,
