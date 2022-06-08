@@ -110,11 +110,11 @@
 				{
 					"Name": "ProductId",
 					"OriginDataTypeName": {
-						"TypeName": "short",
+						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": false,
 						"Properties": {
-							"HIVE_TYPE_STRING": "short"
+							"HIVE_TYPE_STRING": "integer"
 						}
 					}
 				}
