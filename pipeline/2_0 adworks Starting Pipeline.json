@@ -1,5 +1,5 @@
 {
-	"name": "adworks Starting Pipeline",
+	"name": "2_0 adworks Starting Pipeline",
 	"properties": {
 		"activities": [
 			{
@@ -9,7 +9,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
-						"referenceName": "Copy CSV data from GitHub",
+						"referenceName": "2_1 Copy CSV data from GitHub",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true
@@ -29,7 +29,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
-						"referenceName": "Load CSV data to adworks",
+						"referenceName": "2_2 Load CSV data to adworks",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true

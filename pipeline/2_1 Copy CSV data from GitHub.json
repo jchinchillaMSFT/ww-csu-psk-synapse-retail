@@ -1,5 +1,5 @@
 {
-	"name": "Copy CSV data from GitHub",
+	"name": "2_1 Copy CSV data from GitHub",
 	"properties": {
 		"activities": [
 			{
