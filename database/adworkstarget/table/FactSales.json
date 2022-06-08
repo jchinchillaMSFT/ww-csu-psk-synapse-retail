@@ -157,6 +157,18 @@
 							"HIVE_TYPE_STRING": "long"
 						}
 					}
+				},
+				{
+					"Name": "GeographyKey",
+					"Description": "",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsNullable": false,
+						"IsComplexType": false,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					}
 				}
 			],
 			"Format": {
