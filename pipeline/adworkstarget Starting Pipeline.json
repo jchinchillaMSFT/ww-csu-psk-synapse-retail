@@ -85,14 +85,7 @@
 			{
 				"name": "L0_IndividualCustomer",
 				"type": "ExecutePipeline",
-				"dependsOn": [
-					{
-						"activity": "Independent Dimensions",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
+				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
@@ -129,7 +122,27 @@
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
-						"referenceName": "DimLocation",
+						"referenceName": "IndependentDimensions",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "Dependent Dimensions",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "Independent Dimensions",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "DependentDimensions",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true
