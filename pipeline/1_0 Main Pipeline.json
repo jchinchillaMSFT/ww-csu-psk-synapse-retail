@@ -1,5 +1,5 @@
 {
-	"name": "Main Pipeline",
+	"name": "1_0 Main Pipeline",
 	"properties": {
 		"activities": [
 			{
