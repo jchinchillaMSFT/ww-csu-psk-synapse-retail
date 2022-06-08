@@ -14,9 +14,6 @@
 					"name": "DimCustomerSource"
 				},
 				{
-					"name": "DimResellerSource"
-				},
-				{
 					"name": "DimChannelSource"
 				},
 				{
@@ -30,16 +27,10 @@
 			],
 			"transformations": [
 				{
-					"name": "DimCustomerSelect"
-				},
-				{
-					"name": "DimResellerSelect"
+					"name": "InternetCustomerSelect"
 				},
 				{
 					"name": "DimChannelSelect"
-				},
-				{
-					"name": "ChannelKeyLookup"
 				},
 				{
 					"name": "InternetCustomerKeyLookup"
@@ -57,16 +48,31 @@
 					"name": "ProductKeyLookup"
 				},
 				{
-					"name": "InternetCustomers"
-				},
-				{
 					"name": "split1"
 				},
 				{
 					"name": "ChannelType"
+				},
+				{
+					"name": "DimCustomerSourceSplitSelect"
+				},
+				{
+					"name": "ResellerCustomerSelect"
+				},
+				{
+					"name": "CustomerLookupUnion"
+				},
+				{
+					"name": "select2"
+				},
+				{
+					"name": "InternetCustomerFilter"
+				},
+				{
+					"name": "ResellerFilter"
 				}
 			],
-			"script": "source(output(\n\t\tSalesAmount as double,\n\t\tTotalProductCost as double,\n\t\tProductStandardCost as double,\n\t\tUnitPriceDiscountPct as boolean,\n\t\tExtendedAmount as double,\n\t\tUnitPrice as double,\n\t\tOrderQuantity as short,\n\t\tSalesTerritoryId as short,\n\t\tOrderDate as date,\n\t\tProductId as short,\n\t\tSalesOrderLineId as integer,\n\t\tChannel as string,\n\t\tSalesOrder as string,\n\t\tCustomerId as string,\n\t\tResellerId as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tstore: 'synapse',\n\tdatabaseType: 'spark',\n\tformat: 'table',\n\tdatabase: 'adworks',\n\ttableName: 'Sales',\n\tmanifestType: 'manifest') ~> SalesSource\nsource(output(\n\t\tCustomerId as string,\n\t\tCustomer as string,\n\t\tChannelKey as long,\n\t\tGeographyKey as long,\n\t\tCustomerKey as long\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tstore: 'synapse',\n\tdatabaseType: 'spark',\n\tformat: 'table',\n\tdatabase: 'adworkstarget',\n\ttableName: 'DimCustomer',\n\tmanifestType: 'manifest') ~> DimCustomerSource\nsource(output(\n\t\tCustomerId as string,\n\t\tCustomer as string,\n\t\tChannelKey as long,\n\t\tGeographyKey as long,\n\t\tCustomerKey as long\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tstore: 'synapse',\n\tdatabaseType: 'spark',\n\tformat: 'table',\n\tdatabase: 'adworkstarget',\n\ttableName: 'DimCustomer',\n\tmanifestType: 'manifest') ~> DimResellerSource\nsource(output(\n\t\tChannel as string,\n\t\tChannelCategory as string,\n\t\tChannelKey as long\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tlimit: 100,\n\tstore: 'synapse',\n\tdatabaseType: 'spark',\n\tformat: 'table',\n\tdatabase: 'adworkstarget',\n\ttableName: 'DimChannel') ~> DimChannelSource\nsource(output(\n\t\tProductId as short,\n\t\tCategory as string,\n\t\tSubcategory as string,\n\t\tModel as string,\n\t\tListPrice as double,\n\t\tColor as string,\n\t\tStandardCost as double,\n\t\tProduct as string,\n\t\tSKU as string,\n\t\tProductKey as long\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tstore: 'synapse',\n\tdatabaseType: 'spark',\n\tformat: 'table',\n\tdatabase: 'adworkstarget',\n\ttableName: 'DimProduct') ~> DimProductSource\nInternetCustomers select(mapColumn(\n\t\tCustomerKey,\n\t\tCustomerId_lookup = CustomerId\n\t),\n\tskipDuplicateMapInputs: false,\n\tskipDuplicateMapOutputs: false) ~> DimCustomerSelect\nDimResellerSource select(mapColumn(\n\t\tResellerId_lookup = ResellerId,\n\t\tResellerKey\n\t),\n\tskipDuplicateMapInputs: false,\n\tskipDuplicateMapOutputs: false) ~> DimResellerSelect\nDimChannelSource select(mapColumn(\n\t\tChannel_lookup = Channel,\n\t\tChannelKey,\n\t\tChannelCategory\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> DimChannelSelect\nSalesSource, DimChannelSelect lookup(Channel == Channel_lookup,\n\tmultiple: false,\n\tpickup: 'any',\n\tbroadcast: 'auto')~> ChannelKeyLookup\nChannelKeyLookup, DimCustomerSelect lookup(CustomerId == CustomerId_lookup,\n\tmultiple: false,\n\tpickup: 'any',\n\tbroadcast: 'auto')~> InternetCustomerKeyLookup\nInternetCustomerKeyLookup, DimResellerSelect lookup(ResellerId == ResellerId_lookup,\n\tmultiple: false,\n\tpickup: 'any',\n\tbroadcast: 'auto')~> ResellerKeyLookup\nProductKeyLookup select(mapColumn(\n\t\tSalesAmount,\n\t\tTotalProductCost,\n\t\tProductStandardCost,\n\t\tUnitPriceDiscountPct,\n\t\tExtendedAmount,\n\t\tUnitPrice,\n\t\tOrderQuantity,\n\t\tOrderDate,\n\t\tSalesOrderLineId,\n\t\tChannel,\n\t\tSalesOrder,\n\t\tCustomerId,\n\t\tResellerId,\n\t\tChannelKey,\n\t\tCustomerKey,\n\t\tResellerKey,\n\t\tProductKey\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> select1\nDimProductSource select(mapColumn(\n\t\tProductId,\n\t\tProductKey\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> DimProductSelect\nResellerKeyLookup, DimProductSelect lookup(SalesSource@ProductId == DimProductSelect@ProductId,\n\tmultiple: false,\n\tpickup: 'any',\n\tbroadcast: 'auto')~> ProductKeyLookup\nsplit1@ResellerCustomers filter(ERROR_FUNCTION('')) ~> InternetCustomers\nChannelType split(ERROR_FUNCTION(''),\n\tdisjoint: false) ~> split1@(ResellerCustomers, InternetCustomers)\nDimCustomerSource, DimChannelSelect lookup(ERROR_FUNCTION('') == ERROR_FUNCTION(''),\n\tmultiple: false,\n\tpickup: 'any',\n\tbroadcast: 'auto')~> ChannelType\nselect1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tstore: 'synapse',\n\tdatabaseType: 'spark',\n\tformat: 'table',\n\tdatabase: 'adworkstarget',\n\ttableName: 'FactSales',\n\trecreate:true,\n\tmanifestType: 'manifest') ~> FactSalesSink"
+			"script": "source(output(\n\t\tSalesAmount as double,\n\t\tTotalProductCost as double,\n\t\tProductStandardCost as double,\n\t\tUnitPriceDiscountPct as boolean,\n\t\tExtendedAmount as double,\n\t\tUnitPrice as double,\n\t\tOrderQuantity as short,\n\t\tSalesTerritoryId as short,\n\t\tOrderDate as date,\n\t\tProductId as short,\n\t\tSalesOrderLineId as integer,\n\t\tChannel as string,\n\t\tSalesOrder as string,\n\t\tCustomerId as string,\n\t\tResellerId as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tstore: 'synapse',\n\tdatabaseType: 'spark',\n\tformat: 'table',\n\tdatabase: 'adworks',\n\ttableName: 'Sales',\n\tmanifestType: 'manifest') ~> SalesSource\nsource(output(\n\t\tCustomerId as string,\n\t\tCustomer as string,\n\t\tChannelKey as long,\n\t\tGeographyKey as long,\n\t\tCustomerKey as long\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tstore: 'synapse',\n\tdatabaseType: 'spark',\n\tformat: 'table',\n\tdatabase: 'adworkstarget',\n\ttableName: 'DimCustomer',\n\tmanifestType: 'manifest') ~> DimCustomerSource\nsource(output(\n\t\tChannel as string,\n\t\tChannelCategory as string,\n\t\tChannelKey as long\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tlimit: 100,\n\tstore: 'synapse',\n\tdatabaseType: 'spark',\n\tformat: 'table',\n\tdatabase: 'adworkstarget',\n\ttableName: 'DimChannel') ~> DimChannelSource\nsource(output(\n\t\tProductId as short,\n\t\tCategory as string,\n\t\tSubcategory as string,\n\t\tModel as string,\n\t\tListPrice as double,\n\t\tColor as string,\n\t\tStandardCost as double,\n\t\tProduct as string,\n\t\tSKU as string,\n\t\tProductKey as long\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tstore: 'synapse',\n\tdatabaseType: 'spark',\n\tformat: 'table',\n\tdatabase: 'adworkstarget',\n\ttableName: 'DimProduct') ~> DimProductSource\nsplit1@InternetCustomers select(mapColumn(\n\t\tCustomerId_lookup = CustomerId,\n\t\tCustomerKey,\n\t\tChannelKey,\n\t\tChannelCategory\n\t),\n\tskipDuplicateMapInputs: false,\n\tskipDuplicateMapOutputs: false) ~> InternetCustomerSelect\nDimChannelSource select(mapColumn(\n\t\tChannel_lookup = Channel,\n\t\tChannelKey,\n\t\tChannelCategory\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> DimChannelSelect\nSalesSource, InternetCustomerSelect lookup(CustomerId == CustomerId_lookup,\n\tmultiple: false,\n\tpickup: 'any',\n\tbroadcast: 'auto')~> InternetCustomerKeyLookup\nSalesSource, ResellerCustomerSelect lookup(ResellerId == ResellerId_lookup,\n\tmultiple: false,\n\tpickup: 'any',\n\tbroadcast: 'auto')~> ResellerKeyLookup\nProductKeyLookup select(mapColumn(\n\t\tProductId = DimProductSelect@ProductId,\n\t\tProductKey\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> select1\nDimProductSource select(mapColumn(\n\t\tProductId,\n\t\tProductKey\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> DimProductSelect\nselect2, DimProductSelect lookup(ERROR_FUNCTION('') == DimProductSelect@ProductId,\n\tmultiple: false,\n\tpickup: 'any',\n\tbroadcast: 'auto')~> ProductKeyLookup\nDimCustomerSourceSplitSelect split(ChannelCategory=='Internet',\n\tdisjoint: false) ~> split1@(InternetCustomers, ResellerCustomers)\nDimCustomerSource, DimChannelSelect lookup(DimCustomerSource@ChannelKey == DimChannelSelect@ChannelKey,\n\tmultiple: false,\n\tpickup: 'any',\n\tbroadcast: 'auto')~> ChannelType\nChannelType select(mapColumn(\n\t\tCustomerId,\n\t\tCustomerKey,\n\t\tChannelKey = DimChannelSelect@ChannelKey,\n\t\tChannelCategory\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> DimCustomerSourceSplitSelect\nsplit1@ResellerCustomers select(mapColumn(\n\t\tResellerId_lookup = CustomerId,\n\t\tCustomerKey,\n\t\tChannelKey,\n\t\tChannelCategory\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> ResellerCustomerSelect\nResellerFilter, InternetCustomerFilter union(byName: true)~> CustomerLookupUnion\nCustomerLookupUnion select(mapColumn(\n\t\tSalesAmount,\n\t\tTotalProductCost,\n\t\tProductStandardCost,\n\t\tUnitPriceDiscountPct,\n\t\tExtendedAmount,\n\t\tUnitPrice,\n\t\tOrderQuantity,\n\t\tSalesTerritoryId,\n\t\tOrderDate,\n\t\tProductId,\n\t\tSalesOrderLineId,\n\t\tChannel,\n\t\tSalesOrder,\n\t\tCustomerId,\n\t\tResellerId,\n\t\tResellerId_lookup,\n\t\tCustomerKey,\n\t\tChannelKey,\n\t\tChannelCategory,\n\t\tCustomerId_lookup\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> select2\nInternetCustomerKeyLookup filter(isNull(CustomerId)) ~> InternetCustomerFilter\nResellerKeyLookup filter(isNull(ResellerId)) ~> ResellerFilter\nselect1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tstore: 'synapse',\n\tdatabaseType: 'spark',\n\tformat: 'table',\n\tdatabase: 'adworkstarget',\n\ttableName: 'FactSales',\n\trecreate:true,\n\tmanifestType: 'manifest') ~> FactSalesSink"
 		}
 	}
 }
