@@ -8,11 +8,7 @@
 		"typeProperties": {
 			"sources": [
 				{
-					"dataset": {
-						"referenceName": "adworksRaw",
-						"type": "DatasetReference"
-					},
-					"name": "LocationCSV"
+					"name": "LocationSource"
 				}
 			],
 			"sinks": [
@@ -20,26 +16,43 @@
 					"name": "Location"
 				}
 			],
-			"transformations": [],
+			"transformations": [
+				{
+					"name": "surrogateKey"
+				},
+				{
+					"name": "aggregate1"
+				}
+			],
 			"scriptLines": [
 				"source(output(",
-				"          {-1} as string,",
-				"          {[Not Applicable]1} as string,",
-				"          {[Not Applicable]2} as string,",
-				"          {[Not Applicable]3} as string,",
-				"          {[Not Applicable]4} as string,",
-				"          {[Not Applicable]5} as string,",
-				"          {[Not Applicable]6} as string",
+				"          LocationId as short,",
+				"          LocationZip as short,",
+				"          LocationState as string,",
+				"          LocationCity as string,",
+				"          Country as string",
 				"     ),",
 				"     allowSchemaDrift: true,",
-				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> LocationCSV",
-				"LocationCSV sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     store: 'synapse',",
 				"     databaseType: 'spark',",
 				"     format: 'table',",
 				"     database: 'adworks',",
+				"     tableName: 'Location') ~> LocationSource",
+				"aggregate1 keyGenerate(output(LocationKey as long),",
+				"     startAt: 1L,",
+				"     stepValue: 1L) ~> surrogateKey",
+				"LocationSource aggregate(groupBy(LocationId),",
+				"     LocationZip = last(LocationZip),",
+				"          LocationState = last(LocationState),",
+				"          LocationCity = last(LocationCity),",
+				"          Country = last(Country)) ~> aggregate1",
+				"surrogateKey sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     store: 'synapse',",
+				"     databaseType: 'spark',",
+				"     format: 'table',",
+				"     database: 'adworkstarget',",
 				"     tableName: 'Location',",
 				"     recreate:true) ~> Location"
 			]
