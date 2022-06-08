@@ -8,12 +8,12 @@
 		"typeProperties": {
 			"sources": [
 				{
-					"name": "ChannelTypeSource"
+					"name": "ChannelSource"
 				}
 			],
 			"sinks": [
 				{
-					"name": "ChannelType"
+					"name": "DimChannel"
 				}
 			],
 			"transformations": [
@@ -42,11 +42,11 @@
 				"     databaseType: 'spark',",
 				"     format: 'table',",
 				"     database: 'adworks',",
-				"     tableName: 'SalesOrder') ~> ChannelTypeSource",
+				"     tableName: 'SalesOrder') ~> ChannelSource",
 				"select1 keyGenerate(output(ChannelTypeKey as long),",
 				"     startAt: 1L,",
 				"     stepValue: 1L) ~> SurrogateKey",
-				"ChannelTypeSource aggregate(groupBy(Channel),",
+				"ChannelSource aggregate(groupBy(Channel),",
 				"     firstValue = first(Channel)) ~> aggregate1",
 				"aggregate1 select(mapColumn(",
 				"          Channel",
@@ -64,7 +64,7 @@
 				"     mapColumn(",
 				"          Channel,",
 				"          ChannelTypeKey",
-				"     )) ~> ChannelType"
+				"     )) ~> DimChannel"
 			]
 		}
 	}
