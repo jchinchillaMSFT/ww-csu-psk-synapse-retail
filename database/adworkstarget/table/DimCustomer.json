@@ -1,7 +1,7 @@
 {
-	"name": "DimProduct",
+	"name": "DimCustomer",
 	"properties": {
-		"Name": "DimProduct",
+		"Name": "DimCustomer",
 		"EntityType": "TABLE",
 		"Namespace": {
 			"DatabaseName": "adworkstarget"
@@ -14,18 +14,7 @@
 		"StorageDescriptor": {
 			"Columns": [
 				{
-					"Name": "ProductId",
-					"OriginDataTypeName": {
-						"TypeName": "short",
-						"IsComplexType": false,
-						"IsNullable": true,
-						"Properties": {
-							"HIVE_TYPE_STRING": "short"
-						}
-					}
-				},
-				{
-					"Name": "Category",
+					"Name": "CustomerId",
 					"OriginDataTypeName": {
 						"TypeName": "string",
 						"IsComplexType": false,
@@ -37,7 +26,7 @@
 					}
 				},
 				{
-					"Name": "Subcategory",
+					"Name": "Customer",
 					"OriginDataTypeName": {
 						"TypeName": "string",
 						"IsComplexType": false,
@@ -49,77 +38,18 @@
 					}
 				},
 				{
-					"Name": "Model",
+					"Name": "CustomerKey",
 					"OriginDataTypeName": {
-						"TypeName": "string",
+						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": true,
-						"Length": 8000,
 						"Properties": {
-							"HIVE_TYPE_STRING": "string"
+							"HIVE_TYPE_STRING": "long"
 						}
 					}
 				},
 				{
-					"Name": "ListPrice",
-					"OriginDataTypeName": {
-						"TypeName": "float",
-						"IsComplexType": false,
-						"IsNullable": true,
-						"Properties": {
-							"HIVE_TYPE_STRING": "float"
-						}
-					}
-				},
-				{
-					"Name": "Color",
-					"OriginDataTypeName": {
-						"TypeName": "string",
-						"IsComplexType": false,
-						"IsNullable": true,
-						"Length": 8000,
-						"Properties": {
-							"HIVE_TYPE_STRING": "string"
-						}
-					}
-				},
-				{
-					"Name": "StandardCost",
-					"OriginDataTypeName": {
-						"TypeName": "float",
-						"IsComplexType": false,
-						"IsNullable": true,
-						"Properties": {
-							"HIVE_TYPE_STRING": "float"
-						}
-					}
-				},
-				{
-					"Name": "Product",
-					"OriginDataTypeName": {
-						"TypeName": "string",
-						"IsComplexType": false,
-						"IsNullable": true,
-						"Length": 8000,
-						"Properties": {
-							"HIVE_TYPE_STRING": "string"
-						}
-					}
-				},
-				{
-					"Name": "SKU",
-					"OriginDataTypeName": {
-						"TypeName": "string",
-						"IsComplexType": false,
-						"IsNullable": true,
-						"Length": 8000,
-						"Properties": {
-							"HIVE_TYPE_STRING": "string"
-						}
-					}
-				},
-				{
-					"Name": "ProductKey",
+					"Name": "GeographyKey",
 					"OriginDataTypeName": {
 						"TypeName": "long",
 						"IsComplexType": false,
@@ -136,13 +66,13 @@
 				"FormatType": "parquet",
 				"SerializeLib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
 				"Properties": {
-					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworkstarget/DimProduct",
+					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworkstarget/DimCustomer",
 					"FormatTypeSetToDatabaseDefault": false
 				}
 			},
 			"Source": {
 				"Provider": "ADLS",
-				"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworkstarget/DimProduct",
+				"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworkstarget/DimCustomer",
 				"Properties": {
 					"LinkedServiceName": "azwksdatalakego2d3",
 					"LocationSetToDatabaseDefault": false
@@ -150,7 +80,7 @@
 			},
 			"Properties": {
 				"textinputformat.record.delimiter": ",",
-				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"compression": "",
 				"derivedModelAttributeInfo": "{\"attributeReferences\":{}}"
 			},
 			"Compressed": false,
