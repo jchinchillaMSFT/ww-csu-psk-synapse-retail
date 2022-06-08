@@ -87,7 +87,7 @@
 				"type": "ExecutePipeline",
 				"dependsOn": [
 					{
-						"activity": "DimLocation",
+						"activity": "Independent Dimensions",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -123,13 +123,13 @@
 				}
 			},
 			{
-				"name": "DimLocation",
+				"name": "Independent Dimensions",
 				"type": "ExecutePipeline",
 				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
-						"referenceName": "F0_Location",
+						"referenceName": "DimLocation",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true

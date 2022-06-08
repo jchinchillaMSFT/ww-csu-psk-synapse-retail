@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "adworks_Location",
+						"referenceName": "DimLocation_DF",
 						"type": "DataFlowReference"
 					},
 					"compute": {
@@ -41,11 +41,7 @@
 				"typeProperties": {
 					"dataflow": {
 						"referenceName": "DimProduct_DF",
-						"type": "DataFlowReference",
-						"parameters": {
-							"modifiedAfter": "toTimestamp(\"01-01-1900\")",
-							"modifiedBefore": "currentTimestamp()"
-						}
+						"type": "DataFlowReference"
 					},
 					"compute": {
 						"coreCount": 8,
