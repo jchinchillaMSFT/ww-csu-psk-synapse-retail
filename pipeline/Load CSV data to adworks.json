@@ -123,7 +123,7 @@
 				}
 			}
 		],
-		"concurrency": 3,
+		"concurrency": 2,
 		"variables": {
 			"adworksSourceFolderPath": {
 				"type": "String",
