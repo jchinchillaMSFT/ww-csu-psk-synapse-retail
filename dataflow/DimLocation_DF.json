@@ -13,7 +13,7 @@
 			],
 			"sinks": [
 				{
-					"name": "DimLocation"
+					"name": "DimGeography"
 				}
 			],
 			"transformations": [
@@ -53,8 +53,8 @@
 				"     databaseType: 'spark',",
 				"     format: 'table',",
 				"     database: 'adworkstarget',",
-				"     tableName: 'DimLocation',",
-				"     recreate:true) ~> DimLocation"
+				"     tableName: 'DimGeography',",
+				"     recreate:true) ~> DimGeography"
 			]
 		}
 	}
