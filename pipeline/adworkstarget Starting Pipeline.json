@@ -47,7 +47,7 @@
 				"type": "ExecutePipeline",
 				"dependsOn": [
 					{
-						"activity": "F0_Location",
+						"activity": "F1_Country_Country1",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -85,7 +85,14 @@
 			{
 				"name": "L0_IndividualCustomer",
 				"type": "ExecutePipeline",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "DimLocation",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
@@ -116,16 +123,9 @@
 				}
 			},
 			{
-				"name": "F0_Location",
+				"name": "DimLocation",
 				"type": "ExecutePipeline",
-				"dependsOn": [
-					{
-						"activity": "F1_Country_Country1",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
+				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
