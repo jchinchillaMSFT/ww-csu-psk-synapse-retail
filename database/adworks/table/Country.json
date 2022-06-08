@@ -18,7 +18,7 @@
 					"OriginDataTypeName": {
 						"TypeName": "short",
 						"IsComplexType": false,
-						"IsNullable": true,
+						"IsNullable": false,
 						"Properties": {
 							"HIVE_TYPE_STRING": "short"
 						}

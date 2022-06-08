@@ -18,7 +18,7 @@
 					"OriginDataTypeName": {
 						"TypeName": "date",
 						"IsComplexType": false,
-						"IsNullable": true,
+						"IsNullable": false,
 						"Properties": {
 							"DateFormat": "YYYY-MM-DD",
 							"HIVE_TYPE_STRING": "date"
@@ -194,7 +194,7 @@
 		"Properties": {
 			"Description": "",
 			"DisplayFolderInfo": "{\"name\":\"Others\",\"colorCode\":\"\"}",
-			"PrimaryKeys": "",
+			"PrimaryKeys": "Date",
 			"spark.sql.sources.provider": "parquet"
 		},
 		"Retention": 0,

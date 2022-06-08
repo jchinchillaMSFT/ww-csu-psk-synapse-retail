@@ -18,7 +18,7 @@
 					"OriginDataTypeName": {
 						"TypeName": "short",
 						"IsComplexType": false,
-						"IsNullable": true,
+						"IsNullable": false,
 						"Properties": {
 							"HIVE_TYPE_STRING": "short"
 						}
@@ -90,7 +90,7 @@
 		"Properties": {
 			"Description": "",
 			"DisplayFolderInfo": "{\"name\":\"Others\",\"colorCode\":\"\"}",
-			"PrimaryKeys": "",
+			"PrimaryKeys": "SalesTerritoryID",
 			"spark.sql.sources.provider": "parquet"
 		},
 		"Retention": 0,

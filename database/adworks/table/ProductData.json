@@ -18,7 +18,7 @@
 					"OriginDataTypeName": {
 						"TypeName": "string",
 						"IsComplexType": false,
-						"IsNullable": true,
+						"IsNullable": false,
 						"Length": 8000,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
@@ -112,7 +112,7 @@
 					"OriginDataTypeName": {
 						"TypeName": "short",
 						"IsComplexType": false,
-						"IsNullable": true,
+						"IsNullable": false,
 						"Properties": {
 							"HIVE_TYPE_STRING": "short"
 						}
@@ -148,7 +148,7 @@
 		"Properties": {
 			"Description": "",
 			"DisplayFolderInfo": "{\"name\":\"Others\",\"colorCode\":\"\"}",
-			"PrimaryKeys": "",
+			"PrimaryKeys": "ProductId",
 			"spark.sql.sources.provider": "parquet"
 		},
 		"Retention": 0,

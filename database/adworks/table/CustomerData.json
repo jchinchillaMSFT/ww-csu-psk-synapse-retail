@@ -18,7 +18,7 @@
 					"OriginDataTypeName": {
 						"TypeName": "string",
 						"IsComplexType": false,
-						"IsNullable": true,
+						"IsNullable": false,
 						"Length": 8000,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
@@ -115,7 +115,7 @@
 		"Properties": {
 			"Description": "",
 			"DisplayFolderInfo": "{\"name\":\"Others\",\"colorCode\":\"\"}",
-			"PrimaryKeys": "",
+			"PrimaryKeys": "CustomerId",
 			"spark.sql.sources.provider": "parquet"
 		},
 		"Retention": 0,
