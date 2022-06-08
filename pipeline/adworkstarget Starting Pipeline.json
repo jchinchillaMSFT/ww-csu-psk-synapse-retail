@@ -5,14 +5,7 @@
 			{
 				"name": "F0_ChannelType_Territory_Channel",
 				"type": "ExecutePipeline",
-				"dependsOn": [
-					{
-						"activity": "L0_IndividualCustomer",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
+				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
@@ -77,19 +70,6 @@
 				"typeProperties": {
 					"pipeline": {
 						"referenceName": "F3_Item_ProductCategoryDim_Product_TransactionLineItem",
-						"type": "PipelineReference"
-					},
-					"waitOnCompletion": true
-				}
-			},
-			{
-				"name": "L0_IndividualCustomer",
-				"type": "ExecutePipeline",
-				"dependsOn": [],
-				"userProperties": [],
-				"typeProperties": {
-					"pipeline": {
-						"referenceName": "L0_IndividualCustomer",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true
