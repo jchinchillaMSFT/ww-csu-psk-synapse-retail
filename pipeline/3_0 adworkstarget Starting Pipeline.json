@@ -1,5 +1,5 @@
 {
-	"name": "adworkstarget Starting Pipeline",
+	"name": "3_0 adworkstarget Starting Pipeline",
 	"properties": {
 		"activities": [
 			{
@@ -9,7 +9,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
-						"referenceName": "IndependentDimensions",
+						"referenceName": "3_1 IndependentDimensions",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true
@@ -29,7 +29,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
-						"referenceName": "DependentDimensions",
+						"referenceName": "3_2 DependentDimensions",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true
@@ -49,7 +49,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
-						"referenceName": "FactTables",
+						"referenceName": "3_3 FactTables",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true

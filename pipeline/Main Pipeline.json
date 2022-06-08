@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
-						"referenceName": "adworkstarget Starting Pipeline",
+						"referenceName": "3_0 adworkstarget Starting Pipeline",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true
