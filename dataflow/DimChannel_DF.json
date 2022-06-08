@@ -89,7 +89,7 @@
 				"     format: 'table',",
 				"     database: 'adworks',",
 				"     tableName: 'Sales') ~> InternetChannelSource",
-				"ChannelUnion keyGenerate(output(ChannelTypeKey as long),",
+				"ChannelUnion keyGenerate(output(ChannelKey as long),",
 				"     startAt: 1L,",
 				"     stepValue: 1L) ~> SurrogateKey",
 				"ResellerChannelSource aggregate(groupBy(BusinessType),",
@@ -122,7 +122,7 @@
 				"     recreate:true,",
 				"     mapColumn(",
 				"          Channel,",
-				"          ChannelTypeKey",
+				"          ChannelTypeKey = ChannelKey",
 				"     )) ~> DimChannel"
 			]
 		}
