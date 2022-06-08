@@ -162,11 +162,11 @@
 					"Name": "GeographyKey",
 					"Description": "",
 					"OriginDataTypeName": {
-						"TypeName": "integer",
+						"TypeName": "long",
 						"IsNullable": false,
 						"IsComplexType": false,
 						"Properties": {
-							"HIVE_TYPE_STRING": "integer"
+							"HIVE_TYPE_STRING": "long"
 						}
 					}
 				}
