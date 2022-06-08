@@ -46,6 +46,9 @@
 				},
 				{
 					"name": "ChannelUnion"
+				},
+				{
+					"name": "select1"
 				}
 			],
 			"scriptLines": [
@@ -112,18 +115,21 @@
 				"DistinctChannel filter(Channel=='Internet') ~> InternetFilter",
 				"InternetFilter derive(ChannelCategory = 'Internet') ~> ChannelSalesCategoryDerivedCol",
 				"ResellerChannelSelect, InternetChannelSelect union(byName: true)~> ChannelUnion",
-				"SurrogateKey sink(allowSchemaDrift: true,",
+				"SurrogateKey select(mapColumn(",
+				"          Channel,",
+				"          ChannelCategory,",
+				"          ChannelKey",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select1",
+				"select1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     store: 'synapse',",
 				"     databaseType: 'spark',",
 				"     format: 'table',",
 				"     database: 'adworkstarget',",
 				"     tableName: 'DimChannel',",
-				"     recreate:true,",
-				"     mapColumn(",
-				"          Channel,",
-				"          ChannelTypeKey = ChannelKey",
-				"     )) ~> DimChannel"
+				"     recreate:true) ~> DimChannel"
 			]
 		}
 	}
