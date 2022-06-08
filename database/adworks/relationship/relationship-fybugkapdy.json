@@ -10,7 +10,7 @@
 			"Type": "SPARK"
 		},
 		"FromTableName": "Sales",
-		"ToTableName": "CustomerData",
+		"ToTableName": "InternetCustomer",
 		"ColumnRelationshipInformations": [
 			{
 				"FromColumnName": "CustomerId",

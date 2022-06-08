@@ -9,7 +9,7 @@
 		"Origin": {
 			"Type": "SPARK"
 		},
-		"FromTableName": "CustomerData",
+		"FromTableName": "InternetCustomer",
 		"ToTableName": "Country",
 		"ColumnRelationshipInformations": [
 			{
