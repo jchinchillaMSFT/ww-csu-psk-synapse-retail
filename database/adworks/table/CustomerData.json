@@ -14,22 +14,11 @@
 		"StorageDescriptor": {
 			"Columns": [
 				{
-					"Name": "CustomerId0",
-					"OriginDataTypeName": {
-						"TypeName": "short",
-						"IsComplexType": false,
-						"IsNullable": true,
-						"Properties": {
-							"HIVE_TYPE_STRING": "short"
-						}
-					}
-				},
-				{
-					"Name": "CustomerId1",
+					"Name": "CustomerId",
 					"OriginDataTypeName": {
 						"TypeName": "string",
-						"IsComplexType": false,
 						"IsNullable": true,
+						"IsComplexType": false,
 						"Length": 8000,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
@@ -117,7 +106,7 @@
 			},
 			"Properties": {
 				"textinputformat.record.delimiter": ",",
-				"compression": "",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
 				"derivedModelAttributeInfo": "{\"attributeReferences\":{}}"
 			},
 			"Compressed": false,
