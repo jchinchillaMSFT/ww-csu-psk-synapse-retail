@@ -20,7 +20,7 @@
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "1",
 				"spark.dynamicAllocation.maxExecutors": "1",
-				"spark.autotune.trackingId": "a8571abe-0bcc-4955-9ee9-fd941e537614"
+				"spark.autotune.trackingId": "5622504a-ea67-4ae9-aa8b-433bf7e4b168"
 			}
 		},
 		"metadata": {
@@ -102,7 +102,7 @@
 					"print(f\"PySpark version: {pyspark_version}\")\r\n",
 					"print(f\"MMLSpark version: {mmlspark.core.__spark_package_version__}\")"
 				],
-				"execution_count": 1
+				"execution_count": 31
 			},
 			{
 				"cell_type": "markdown",
@@ -140,7 +140,7 @@
 					"RETAIL_PRODUCT_TABLE = \"adworkstarget.DimProduct\"\r\n",
 					"CUSTOMER_TABLE = \"adworkstarget.DimCustomer\""
 				],
-				"execution_count": 6
+				"execution_count": 32
 			},
 			{
 				"cell_type": "code",
@@ -174,7 +174,7 @@
 					"MODEL_NAME = \"lgb-quickstart\"\r\n",
 					""
 				],
-				"execution_count": 7
+				"execution_count": 33
 			},
 			{
 				"cell_type": "markdown",
@@ -216,7 +216,7 @@
 					"    query = \"SELECT * FROM \" + storage_name\r\n",
 					"    return spark.sql(query)"
 				],
-				"execution_count": 8
+				"execution_count": 34
 			},
 			{
 				"cell_type": "code",
@@ -245,7 +245,7 @@
 					"print(\"Customer Data Schema: \")\r\n",
 					"customer_df.printSchema()"
 				],
-				"execution_count": 13
+				"execution_count": 35
 			},
 			{
 				"cell_type": "code",
@@ -264,7 +264,7 @@
 					"#transaction_line_df = transaction_line_df.drop(\"ItemSku\",\"UniversalProductCode\")\r\n",
 					"customer_df = customer_df.drop(\"ChannelKey\",\"GeographyKey\")"
 				],
-				"execution_count": 16
+				"execution_count": 36
 			},
 			{
 				"cell_type": "markdown",
@@ -296,7 +296,7 @@
 					"# After reading each table into a dataframe in a previous step, we will now join the dataframes\r\n",
 					"raw_data = transaction_line_df.join(F.broadcast(retail_product_df), \"ProductKey\").na.drop()\r\n",
 					"raw_data = raw_data.join(F.broadcast(customer_df), \"CustomerKey\").na.drop()\r\n",
-					"raw_data = raw_data.drop(\"Customer\", \"CustomerId\", \"Product\",\"ProductId\", \"UnitPriceDiscountPct\",\"SKU\",\"ListPrice\",\"TotalProductCost\",\"ProductStandardCost\",\"UnitPrice\",\"ExtendedAmount\",\"StandardCost\")\r\n",
+					"raw_data = raw_data.drop(\"Customer\", \"CustomerId\", \"Product\",\"ProductId\", \"UnitPriceDiscountPct\",\"SKU\",\"ListPrice\",\"TotalProductCost\",\"ProductStandardCost\",\"ExtendedAmount\",\"StandardCost\")\r\n",
 					"\r\n",
 					"print(\"Schema: \")\r\n",
 					"raw_data.printSchema()\r\n",
@@ -304,7 +304,7 @@
 					"df = raw_data.toPandas()\r\n",
 					"print(\"Shape: \", df.shape)"
 				],
-				"execution_count": 25
+				"execution_count": 38
 			},
 			{
 				"cell_type": "markdown",
