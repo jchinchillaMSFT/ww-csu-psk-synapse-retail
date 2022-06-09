@@ -1,30 +1,10 @@
 {
-<<<<<<< HEAD
-<<<<<<<< HEAD:database/adworkstarget/table/DimChannel.json
-=======
->>>>>>> main
 	"name": "DimChannel",
 	"properties": {
 		"Name": "DimChannel",
 		"EntityType": "TABLE",
 		"Namespace": {
 			"DatabaseName": "adworkstarget"
-<<<<<<< HEAD
-========
-	"name": "Location",
-	"properties": {
-		"Name": "Location",
-		"EntityType": "TABLE",
-		"Namespace": {
-			"DatabaseName": "adworks"
-		},
-		"Description": "",
-		"TableType": "EXTERNAL",
-		"Origin": {
-			"Type": "SPARK"
->>>>>>>> main:database/adworks/table/Location.json
-=======
->>>>>>> main
 		},
 		"Description": "",
 		"TableType": "EXTERNAL",
@@ -34,72 +14,12 @@
 		"StorageDescriptor": {
 			"Columns": [
 				{
-<<<<<<< HEAD
-<<<<<<<< HEAD:database/adworkstarget/table/DimChannel.json
 					"Name": "Channel",
-========
-					"Name": "LocationId",
-					"OriginDataTypeName": {
-						"TypeName": "short",
-						"IsComplexType": false,
-						"IsNullable": false,
-						"Properties": {
-							"HIVE_TYPE_STRING": "short"
-						}
-					}
-				},
-				{
-					"Name": "LocationZip",
-					"OriginDataTypeName": {
-						"TypeName": "short",
-						"IsComplexType": false,
-						"IsNullable": true,
-						"Properties": {
-							"HIVE_TYPE_STRING": "short"
-						}
-					}
-				},
-				{
-					"Name": "LocationState",
->>>>>>>> main:database/adworks/table/Location.json
-=======
-					"Name": "Channel",
->>>>>>> main
 					"OriginDataTypeName": {
 						"TypeName": "string",
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 8000,
-<<<<<<< HEAD
-<<<<<<<< HEAD:database/adworkstarget/table/DimChannel.json
-========
-						"Properties": {
-							"HIVE_TYPE_STRING": "string"
-						}
-					}
-				},
-				{
-					"Name": "LocationCity",
-					"OriginDataTypeName": {
-						"TypeName": "string",
-						"IsComplexType": false,
-						"IsNullable": true,
-						"Length": 8000,
-						"Properties": {
-							"HIVE_TYPE_STRING": "string"
-						}
-					}
-				},
-				{
-					"Name": "Country",
-					"OriginDataTypeName": {
-						"TypeName": "string",
-						"IsComplexType": false,
-						"IsNullable": true,
-						"Length": 8000,
->>>>>>>> main:database/adworks/table/Location.json
-=======
->>>>>>> main
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -135,29 +55,13 @@
 				"FormatType": "parquet",
 				"SerializeLib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
 				"Properties": {
-<<<<<<< HEAD
-<<<<<<<< HEAD:database/adworkstarget/table/DimChannel.json
 					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworkstarget/DimChannel",
-========
-					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/Location",
->>>>>>>> main:database/adworks/table/Location.json
-=======
-					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworkstarget/DimChannel",
->>>>>>> main
 					"FormatTypeSetToDatabaseDefault": false
 				}
 			},
 			"Source": {
 				"Provider": "ADLS",
-<<<<<<< HEAD
-<<<<<<<< HEAD:database/adworkstarget/table/DimChannel.json
 				"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworkstarget/DimChannel",
-========
-				"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/Location",
->>>>>>>> main:database/adworks/table/Location.json
-=======
-				"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworkstarget/DimChannel",
->>>>>>> main
 				"Properties": {
 					"LinkedServiceName": "azsynapsewksgo2d3-WorkspaceDefaultStorage",
 					"LocationSetToDatabaseDefault": false
@@ -174,15 +78,7 @@
 		"Properties": {
 			"Description": "",
 			"DisplayFolderInfo": "{\"name\":\"Others\",\"colorCode\":\"\"}",
-<<<<<<< HEAD
-<<<<<<<< HEAD:database/adworkstarget/table/DimChannel.json
 			"PrimaryKeys": "ChannelKey",
-========
-			"PrimaryKeys": "LocationId",
->>>>>>>> main:database/adworks/table/Location.json
-=======
-			"PrimaryKeys": "ChannelKey",
->>>>>>> main
 			"spark.sql.sources.provider": "parquet"
 		},
 		"Retention": 0,
