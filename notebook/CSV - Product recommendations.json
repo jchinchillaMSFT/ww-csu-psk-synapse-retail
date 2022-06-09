@@ -1,5 +1,5 @@
 {
-	"name": "CSV - Retail - Product recommendations",
+	"name": "CSV - Product recommendations",
 	"properties": {
 		"folder": {
 			"name": "Retail Recommendation"
@@ -20,7 +20,7 @@
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "2",
 				"spark.dynamicAllocation.maxExecutors": "2",
-				"spark.autotune.trackingId": "2e4d0761-b341-4cec-989b-0c41bb6e47d6"
+				"spark.autotune.trackingId": "072e26cd-b8fb-46f3-a3c9-53618f252779"
 			}
 		},
 		"metadata": {
