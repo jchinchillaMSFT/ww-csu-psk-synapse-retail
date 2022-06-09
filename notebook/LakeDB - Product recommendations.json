@@ -20,7 +20,7 @@
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "1",
 				"spark.dynamicAllocation.maxExecutors": "1",
-				"spark.autotune.trackingId": "2e6a87cf-fc4f-4df8-87db-b182c93235da"
+				"spark.autotune.trackingId": "5cb4cae4-6db9-4f48-9e20-d9a53e0e5dce"
 			}
 		},
 		"metadata": {
@@ -140,7 +140,7 @@
 					"RETAIL_PRODUCT_TABLE = \"adworkstarget.dbo.DimProduct\"\r\n",
 					"CUSTOMER_TABLE = \"adworkstarget.dbo.DimCustomer\""
 				],
-				"execution_count": 15
+				"execution_count": null
 			},
 			{
 				"cell_type": "code",
@@ -174,7 +174,7 @@
 					"MODEL_NAME = \"lgb-quickstart\"\r\n",
 					""
 				],
-				"execution_count": 16
+				"execution_count": null
 			},
 			{
 				"cell_type": "markdown",
@@ -216,7 +216,7 @@
 					"    query = \"SELECT * FROM \" + storage_name\r\n",
 					"    return spark.sql(query)"
 				],
-				"execution_count": 17
+				"execution_count": null
 			},
 			{
 				"cell_type": "code",
@@ -245,7 +245,7 @@
 					"print(\"Customer Data Schema: \")\r\n",
 					"customer_df.printSchema()"
 				],
-				"execution_count": 18
+				"execution_count": null
 			},
 			{
 				"cell_type": "code",
@@ -263,7 +263,7 @@
 				"source": [
 					"transaction_line_df = transaction_line_df.drop(\"ItemSku\",\"UniversalProductCode\")"
 				],
-				"execution_count": 19
+				"execution_count": null
 			},
 			{
 				"cell_type": "markdown",
@@ -303,7 +303,7 @@
 					"df = raw_data.toPandas()\r\n",
 					"print(\"Shape: \", df.shape)"
 				],
-				"execution_count": 20
+				"execution_count": null
 			},
 			{
 				"cell_type": "markdown",
