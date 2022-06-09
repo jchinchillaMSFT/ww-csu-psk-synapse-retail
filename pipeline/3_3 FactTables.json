@@ -1,13 +1,6 @@
 {
-<<<<<<<< HEAD:pipeline/3_3 FactTables.json
-<<<<<<<< HEAD:pipeline/3_3 FactTables.json
 	"name": "3_3 FactTables",
-========
-	"name": "FactTables",
->>>>>>>> main:pipeline/FactTables.json
-========
-	"name": "FactTables",
->>>>>>>> main:pipeline/FactTables.json
+
 	"properties": {
 		"activities": [
 			{
