@@ -1,6 +1,9 @@
 {
 	"name": "DimDate_DF",
 	"properties": {
+		"folder": {
+			"name": "adworkstarget"
+		},
 		"type": "MappingDataFlow",
 		"typeProperties": {
 			"sources": [
