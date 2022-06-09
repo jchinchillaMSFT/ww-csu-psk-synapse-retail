@@ -20,7 +20,7 @@
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "1",
 				"spark.dynamicAllocation.maxExecutors": "1",
-				"spark.autotune.trackingId": "2e658015-c40c-4f13-8fa7-41bb77f099ac"
+				"spark.autotune.trackingId": "2e6a87cf-fc4f-4df8-87db-b182c93235da"
 			}
 		},
 		"metadata": {
@@ -102,7 +102,7 @@
 					"print(f\"PySpark version: {pyspark_version}\")\r\n",
 					"print(f\"MMLSpark version: {mmlspark.core.__spark_package_version__}\")"
 				],
-				"execution_count": 14
+				"execution_count": null
 			},
 			{
 				"cell_type": "markdown",
@@ -136,9 +136,9 @@
 					"# #This solution uses selected tables from your Retail Database Template. \r\n",
 					"# Make sure you update the names if you have used custom table names. You will also need to customize the columns to use and ideally add more columns. \r\n",
 					"# This AI solution will use a minimum number of tables and columns to provide a baseline for further customization\r\n",
-					"TRANSACTION_LINE_TABLE = \"RetailTemplateDB.TransactionLineItem\"\r\n",
-					"RETAIL_PRODUCT_TABLE = \"RetailTemplateDB.RetailProduct\"\r\n",
-					"CUSTOMER_TABLE = \"RetailTemplateDB.Customer\""
+					"TRANSACTION_LINE_TABLE = \"adworkstarget.dbo.FactSales\"\r\n",
+					"RETAIL_PRODUCT_TABLE = \"adworkstarget.dbo.DimProduct\"\r\n",
+					"CUSTOMER_TABLE = \"adworkstarget.dbo.DimCustomer\""
 				],
 				"execution_count": 15
 			},
