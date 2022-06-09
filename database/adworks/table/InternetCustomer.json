@@ -1,10 +1,19 @@
 {
+<<<<<<<< HEAD:database/adworks/table/InternetCustomer.json
 	"name": "InternetCustomer",
 	"properties": {
 		"Name": "InternetCustomer",
 		"EntityType": "TABLE",
 		"Namespace": {
 			"DatabaseName": "adworks"
+========
+	"name": "DimGeography",
+	"properties": {
+		"Name": "DimGeography",
+		"EntityType": "TABLE",
+		"Namespace": {
+			"DatabaseName": "adworkstarget"
+>>>>>>>> main:database/adworkstarget/table/DimGeography.json
 		},
 		"Description": "",
 		"TableType": "EXTERNAL",
@@ -14,36 +23,53 @@
 		"StorageDescriptor": {
 			"Columns": [
 				{
+<<<<<<<< HEAD:database/adworks/table/InternetCustomer.json
 					"Name": "CustomerId",
 					"OriginDataTypeName": {
 						"TypeName": "string",
 						"IsComplexType": false,
 						"IsNullable": false,
-						"Length": 8000,
-						"Properties": {
-							"HIVE_TYPE_STRING": "string"
-						}
-					}
-				},
-				{
-					"Name": "Customer",
-					"OriginDataTypeName": {
-						"TypeName": "string",
-						"IsComplexType": false,
-						"IsNullable": true,
-						"Length": 8000,
-						"Properties": {
-							"HIVE_TYPE_STRING": "string"
-						}
-					}
-				},
-				{
+========
 					"Name": "City",
 					"OriginDataTypeName": {
 						"TypeName": "string",
 						"IsComplexType": false,
 						"IsNullable": true,
+>>>>>>>> main:database/adworkstarget/table/DimGeography.json
 						"Length": 8000,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					}
+				},
+				{
+<<<<<<<< HEAD:database/adworks/table/InternetCustomer.json
+					"Name": "Customer",
+========
+					"Name": "StateProvince",
+>>>>>>>> main:database/adworkstarget/table/DimGeography.json
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 8000,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					}
+				},
+				{
+<<<<<<<< HEAD:database/adworks/table/InternetCustomer.json
+					"Name": "City",
+========
+					"Name": "PostalCode",
+>>>>>>>> main:database/adworkstarget/table/DimGeography.json
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 8000,
+<<<<<<<< HEAD:database/adworks/table/InternetCustomer.json
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -80,8 +106,33 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 8000,
+========
+>>>>>>>> main:database/adworkstarget/table/DimGeography.json
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
+						}
+					}
+				},
+				{
+					"Name": "CountryRegion",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 8000,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					}
+				},
+				{
+					"Name": "GeographyKey",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
 						}
 					}
 				}
@@ -92,15 +143,25 @@
 				"FormatType": "parquet",
 				"SerializeLib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
 				"Properties": {
+<<<<<<<< HEAD:database/adworks/table/InternetCustomer.json
 					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/InternetCustomer",
+========
+					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworkstarget/DimGeography",
+>>>>>>>> main:database/adworkstarget/table/DimGeography.json
 					"FormatTypeSetToDatabaseDefault": false
 				}
 			},
 			"Source": {
 				"Provider": "ADLS",
+<<<<<<<< HEAD:database/adworks/table/InternetCustomer.json
 				"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/InternetCustomer",
 				"Properties": {
 					"LinkedServiceName": "azsynapsewksgo2d3-WorkspaceDefaultStorage",
+========
+				"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworkstarget/DimGeography",
+				"Properties": {
+					"LinkedServiceName": "azwksdatalakego2d3",
+>>>>>>>> main:database/adworkstarget/table/DimGeography.json
 					"LocationSetToDatabaseDefault": false
 				}
 			},
@@ -115,7 +176,11 @@
 		"Properties": {
 			"Description": "",
 			"DisplayFolderInfo": "{\"name\":\"Others\",\"colorCode\":\"\"}",
+<<<<<<<< HEAD:database/adworks/table/InternetCustomer.json
 			"PrimaryKeys": "CustomerId",
+========
+			"PrimaryKeys": "GeographyKey",
+>>>>>>>> main:database/adworkstarget/table/DimGeography.json
 			"spark.sql.sources.provider": "parquet"
 		},
 		"Retention": 0,

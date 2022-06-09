@@ -1,7 +1,13 @@
 {
+<<<<<<<< HEAD:database/adworkstarget/relationship/relationship-ypbjktffns.json
 	"name": "relationship-ypbjktffns",
 	"properties": {
 		"Name": "relationship-ypbjktffns",
+========
+	"name": "relationship-fybugkapdy",
+	"properties": {
+		"Name": "relationship-fybugkapdy",
+>>>>>>>> main:database/adworks/relationship/relationship-fybugkapdy.json
 		"EntityType": "RELATIONSHIP",
 		"Namespace": {
 			"DatabaseName": "adworkstarget"
@@ -9,12 +15,17 @@
 		"Origin": {
 			"Type": "SPARK"
 		},
+<<<<<<<< HEAD:database/adworkstarget/relationship/relationship-ypbjktffns.json
 		"FromTableName": "FactSales",
 		"ToTableName": "DimDate",
+========
+		"FromTableName": "Sales",
+		"ToTableName": "CustomerData",
+>>>>>>>> main:database/adworks/relationship/relationship-fybugkapdy.json
 		"ColumnRelationshipInformations": [
 			{
-				"FromColumnName": "OrderDateKey",
-				"ToColumnName": "DateKey"
+				"FromColumnName": "CustomerId",
+				"ToColumnName": "CustomerId"
 			}
 		],
 		"RelationshipType": 0

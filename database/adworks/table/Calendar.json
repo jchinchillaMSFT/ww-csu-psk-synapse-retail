@@ -1,4 +1,5 @@
 {
+<<<<<<<< HEAD:database/adworks/table/Calendar.json
 	"name": "Calendar",
 	"properties": {
 		"Name": "Calendar",
@@ -10,20 +11,147 @@
 		"TableType": "EXTERNAL",
 		"Origin": {
 			"Type": "SPARK"
+========
+	"name": "DimProduct",
+	"properties": {
+		"Name": "DimProduct",
+		"EntityType": "TABLE",
+		"Namespace": {
+			"DatabaseName": "adworkstarget"
+>>>>>>>> main:database/adworkstarget/table/DimProduct.json
+		},
+		"Description": "",
+		"TableType": "EXTERNAL",
+		"Origin": {
+			"Type": "SPARK"
 		},
 		"StorageDescriptor": {
 			"Columns": [
 				{
+<<<<<<<< HEAD:database/adworks/table/Calendar.json
 					"Name": "Date",
+========
+					"Name": "ProductId",
+					"OriginDataTypeName": {
+						"TypeName": "short",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"HIVE_TYPE_STRING": "short"
+						}
+					}
+				},
+				{
+					"Name": "Category",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 8000,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					}
+				},
+				{
+					"Name": "Subcategory",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 8000,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					}
+				},
+				{
+					"Name": "Model",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 8000,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					}
+				},
+				{
+					"Name": "ListPrice",
+					"OriginDataTypeName": {
+						"TypeName": "float",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"HIVE_TYPE_STRING": "float"
+						}
+					}
+				},
+				{
+					"Name": "Color",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 8000,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					}
+				},
+				{
+					"Name": "StandardCost",
+					"OriginDataTypeName": {
+						"TypeName": "float",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"HIVE_TYPE_STRING": "float"
+						}
+					}
+				},
+				{
+					"Name": "Product",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 8000,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					}
+				},
+				{
+					"Name": "SKU",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 8000,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					}
+				},
+				{
+					"Name": "ProductKey",
+>>>>>>>> main:database/adworkstarget/table/DimProduct.json
 					"OriginDataTypeName": {
 						"TypeName": "date",
 						"IsComplexType": false,
+<<<<<<<< HEAD:database/adworks/table/Calendar.json
 						"IsNullable": true,
+========
+						"IsNullable": false,
+>>>>>>>> main:database/adworkstarget/table/DimProduct.json
 						"Properties": {
 							"DateFormat": "YYYY-MM-DD",
 							"HIVE_TYPE_STRING": "date"
 						}
 					}
+<<<<<<<< HEAD:database/adworks/table/Calendar.json
 				},
 				{
 					"Name": "YYYYQ",
@@ -127,6 +255,8 @@
 							"HIVE_TYPE_STRING": "short"
 						}
 					}
+========
+>>>>>>>> main:database/adworkstarget/table/DimProduct.json
 				}
 			],
 			"Format": {
@@ -135,15 +265,25 @@
 				"FormatType": "parquet",
 				"SerializeLib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
 				"Properties": {
+<<<<<<<< HEAD:database/adworks/table/Calendar.json
 					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/Calendar",
+========
+					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworkstarget/DimProduct",
+>>>>>>>> main:database/adworkstarget/table/DimProduct.json
 					"FormatTypeSetToDatabaseDefault": false
 				}
 			},
 			"Source": {
 				"Provider": "ADLS",
+<<<<<<<< HEAD:database/adworks/table/Calendar.json
 				"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/Calendar",
 				"Properties": {
 					"LinkedServiceName": "azsynapsewksgo2d3-WorkspaceDefaultStorage",
+========
+				"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworkstarget/DimProduct",
+				"Properties": {
+					"LinkedServiceName": "azwksdatalakego2d3",
+>>>>>>>> main:database/adworkstarget/table/DimProduct.json
 					"LocationSetToDatabaseDefault": false
 				}
 			},
@@ -158,7 +298,11 @@
 		"Properties": {
 			"Description": "",
 			"DisplayFolderInfo": "{\"name\":\"Others\",\"colorCode\":\"\"}",
+<<<<<<<< HEAD:database/adworks/table/Calendar.json
 			"PrimaryKeys": "",
+========
+			"PrimaryKeys": "ProductKey",
+>>>>>>>> main:database/adworkstarget/table/DimProduct.json
 			"spark.sql.sources.provider": "parquet"
 		},
 		"Retention": 0,

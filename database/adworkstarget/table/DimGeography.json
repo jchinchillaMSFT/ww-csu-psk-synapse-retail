@@ -4,7 +4,16 @@
 		"Name": "DimGeography",
 		"EntityType": "TABLE",
 		"Namespace": {
+<<<<<<<< HEAD:database/adworkstarget/table/DimGeography.json
 			"DatabaseName": "adworkstarget"
+		},
+		"Description": "",
+		"TableType": "EXTERNAL",
+		"Origin": {
+			"Type": "SPARK"
+========
+			"DatabaseName": "adworks"
+>>>>>>>> main:database/adworks/table/Country.json
 		},
 		"Description": "",
 		"TableType": "EXTERNAL",
@@ -14,7 +23,22 @@
 		"StorageDescriptor": {
 			"Columns": [
 				{
+<<<<<<<< HEAD:database/adworkstarget/table/DimGeography.json
 					"Name": "City",
+========
+					"Name": "CountryId",
+					"OriginDataTypeName": {
+						"TypeName": "short",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Properties": {
+							"HIVE_TYPE_STRING": "short"
+						}
+					}
+				},
+				{
+					"Name": "IsoCountryName",
+>>>>>>>> main:database/adworks/table/Country.json
 					"OriginDataTypeName": {
 						"TypeName": "string",
 						"IsComplexType": false,
@@ -79,7 +103,11 @@
 				"FormatType": "parquet",
 				"SerializeLib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
 				"Properties": {
+<<<<<<<< HEAD:database/adworkstarget/table/DimGeography.json
 					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworkstarget/DimGeography",
+========
+					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/Country",
+>>>>>>>> main:database/adworks/table/Country.json
 					"FormatTypeSetToDatabaseDefault": false
 				}
 			},
@@ -87,7 +115,11 @@
 				"Provider": "ADLS",
 				"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworkstarget/DimGeography",
 				"Properties": {
+<<<<<<<< HEAD:database/adworkstarget/table/DimGeography.json
 					"LinkedServiceName": "azwksdatalakego2d3",
+========
+					"LinkedServiceName": "azsynapsewksgo2d3-WorkspaceDefaultStorage",
+>>>>>>>> main:database/adworks/table/Country.json
 					"LocationSetToDatabaseDefault": false
 				}
 			},
@@ -102,7 +134,11 @@
 		"Properties": {
 			"Description": "",
 			"DisplayFolderInfo": "{\"name\":\"Others\",\"colorCode\":\"\"}",
+<<<<<<<< HEAD:database/adworkstarget/table/DimGeography.json
 			"PrimaryKeys": "GeographyKey",
+========
+			"PrimaryKeys": "",
+>>>>>>>> main:database/adworks/table/Country.json
 			"spark.sql.sources.provider": "parquet"
 		},
 		"Retention": 0,

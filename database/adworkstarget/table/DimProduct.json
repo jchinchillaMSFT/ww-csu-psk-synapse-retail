@@ -4,7 +4,16 @@
 		"Name": "DimProduct",
 		"EntityType": "TABLE",
 		"Namespace": {
+<<<<<<<< HEAD:database/adworkstarget/table/DimProduct.json
 			"DatabaseName": "adworkstarget"
+		},
+		"Description": "",
+		"TableType": "EXTERNAL",
+		"Origin": {
+			"Type": "SPARK"
+========
+			"DatabaseName": "adworks"
+>>>>>>>> main:database/adworks/table/CustomerData.json
 		},
 		"Description": "",
 		"TableType": "EXTERNAL",
@@ -14,6 +23,7 @@
 		"StorageDescriptor": {
 			"Columns": [
 				{
+<<<<<<<< HEAD:database/adworkstarget/table/DimProduct.json
 					"Name": "ProductId",
 					"OriginDataTypeName": {
 						"TypeName": "short",
@@ -30,6 +40,13 @@
 						"TypeName": "string",
 						"IsComplexType": false,
 						"IsNullable": true,
+========
+					"Name": "CustomerId",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": false,
+>>>>>>>> main:database/adworks/table/CustomerData.json
 						"Length": 8000,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
@@ -37,7 +54,11 @@
 					}
 				},
 				{
+<<<<<<<< HEAD:database/adworkstarget/table/DimProduct.json
 					"Name": "Subcategory",
+========
+					"Name": "Customer",
+>>>>>>>> main:database/adworks/table/CustomerData.json
 					"OriginDataTypeName": {
 						"TypeName": "string",
 						"IsComplexType": false,
@@ -49,7 +70,11 @@
 					}
 				},
 				{
+<<<<<<<< HEAD:database/adworkstarget/table/DimProduct.json
 					"Name": "Model",
+========
+					"Name": "City",
+>>>>>>>> main:database/adworks/table/CustomerData.json
 					"OriginDataTypeName": {
 						"TypeName": "string",
 						"IsComplexType": false,
@@ -61,6 +86,7 @@
 					}
 				},
 				{
+<<<<<<<< HEAD:database/adworkstarget/table/DimProduct.json
 					"Name": "ListPrice",
 					"OriginDataTypeName": {
 						"TypeName": "float",
@@ -73,11 +99,15 @@
 				},
 				{
 					"Name": "Color",
+========
+					"Name": "StateProvince",
+>>>>>>>> main:database/adworks/table/CustomerData.json
 					"OriginDataTypeName": {
 						"TypeName": "string",
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 8000,
+<<<<<<<< HEAD:database/adworkstarget/table/DimProduct.json
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -101,18 +131,39 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 8000,
+========
+>>>>>>>> main:database/adworks/table/CustomerData.json
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
 					}
 				},
 				{
+<<<<<<<< HEAD:database/adworkstarget/table/DimProduct.json
 					"Name": "SKU",
+========
+					"Name": "PostalCode",
+>>>>>>>> main:database/adworks/table/CustomerData.json
 					"OriginDataTypeName": {
 						"TypeName": "string",
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 8000,
+<<<<<<<< HEAD:database/adworkstarget/table/DimProduct.json
+========
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					}
+				},
+				{
+					"Name": "CountryRegion",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 8000,
+>>>>>>>> main:database/adworks/table/CustomerData.json
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -136,7 +187,11 @@
 				"FormatType": "parquet",
 				"SerializeLib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
 				"Properties": {
+<<<<<<<< HEAD:database/adworkstarget/table/DimProduct.json
 					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworkstarget/DimProduct",
+========
+					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/CustomerData",
+>>>>>>>> main:database/adworks/table/CustomerData.json
 					"FormatTypeSetToDatabaseDefault": false
 				}
 			},
@@ -144,7 +199,11 @@
 				"Provider": "ADLS",
 				"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworkstarget/DimProduct",
 				"Properties": {
+<<<<<<<< HEAD:database/adworkstarget/table/DimProduct.json
 					"LinkedServiceName": "azwksdatalakego2d3",
+========
+					"LinkedServiceName": "azsynapsewksgo2d3-WorkspaceDefaultStorage",
+>>>>>>>> main:database/adworks/table/CustomerData.json
 					"LocationSetToDatabaseDefault": false
 				}
 			},
@@ -159,7 +218,11 @@
 		"Properties": {
 			"Description": "",
 			"DisplayFolderInfo": "{\"name\":\"Others\",\"colorCode\":\"\"}",
+<<<<<<<< HEAD:database/adworkstarget/table/DimProduct.json
 			"PrimaryKeys": "ProductKey",
+========
+			"PrimaryKeys": "CustomerId",
+>>>>>>>> main:database/adworks/table/CustomerData.json
 			"spark.sql.sources.provider": "parquet"
 		},
 		"Retention": 0,

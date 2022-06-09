@@ -91,6 +91,7 @@
 					}
 				},
 				{
+<<<<<<< HEAD
 					"Name": "OrderDateKey",
 					"OriginDataTypeName": {
 						"TypeName": "integer",
@@ -98,6 +99,16 @@
 						"IsComplexType": false,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
+=======
+					"Name": "OrderDate",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+>>>>>>> main
 						}
 					}
 				},
@@ -161,11 +172,19 @@
 					"Name": "GeographyKey",
 					"Description": "",
 					"OriginDataTypeName": {
+<<<<<<< HEAD
 						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": false,
 						"Properties": {
 							"HIVE_TYPE_STRING": "long"
+=======
+						"TypeName": "integer",
+						"IsNullable": false,
+						"IsComplexType": false,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+>>>>>>> main
 						}
 					}
 				}

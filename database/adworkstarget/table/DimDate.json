@@ -4,7 +4,11 @@
 		"Name": "DimDate",
 		"EntityType": "TABLE",
 		"Namespace": {
+<<<<<<< HEAD:database/adworkstarget/table/DimDate.json
 			"DatabaseName": "adworkstarget"
+=======
+			"DatabaseName": "adworks"
+>>>>>>> main:database/adworks/table/Date.json
 		},
 		"Description": "",
 		"TableType": "EXTERNAL",
@@ -18,10 +22,43 @@
 					"OriginDataTypeName": {
 						"TypeName": "date",
 						"IsComplexType": false,
+<<<<<<< HEAD:database/adworkstarget/table/DimDate.json
 						"IsNullable": true,
+=======
+						"IsNullable": false,
+>>>>>>> main:database/adworks/table/Date.json
 						"Properties": {
 							"DateFormat": "YYYY-MM-DD",
 							"HIVE_TYPE_STRING": "date"
+						}
+					}
+				},
+				{
+<<<<<<< HEAD:database/adworkstarget/table/DimDate.json
+					"Name": "YYYYQ",
+=======
+					"Name": "DateKey",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					}
+				},
+				{
+					"Name": "Year2",
+>>>>>>> main:database/adworks/table/Date.json
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 8000,
+<<<<<<< HEAD:database/adworkstarget/table/DimDate.json
+=======
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
 						}
 					}
 				},
@@ -32,6 +69,7 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 8000,
+>>>>>>> main:database/adworks/table/Date.json
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -50,6 +88,21 @@
 					}
 				},
 				{
+<<<<<<< HEAD:database/adworkstarget/table/DimDate.json
+=======
+					"Name": "FullDate",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 8000,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					}
+				},
+				{
+>>>>>>> main:database/adworks/table/Date.json
 					"Name": "YYYYMM",
 					"OriginDataTypeName": {
 						"TypeName": "integer",
@@ -96,7 +149,11 @@
 					}
 				},
 				{
+<<<<<<< HEAD:database/adworkstarget/table/DimDate.json
 					"Name": "Year",
+=======
+					"Name": "Year10",
+>>>>>>> main:database/adworks/table/Date.json
 					"OriginDataTypeName": {
 						"TypeName": "short",
 						"IsComplexType": false,
@@ -127,6 +184,7 @@
 							"HIVE_TYPE_STRING": "short"
 						}
 					}
+<<<<<<< HEAD:database/adworkstarget/table/DimDate.json
 				},
 				{
 					"Name": "DateKey",
@@ -138,6 +196,8 @@
 							"HIVE_TYPE_STRING": "integer"
 						}
 					}
+=======
+>>>>>>> main:database/adworks/table/Date.json
 				}
 			],
 			"Format": {
@@ -146,7 +206,11 @@
 				"FormatType": "parquet",
 				"SerializeLib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
 				"Properties": {
+<<<<<<< HEAD:database/adworkstarget/table/DimDate.json
 					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworkstarget/DimDate",
+=======
+					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/Date",
+>>>>>>> main:database/adworks/table/Date.json
 					"FormatTypeSetToDatabaseDefault": false
 				}
 			},
@@ -169,7 +233,11 @@
 		"Properties": {
 			"Description": "",
 			"DisplayFolderInfo": "{\"name\":\"Others\",\"colorCode\":\"\"}",
+<<<<<<< HEAD:database/adworkstarget/table/DimDate.json
 			"PrimaryKeys": "DateKey",
+=======
+			"PrimaryKeys": "Date",
+>>>>>>> main:database/adworks/table/Date.json
 			"spark.sql.sources.provider": "parquet"
 		},
 		"Retention": 0,
