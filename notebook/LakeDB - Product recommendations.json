@@ -20,7 +20,7 @@
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "1",
 				"spark.dynamicAllocation.maxExecutors": "1",
-				"spark.autotune.trackingId": "5cb4cae4-6db9-4f48-9e20-d9a53e0e5dce"
+				"spark.autotune.trackingId": "a8571abe-0bcc-4955-9ee9-fd941e537614"
 			}
 		},
 		"metadata": {
@@ -102,7 +102,7 @@
 					"print(f\"PySpark version: {pyspark_version}\")\r\n",
 					"print(f\"MMLSpark version: {mmlspark.core.__spark_package_version__}\")"
 				],
-				"execution_count": null
+				"execution_count": 1
 			},
 			{
 				"cell_type": "markdown",
@@ -136,11 +136,11 @@
 					"# #This solution uses selected tables from your Retail Database Template. \r\n",
 					"# Make sure you update the names if you have used custom table names. You will also need to customize the columns to use and ideally add more columns. \r\n",
 					"# This AI solution will use a minimum number of tables and columns to provide a baseline for further customization\r\n",
-					"TRANSACTION_LINE_TABLE = \"adworkstarget.dbo.FactSales\"\r\n",
-					"RETAIL_PRODUCT_TABLE = \"adworkstarget.dbo.DimProduct\"\r\n",
-					"CUSTOMER_TABLE = \"adworkstarget.dbo.DimCustomer\""
+					"TRANSACTION_LINE_TABLE = \"adworkstarget.FactSales\"\r\n",
+					"RETAIL_PRODUCT_TABLE = \"adworkstarget.DimProduct\"\r\n",
+					"CUSTOMER_TABLE = \"adworkstarget.DimCustomer\""
 				],
-				"execution_count": null
+				"execution_count": 6
 			},
 			{
 				"cell_type": "code",
@@ -174,7 +174,7 @@
 					"MODEL_NAME = \"lgb-quickstart\"\r\n",
 					""
 				],
-				"execution_count": null
+				"execution_count": 7
 			},
 			{
 				"cell_type": "markdown",
@@ -216,7 +216,7 @@
 					"    query = \"SELECT * FROM \" + storage_name\r\n",
 					"    return spark.sql(query)"
 				],
-				"execution_count": null
+				"execution_count": 8
 			},
 			{
 				"cell_type": "code",
@@ -245,7 +245,7 @@
 					"print(\"Customer Data Schema: \")\r\n",
 					"customer_df.printSchema()"
 				],
-				"execution_count": null
+				"execution_count": 13
 			},
 			{
 				"cell_type": "code",
@@ -261,9 +261,10 @@
 					}
 				},
 				"source": [
-					"transaction_line_df = transaction_line_df.drop(\"ItemSku\",\"UniversalProductCode\")"
+					"#transaction_line_df = transaction_line_df.drop(\"ItemSku\",\"UniversalProductCode\")\r\n",
+					"customer_df = customer_df.drop(\"ChannelKey\",\"GeographyKey\")"
 				],
-				"execution_count": null
+				"execution_count": 16
 			},
 			{
 				"cell_type": "markdown",
@@ -293,9 +294,9 @@
 				},
 				"source": [
 					"# After reading each table into a dataframe in a previous step, we will now join the dataframes\r\n",
-					"raw_data = transaction_line_df.join(F.broadcast(retail_product_df), \"ProductId\").na.drop()\r\n",
-					"raw_data = raw_data.join(F.broadcast(customer_df), \"CustomerId\").na.drop()\r\n",
-					"raw_data = raw_data.drop(\"TransactionCompletedTimestamp\", \"TransactionLineItemId\", \"TransactionId\")\r\n",
+					"raw_data = transaction_line_df.join(F.broadcast(retail_product_df), \"ProductKey\").na.drop()\r\n",
+					"raw_data = raw_data.join(F.broadcast(customer_df), \"CustomerKey\").na.drop()\r\n",
+					"raw_data = raw_data.drop(\"Customer\", \"CustomerId\", \"Product\",\"ProductId\", \"UnitPriceDiscountPct\",\"SKU\",\"ListPrice\",\"TotalProductCost\",\"ProductStandardCost\",\"UnitPrice\",\"ExtendedAmount\",\"StandardCost\")\r\n",
 					"\r\n",
 					"print(\"Schema: \")\r\n",
 					"raw_data.printSchema()\r\n",
@@ -303,7 +304,7 @@
 					"df = raw_data.toPandas()\r\n",
 					"print(\"Shape: \", df.shape)"
 				],
-				"execution_count": null
+				"execution_count": 25
 			},
 			{
 				"cell_type": "markdown",
@@ -336,7 +337,7 @@
 					"df.describe()\r\n",
 					""
 				],
-				"execution_count": null
+				"execution_count": 26
 			},
 			{
 				"cell_type": "code",
@@ -371,7 +372,7 @@
 					"            annot_kws={'size': 10})\r\n",
 					"plt.show()"
 				],
-				"execution_count": null
+				"execution_count": 27
 			},
 			{
 				"cell_type": "code",
@@ -393,7 +394,7 @@
 					"sns.pairplot(df, height=2.5)\r\n",
 					"plt.show()"
 				],
-				"execution_count": null
+				"execution_count": 28
 			},
 			{
 				"cell_type": "markdown",
