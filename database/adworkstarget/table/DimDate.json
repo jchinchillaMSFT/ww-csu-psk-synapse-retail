@@ -1,7 +1,7 @@
 {
-	"name": "DimCalendar",
+	"name": "DimDate",
 	"properties": {
-		"Name": "DimCalendar",
+		"Name": "DimDate",
 		"EntityType": "TABLE",
 		"Namespace": {
 			"DatabaseName": "adworkstarget"
@@ -99,8 +99,8 @@
 					"Name": "Year",
 					"OriginDataTypeName": {
 						"TypeName": "short",
-						"IsComplexType": false,
 						"IsNullable": true,
+						"IsComplexType": false,
 						"Properties": {
 							"HIVE_TYPE_STRING": "short"
 						}
@@ -146,13 +146,13 @@
 				"FormatType": "parquet",
 				"SerializeLib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
 				"Properties": {
-					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworkstarget/DimCalendar",
+					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworkstarget/DimDate",
 					"FormatTypeSetToDatabaseDefault": false
 				}
 			},
 			"Source": {
 				"Provider": "ADLS",
-				"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworkstarget/DimCalendar",
+				"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworkstarget/DimDate",
 				"Properties": {
 					"LinkedServiceName": "azsynapsewksgo2d3-WorkspaceDefaultStorage",
 					"LocationSetToDatabaseDefault": false
@@ -160,7 +160,7 @@
 			},
 			"Properties": {
 				"textinputformat.record.delimiter": ",",
-				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"compression": "",
 				"derivedModelAttributeInfo": "{\"attributeReferences\":{}}"
 			},
 			"Compressed": false,
