@@ -1,5 +1,5 @@
 {
-	"name": "Main Pipeline",
+	"name": "1_0 Main Pipeline",
 	"properties": {
 		"activities": [
 			{
@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
-						"referenceName": "adworkstarget Starting Pipeline",
+						"referenceName": "3_0 adworkstarget Starting Pipeline",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true
@@ -29,7 +29,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
-						"referenceName": "adworks Starting Pipeline",
+						"referenceName": "2_0 adworks Starting Pipeline",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true

@@ -2,7 +2,7 @@
 	"name": "adworkstarget RowCounts",
 	"properties": {
 		"content": {
-			"query": "SELECT 'ChannelType' as [TableName], count(*) as [RowCount]\n FROM [adworkstarget].[dbo].[ChannelType]\nUNION ALL\n SELECT 'Country' as [TableName], count(*) as [RowCount]\n FROM [adworkstarget].[dbo].[Country]\nUNION ALL\n SELECT 'Customer' as [TableName], count(*) as [RowCount]\n FROM [adworkstarget].[dbo].[Customer]\nUNION ALL\n SELECT 'IndividualCustomer' as [TableName], count(*) as [RowCount]\n FROM [adworkstarget].[dbo].[IndividualCustomer]\nUNION ALL\n SELECT 'Location' as [TableName], count(*) as [RowCount]\n FROM [adworkstarget].[dbo].[Location]\nUNION ALL\n SELECT 'Territory' as [TableName], count(*) as [RowCount]\n FROM [adworkstarget].[dbo].[Territory]\nUNION ALL\n SELECT 'Transaction' as [TableName], count(*) as [RowCount]\n FROM [adworkstarget].[dbo].[Transaction]\n ",
+			"query": "SELECT 'DimChannel' as [TableName], count(*) as [RowCount]\n FROM [adworkstarget].[dbo].[DimChannel]\nUNION ALL\n SELECT 'DimCustomer' as [TableName], count(*) as [RowCount]\n FROM [adworkstarget].[dbo].[DimCustomer]\nUNION ALL\n SELECT 'DimProduct' as [TableName], count(*) as [RowCount]\n FROM [adworkstarget].[dbo].[DimProduct]\nUNION ALL\n SELECT 'DimGeography' as [TableName], count(*) as [RowCount]\n FROM [adworkstarget].[dbo].[DimGeography]\nUNION ALL\n SELECT 'DimProduct' as [TableName], count(*) as [RowCount]\n FROM [adworkstarget].[dbo].[DimProduct]\nUNION ALL\n SELECT 'FactSales' as [TableName], count(*) as [RowCount]\n FROM [adworkstarget].[dbo].[FactSales]\n ",
 			"metadata": {
 				"language": "sql"
 			},

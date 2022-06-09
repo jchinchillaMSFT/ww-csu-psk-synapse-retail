@@ -1,5 +1,5 @@
 {
-	"name": "Retail - Product recommendations from Lake DB",
+	"name": "CSV - Product recommendations",
 	"properties": {
 		"folder": {
 			"name": "Retail Recommendation"
@@ -11,23 +11,20 @@
 			"type": "BigDataPoolReference"
 		},
 		"sessionProperties": {
-			"driverMemory": "56g",
-			"driverCores": 8,
-			"executorMemory": "56g",
-			"executorCores": 8,
-			"numExecutors": 1,
+			"driverMemory": "28g",
+			"driverCores": 4,
+			"executorMemory": "28g",
+			"executorCores": 4,
+			"numExecutors": 2,
 			"conf": {
 				"spark.dynamicAllocation.enabled": "false",
-				"spark.dynamicAllocation.minExecutors": "1",
-				"spark.dynamicAllocation.maxExecutors": "1",
-				"spark.autotune.trackingId": "411e5478-2508-4ce9-ab05-ff29ba7fbdf1"
+				"spark.dynamicAllocation.minExecutors": "2",
+				"spark.dynamicAllocation.maxExecutors": "2",
+				"spark.autotune.trackingId": "072e26cd-b8fb-46f3-a3c9-53618f252779"
 			}
 		},
 		"metadata": {
 			"saveOutput": true,
-			"synapse_widget": {
-				"version": "0.1"
-			},
 			"enableDebugMode": false,
 			"kernelspec": {
 				"name": "synapse_pyspark",
@@ -49,7 +46,7 @@
 				"nodeCount": 3,
 				"cores": 8,
 				"memory": 56,
-				"extraHeader": null
+				"automaticScaleJobs": false
 			},
 			"sessionKeepAliveTimeout": 30
 		},
@@ -67,9 +64,21 @@
 					"# Retail Recommendation Accelerator Quickstart: Model Training\r\n",
 					"\r\n",
 					"\r\n",
-					"This notebook uses data from a database modeled based on a Retail Database Template. It trains a LightGBM machine learning model for product recommendation. The tables and columns used in this Notebook are only a minimum set and the solution needs to be customized to your own needs, by adding additional columns and features."
-				],
-				"attachments": null
+					"This notebook uses sample data to train a LightGBM model for retail product recommendation. The data is randomly generated."
+				]
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"## Library imports"
+				]
 			},
 			{
 				"cell_type": "code",
@@ -94,7 +103,6 @@
 					"from matplotlib import pyplot as plt\r\n",
 					"\r\n",
 					"from pyspark.version import __version__ as pyspark_version\r\n",
-					"import pyspark.sql.functions as F\r\n",
 					"\r\n",
 					"import mmlspark\r\n",
 					"from mmlspark.train import ComputeModelStatistics\r\n",
@@ -106,8 +114,7 @@
 					"print(f\"PySpark version: {pyspark_version}\")\r\n",
 					"print(f\"MMLSpark version: {mmlspark.core.__spark_package_version__}\")"
 				],
-				"attachments": null,
-				"execution_count": 14
+				"execution_count": 2
 			},
 			{
 				"cell_type": "markdown",
@@ -119,10 +126,15 @@
 					}
 				},
 				"source": [
-					"## Parameters\r\n",
-					""
-				],
-				"attachments": null
+					"## Read the data from Blob"
+				]
+			},
+			{
+				"cell_type": "markdown",
+				"source": [
+					"Note: If you're using a Managed VNet enabled workspace, please download the dataset from the \n",
+					"[url](https://synapsemlpublic.blob.core.windows.net/files/PersonalizedData.csv) and then upload it to your own storage account in order to access it."
+				]
 			},
 			{
 				"cell_type": "code",
@@ -135,19 +147,39 @@
 						"transient": {
 							"deleting": false
 						}
-					},
-					"collapsed": true
+					}
 				},
 				"source": [
-					"# #This solution uses selected tables from your Retail Database Template. \r\n",
-					"# Make sure you update the names if you have used custom table names. You will also need to customize the columns to use and ideally add more columns. \r\n",
-					"# This AI solution will use a minimum number of tables and columns to provide a baseline for further customization\r\n",
-					"TRANSACTION_LINE_TABLE = \"RetailTemplateDB.TransactionLineItem\"\r\n",
-					"RETAIL_PRODUCT_TABLE = \"RetailTemplateDB.RetailProduct\"\r\n",
-					"CUSTOMER_TABLE = \"RetailTemplateDB.Customer\""
+					"#Blob URI in linked RAW ADLSv2\r\n",
+					"storageaccount = \"azrawdatalakego2d3\"\r\n",
+					"filesystem = \"raw\"\r\n",
+					"filename= \"PersonalizedData.csv\"\r\n",
+					"uri = \"abfss://\" + filesystem + \"@\" + storageaccount + \".dfs.core.windows.net\" + \"/\" + filename\r\n",
+					"print(uri)\r\n",
+					"\r\n",
+					"# Read and display schema of file from RAW ADLSv2\r\n",
+					"raw_data = spark.read.csv(uri, header=True, inferSchema=True)\r\n",
+					"print(\"Schema: \")\r\n",
+					"raw_data.printSchema()\r\n",
+					"\r\n",
+					"df = raw_data.toPandas()\r\n",
+					"print(\"Shape: \", df.shape)\r\n",
+					""
 				],
-				"attachments": null,
-				"execution_count": 15
+				"execution_count": 3
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"## Parameters"
+				]
 			},
 			{
 				"cell_type": "code",
@@ -181,143 +213,17 @@
 					"MODEL_NAME = \"lgb-quickstart\"\r\n",
 					""
 				],
-				"attachments": null,
-				"execution_count": 16
-			},
-			{
-				"cell_type": "markdown",
-				"metadata": {
-					"nteract": {
-						"transient": {
-							"deleting": false
-						}
-					}
-				},
-				"source": [
-					"## Read the data from Spark table"
-				],
-				"attachments": null
+				"execution_count": 4
 			},
 			{
 				"cell_type": "code",
 				"metadata": {
-					"jupyter": {
-						"source_hidden": false,
-						"outputs_hidden": false
-					},
-					"nteract": {
-						"transient": {
-							"deleting": false
-						}
-					},
-					"collapsed": true
-				},
-				"source": [
-					"def read_from_synms(storage_name, **kwargs):\r\n",
-					"    \"\"\"Read a PySpark dataframe from SynMS\r\n",
-					"    \r\n",
-					"    Args: \r\n",
-					"        storage_name (str): Name of the storage table\r\n",
-					"\r\n",
-					"    Returns:\r\n",
-					"        spark.DataFrame: Dataset\r\n",
-					"    \"\"\"\r\n",
-					"    query = \"SELECT * FROM \" + storage_name\r\n",
-					"    return spark.sql(query)"
-				],
-				"attachments": null,
-				"execution_count": 17
-			},
-			{
-				"cell_type": "code",
-				"metadata": {
-					"jupyter": {
-						"source_hidden": false,
-						"outputs_hidden": false
-					},
-					"nteract": {
-						"transient": {
-							"deleting": false
-						}
-					},
 					"collapsed": false
 				},
 				"source": [
-					"transaction_line_df = read_from_synms(TRANSACTION_LINE_TABLE)\r\n",
-					"print(\"Transaction Line Data Schema: \")\r\n",
-					"transaction_line_df.printSchema()\r\n",
-					"\r\n",
-					"retail_product_df = read_from_synms(RETAIL_PRODUCT_TABLE)\r\n",
-					"print(\"Retail Product Data Schema: \")\r\n",
-					"retail_product_df.printSchema()\r\n",
-					"\r\n",
-					"customer_df = read_from_synms(CUSTOMER_TABLE)\r\n",
-					"print(\"Customer Data Schema: \")\r\n",
-					"customer_df.printSchema()"
+					"display(df.iloc[:10, :])"
 				],
-				"attachments": null,
-				"execution_count": 18
-			},
-			{
-				"cell_type": "code",
-				"metadata": {
-					"jupyter": {
-						"source_hidden": false,
-						"outputs_hidden": false
-					},
-					"nteract": {
-						"transient": {
-							"deleting": false
-						}
-					}
-				},
-				"source": [
-					"transaction_line_df = transaction_line_df.drop(\"ItemSku\",\"UniversalProductCode\")"
-				],
-				"attachments": null,
-				"execution_count": 19
-			},
-			{
-				"cell_type": "markdown",
-				"metadata": {
-					"nteract": {
-						"transient": {
-							"deleting": false
-						}
-					}
-				},
-				"source": [
-					"## Join dataframes"
-				],
-				"attachments": null
-			},
-			{
-				"cell_type": "code",
-				"metadata": {
-					"jupyter": {
-						"source_hidden": false,
-						"outputs_hidden": false
-					},
-					"nteract": {
-						"transient": {
-							"deleting": false
-						}
-					}
-				},
-				"source": [
-					"# After reading each table into a dataframe in a previous step, we will now join the dataframes\r\n",
-					"raw_data = transaction_line_df.join(F.broadcast(retail_product_df), \"ProductId\").na.drop()\r\n",
-					"raw_data = raw_data.join(F.broadcast(customer_df), \"CustomerId\").na.drop()\r\n",
-					"raw_data = raw_data.drop(\"TransactionCompletedTimestamp\", \"TransactionLineItemId\", \"TransactionId\")\r\n",
-					"\r\n",
-					"print(\"Schema: \")\r\n",
-					"raw_data.printSchema()\r\n",
-					"\r\n",
-					"df = raw_data.toPandas()\r\n",
-					"print(\"Shape: \", df.shape)"
-				],
-				"attachments": null,
-				"execution_count": 20
+				"execution_count": 5
 			},
 			{
 				"cell_type": "markdown",
@@ -330,8 +236,7 @@
 				},
 				"source": [
 					"## Data visualization"
-				],
-				"attachments": null
+				]
 			},
 			{
 				"cell_type": "code",
@@ -351,8 +256,7 @@
 					"df.describe()\r\n",
 					""
 				],
-				"attachments": null,
-				"execution_count": null
+				"execution_count": 6
 			},
 			{
 				"cell_type": "code",
@@ -387,8 +291,7 @@
 					"            annot_kws={'size': 10})\r\n",
 					"plt.show()"
 				],
-				"attachments": null,
-				"execution_count": null
+				"execution_count": 7
 			},
 			{
 				"cell_type": "code",
@@ -410,8 +313,7 @@
 					"sns.pairplot(df, height=2.5)\r\n",
 					"plt.show()"
 				],
-				"attachments": null,
-				"execution_count": null
+				"execution_count": 8
 			},
 			{
 				"cell_type": "markdown",
@@ -426,8 +328,7 @@
 					"## Split the data into train, test\r\n",
 					"\r\n",
 					""
-				],
-				"attachments": null
+				]
 			},
 			{
 				"cell_type": "code",
@@ -448,8 +349,7 @@
 					"print(\"Train: (rows, columns) = {}\".format((raw_train.count(), len(raw_train.columns))))\n",
 					"print(\"Test: (rows, columns) = {}\".format((raw_test.count(), len(raw_test.columns))))"
 				],
-				"attachments": null,
-				"execution_count": null
+				"execution_count": 9
 			},
 			{
 				"cell_type": "markdown",
@@ -463,8 +363,7 @@
 				"source": [
 					"## Feature engineering \n",
 					"Transform the original data feature columns into feature vectors"
-				],
-				"attachments": null
+				]
 			},
 			{
 				"cell_type": "code",
@@ -481,13 +380,12 @@
 					"collapsed": true
 				},
 				"source": [
-					"columns = raw_data.columns[3:] # change this to your corresponding column names\n",
+					"columns = raw_data.columns[3:]\n",
 					"featurizer = VectorAssembler(inputCols=columns, outputCol=FEATURE_COL)\n",
 					"train = featurizer.transform(raw_train)[LABEL_COL, FEATURE_COL]\n",
 					"test = featurizer.transform(raw_test)[LABEL_COL, FEATURE_COL]"
 				],
-				"attachments": null,
-				"execution_count": null
+				"execution_count": 10
 			},
 			{
 				"cell_type": "code",
@@ -508,8 +406,7 @@
 					"display(train.groupBy(LABEL_COL).count())\n",
 					""
 				],
-				"attachments": null,
-				"execution_count": null
+				"execution_count": 11
 			},
 			{
 				"cell_type": "markdown",
@@ -523,8 +420,7 @@
 				"source": [
 					"## Model Training\n",
 					""
-				],
-				"attachments": null
+				]
 			},
 			{
 				"cell_type": "code",
@@ -557,8 +453,7 @@
 					")\n",
 					""
 				],
-				"attachments": null,
-				"execution_count": null
+				"execution_count": 12
 			},
 			{
 				"cell_type": "code",
@@ -577,15 +472,13 @@
 				"source": [
 					"model = lgbm.fit(train)"
 				],
-				"attachments": null,
-				"execution_count": null
+				"execution_count": 13
 			},
 			{
 				"cell_type": "markdown",
 				"source": [
 					"## Feature Importances"
-				],
-				"attachments": null
+				]
 			},
 			{
 				"cell_type": "code",
@@ -609,15 +502,13 @@
 					"plt.ylabel('features')\n",
 					"plt.show()"
 				],
-				"attachments": null,
-				"execution_count": null
+				"execution_count": 14
 			},
 			{
 				"cell_type": "markdown",
 				"source": [
 					"## Model Prediction"
-				],
-				"attachments": null
+				]
 			},
 			{
 				"cell_type": "code",
@@ -637,16 +528,17 @@
 					"predictions = model.transform(test)\r\n",
 					""
 				],
-				"attachments": null,
-				"execution_count": null
+				"execution_count": 15
 			},
 			{
 				"cell_type": "code",
+				"metadata": {
+					"collapsed": false
+				},
 				"source": [
 					"display(predictions.limit(10))"
 				],
-				"attachments": null,
-				"execution_count": null
+				"execution_count": 16
 			},
 			{
 				"cell_type": "markdown",
@@ -659,8 +551,7 @@
 				},
 				"source": [
 					"## Evaluation"
-				],
-				"attachments": null
+				]
 			},
 			{
 				"cell_type": "code",
@@ -686,8 +577,7 @@
 					"\n",
 					"metrics = evaluator.transform(predictions)"
 				],
-				"attachments": null,
-				"execution_count": null
+				"execution_count": 17
 			},
 			{
 				"cell_type": "code",
@@ -701,13 +591,12 @@
 							"deleting": false
 						}
 					},
-					"collapsed": true
+					"collapsed": false
 				},
 				"source": [
 					"display(metrics)"
 				],
-				"attachments": null,
-				"execution_count": null
+				"execution_count": 18
 			},
 			{
 				"cell_type": "markdown",
@@ -722,8 +611,7 @@
 					"## Save the model\r\n",
 					"\r\n",
 					"Save the model to linked ADLS"
-				],
-				"attachments": null
+				]
 			},
 			{
 				"cell_type": "code",
@@ -745,7 +633,7 @@
 					"foldername = '/azsynapsewksgo2d3/'\r\n",
 					"\r\n",
 					"print(MODEL_NAME)\r\n",
-					"model_path = os.path.join(foldername,'models/fromLakeDB/',MODEL_NAME)\r\n",
+					"model_path = os.path.join(foldername,'models/fromSampleCSVData/',MODEL_NAME)\r\n",
 					"\r\n",
 					"(model\r\n",
 					" .write()\r\n",
@@ -754,8 +642,7 @@
 					" )\r\n",
 					""
 				],
-				"attachments": null,
-				"execution_count": null
+				"execution_count": 19
 			}
 		]
 	}
