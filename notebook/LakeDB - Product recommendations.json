@@ -1,5 +1,5 @@
 {
-	"name": "Retail - Product recommendations from Lake DB",
+	"name": "LakeDB - Product recommendations",
 	"properties": {
 		"folder": {
 			"name": "Retail Recommendation"
@@ -20,14 +20,11 @@
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "1",
 				"spark.dynamicAllocation.maxExecutors": "1",
-				"spark.autotune.trackingId": "411e5478-2508-4ce9-ab05-ff29ba7fbdf1"
+				"spark.autotune.trackingId": "2e658015-c40c-4f13-8fa7-41bb77f099ac"
 			}
 		},
 		"metadata": {
 			"saveOutput": true,
-			"synapse_widget": {
-				"version": "0.1"
-			},
 			"enableDebugMode": false,
 			"kernelspec": {
 				"name": "synapse_pyspark",
@@ -49,7 +46,7 @@
 				"nodeCount": 3,
 				"cores": 8,
 				"memory": 56,
-				"extraHeader": null
+				"automaticScaleJobs": false
 			},
 			"sessionKeepAliveTimeout": 30
 		},
@@ -68,8 +65,7 @@
 					"\r\n",
 					"\r\n",
 					"This notebook uses data from a database modeled based on a Retail Database Template. It trains a LightGBM machine learning model for product recommendation. The tables and columns used in this Notebook are only a minimum set and the solution needs to be customized to your own needs, by adding additional columns and features."
-				],
-				"attachments": null
+				]
 			},
 			{
 				"cell_type": "code",
@@ -106,7 +102,6 @@
 					"print(f\"PySpark version: {pyspark_version}\")\r\n",
 					"print(f\"MMLSpark version: {mmlspark.core.__spark_package_version__}\")"
 				],
-				"attachments": null,
 				"execution_count": 14
 			},
 			{
@@ -121,8 +116,7 @@
 				"source": [
 					"## Parameters\r\n",
 					""
-				],
-				"attachments": null
+				]
 			},
 			{
 				"cell_type": "code",
@@ -146,7 +140,6 @@
 					"RETAIL_PRODUCT_TABLE = \"RetailTemplateDB.RetailProduct\"\r\n",
 					"CUSTOMER_TABLE = \"RetailTemplateDB.Customer\""
 				],
-				"attachments": null,
 				"execution_count": 15
 			},
 			{
@@ -181,7 +174,6 @@
 					"MODEL_NAME = \"lgb-quickstart\"\r\n",
 					""
 				],
-				"attachments": null,
 				"execution_count": 16
 			},
 			{
@@ -195,8 +187,7 @@
 				},
 				"source": [
 					"## Read the data from Spark table"
-				],
-				"attachments": null
+				]
 			},
 			{
 				"cell_type": "code",
@@ -225,7 +216,6 @@
 					"    query = \"SELECT * FROM \" + storage_name\r\n",
 					"    return spark.sql(query)"
 				],
-				"attachments": null,
 				"execution_count": 17
 			},
 			{
@@ -255,7 +245,6 @@
 					"print(\"Customer Data Schema: \")\r\n",
 					"customer_df.printSchema()"
 				],
-				"attachments": null,
 				"execution_count": 18
 			},
 			{
@@ -274,7 +263,6 @@
 				"source": [
 					"transaction_line_df = transaction_line_df.drop(\"ItemSku\",\"UniversalProductCode\")"
 				],
-				"attachments": null,
 				"execution_count": 19
 			},
 			{
@@ -288,8 +276,7 @@
 				},
 				"source": [
 					"## Join dataframes"
-				],
-				"attachments": null
+				]
 			},
 			{
 				"cell_type": "code",
@@ -316,7 +303,6 @@
 					"df = raw_data.toPandas()\r\n",
 					"print(\"Shape: \", df.shape)"
 				],
-				"attachments": null,
 				"execution_count": 20
 			},
 			{
@@ -330,8 +316,7 @@
 				},
 				"source": [
 					"## Data visualization"
-				],
-				"attachments": null
+				]
 			},
 			{
 				"cell_type": "code",
@@ -351,7 +336,6 @@
 					"df.describe()\r\n",
 					""
 				],
-				"attachments": null,
 				"execution_count": null
 			},
 			{
@@ -387,7 +371,6 @@
 					"            annot_kws={'size': 10})\r\n",
 					"plt.show()"
 				],
-				"attachments": null,
 				"execution_count": null
 			},
 			{
@@ -410,7 +393,6 @@
 					"sns.pairplot(df, height=2.5)\r\n",
 					"plt.show()"
 				],
-				"attachments": null,
 				"execution_count": null
 			},
 			{
@@ -426,8 +408,7 @@
 					"## Split the data into train, test\r\n",
 					"\r\n",
 					""
-				],
-				"attachments": null
+				]
 			},
 			{
 				"cell_type": "code",
@@ -448,7 +429,6 @@
 					"print(\"Train: (rows, columns) = {}\".format((raw_train.count(), len(raw_train.columns))))\n",
 					"print(\"Test: (rows, columns) = {}\".format((raw_test.count(), len(raw_test.columns))))"
 				],
-				"attachments": null,
 				"execution_count": null
 			},
 			{
@@ -463,8 +443,7 @@
 				"source": [
 					"## Feature engineering \n",
 					"Transform the original data feature columns into feature vectors"
-				],
-				"attachments": null
+				]
 			},
 			{
 				"cell_type": "code",
@@ -486,7 +465,6 @@
 					"train = featurizer.transform(raw_train)[LABEL_COL, FEATURE_COL]\n",
 					"test = featurizer.transform(raw_test)[LABEL_COL, FEATURE_COL]"
 				],
-				"attachments": null,
 				"execution_count": null
 			},
 			{
@@ -508,7 +486,6 @@
 					"display(train.groupBy(LABEL_COL).count())\n",
 					""
 				],
-				"attachments": null,
 				"execution_count": null
 			},
 			{
@@ -523,8 +500,7 @@
 				"source": [
 					"## Model Training\n",
 					""
-				],
-				"attachments": null
+				]
 			},
 			{
 				"cell_type": "code",
@@ -557,7 +533,6 @@
 					")\n",
 					""
 				],
-				"attachments": null,
 				"execution_count": null
 			},
 			{
@@ -577,15 +552,13 @@
 				"source": [
 					"model = lgbm.fit(train)"
 				],
-				"attachments": null,
 				"execution_count": null
 			},
 			{
 				"cell_type": "markdown",
 				"source": [
 					"## Feature Importances"
-				],
-				"attachments": null
+				]
 			},
 			{
 				"cell_type": "code",
@@ -609,15 +582,13 @@
 					"plt.ylabel('features')\n",
 					"plt.show()"
 				],
-				"attachments": null,
 				"execution_count": null
 			},
 			{
 				"cell_type": "markdown",
 				"source": [
 					"## Model Prediction"
-				],
-				"attachments": null
+				]
 			},
 			{
 				"cell_type": "code",
@@ -637,7 +608,6 @@
 					"predictions = model.transform(test)\r\n",
 					""
 				],
-				"attachments": null,
 				"execution_count": null
 			},
 			{
@@ -645,7 +615,6 @@
 				"source": [
 					"display(predictions.limit(10))"
 				],
-				"attachments": null,
 				"execution_count": null
 			},
 			{
@@ -659,8 +628,7 @@
 				},
 				"source": [
 					"## Evaluation"
-				],
-				"attachments": null
+				]
 			},
 			{
 				"cell_type": "code",
@@ -686,7 +654,6 @@
 					"\n",
 					"metrics = evaluator.transform(predictions)"
 				],
-				"attachments": null,
 				"execution_count": null
 			},
 			{
@@ -706,7 +673,6 @@
 				"source": [
 					"display(metrics)"
 				],
-				"attachments": null,
 				"execution_count": null
 			},
 			{
@@ -722,8 +688,7 @@
 					"## Save the model\r\n",
 					"\r\n",
 					"Save the model to linked ADLS"
-				],
-				"attachments": null
+				]
 			},
 			{
 				"cell_type": "code",
@@ -754,7 +719,6 @@
 					" )\r\n",
 					""
 				],
-				"attachments": null,
 				"execution_count": null
 			}
 		]
