@@ -1,9 +1,19 @@
 {
 <<<<<<<< HEAD:pipeline/3_3 FactTables.json
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:pipeline/3_3 FactTables.json
+>>>>>>> main
 	"name": "3_3 FactTables",
 ========
 	"name": "FactTables",
 >>>>>>>> main:pipeline/FactTables.json
+<<<<<<< HEAD
+=======
+========
+	"name": "FactTables",
+>>>>>>>> main:pipeline/FactTables.json
+>>>>>>> main
 	"properties": {
 		"activities": [
 			{

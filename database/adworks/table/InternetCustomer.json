@@ -20,21 +20,52 @@
 		"Origin": {
 			"Type": "SPARK"
 		},
+		"Description": "",
+		"TableType": "EXTERNAL",
+		"Origin": {
+			"Type": "SPARK"
+		},
 		"StorageDescriptor": {
 			"Columns": [
 				{
+<<<<<<< HEAD:database/adworks/table/InternetCustomer.json
 <<<<<<<< HEAD:database/adworks/table/InternetCustomer.json
+=======
+>>>>>>> main:database/adworks/table/CustomerData.json
 					"Name": "CustomerId",
 					"OriginDataTypeName": {
 						"TypeName": "string",
 						"IsComplexType": false,
 						"IsNullable": false,
+<<<<<<< HEAD:database/adworks/table/InternetCustomer.json
 ========
+=======
+						"Length": 8000,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					}
+				},
+				{
+					"Name": "Customer",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 8000,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					}
+				},
+				{
+>>>>>>> main:database/adworks/table/CustomerData.json
 					"Name": "City",
 					"OriginDataTypeName": {
 						"TypeName": "string",
 						"IsComplexType": false,
 						"IsNullable": true,
+<<<<<<< HEAD:database/adworks/table/InternetCustomer.json
 >>>>>>>> main:database/adworkstarget/table/DimGeography.json
 						"Length": 8000,
 						"Properties": {
@@ -70,6 +101,9 @@
 						"IsNullable": true,
 						"Length": 8000,
 <<<<<<<< HEAD:database/adworks/table/InternetCustomer.json
+=======
+						"Length": 8000,
+>>>>>>> main:database/adworks/table/CustomerData.json
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -94,6 +128,21 @@
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 8000,
+<<<<<<< HEAD:database/adworks/table/InternetCustomer.json
+=======
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					}
+				},
+				{
+					"Name": "CountryRegion",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 8000,
+>>>>>>> main:database/adworks/table/CustomerData.json
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -143,11 +192,15 @@
 				"FormatType": "parquet",
 				"SerializeLib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
 				"Properties": {
+<<<<<<< HEAD:database/adworks/table/InternetCustomer.json
 <<<<<<<< HEAD:database/adworks/table/InternetCustomer.json
 					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/InternetCustomer",
 ========
 					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworkstarget/DimGeography",
 >>>>>>>> main:database/adworkstarget/table/DimGeography.json
+=======
+					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/CustomerData",
+>>>>>>> main:database/adworks/table/CustomerData.json
 					"FormatTypeSetToDatabaseDefault": false
 				}
 			},
@@ -160,8 +213,12 @@
 ========
 				"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworkstarget/DimGeography",
 				"Properties": {
+<<<<<<< HEAD:database/adworks/table/InternetCustomer.json
 					"LinkedServiceName": "azwksdatalakego2d3",
 >>>>>>>> main:database/adworkstarget/table/DimGeography.json
+=======
+					"LinkedServiceName": "azsynapsewksgo2d3-WorkspaceDefaultStorage",
+>>>>>>> main:database/adworks/table/CustomerData.json
 					"LocationSetToDatabaseDefault": false
 				}
 			},
@@ -176,11 +233,15 @@
 		"Properties": {
 			"Description": "",
 			"DisplayFolderInfo": "{\"name\":\"Others\",\"colorCode\":\"\"}",
+<<<<<<< HEAD:database/adworks/table/InternetCustomer.json
 <<<<<<<< HEAD:database/adworks/table/InternetCustomer.json
 			"PrimaryKeys": "CustomerId",
 ========
 			"PrimaryKeys": "GeographyKey",
 >>>>>>>> main:database/adworkstarget/table/DimGeography.json
+=======
+			"PrimaryKeys": "CustomerId",
+>>>>>>> main:database/adworks/table/CustomerData.json
 			"spark.sql.sources.provider": "parquet"
 		},
 		"Retention": 0,

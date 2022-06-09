@@ -1,7 +1,13 @@
 {
+<<<<<<<< HEAD:database/adworks/relationship/relationship-bvbxmtunqg.json
 	"name": "relationship-bvbxmtunqg",
 	"properties": {
 		"Name": "relationship-bvbxmtunqg",
+========
+	"name": "relationship-fybugkapdy",
+	"properties": {
+		"Name": "relationship-fybugkapdy",
+>>>>>>>> main:database/adworks/relationship/relationship-fybugkapdy.json
 		"EntityType": "RELATIONSHIP",
 		"Namespace": {
 			"DatabaseName": "adworks"
@@ -9,12 +15,21 @@
 		"Origin": {
 			"Type": "SPARK"
 		},
+<<<<<<<< HEAD:database/adworks/relationship/relationship-bvbxmtunqg.json
 		"FromTableName": "Location",
 		"ToTableName": "Country",
 		"ColumnRelationshipInformations": [
 			{
 				"FromColumnName": "Country",
 				"ToColumnName": "IsoCountryName"
+========
+		"FromTableName": "Sales",
+		"ToTableName": "CustomerData",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CustomerId",
+				"ToColumnName": "CustomerId"
+>>>>>>>> main:database/adworks/relationship/relationship-fybugkapdy.json
 			}
 		],
 		"RelationshipType": 0

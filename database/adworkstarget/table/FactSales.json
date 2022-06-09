@@ -92,6 +92,7 @@
 				},
 				{
 <<<<<<< HEAD
+<<<<<<< HEAD
 					"Name": "OrderDateKey",
 					"OriginDataTypeName": {
 						"TypeName": "integer",
@@ -100,6 +101,8 @@
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 =======
+=======
+>>>>>>> main
 					"Name": "OrderDate",
 					"OriginDataTypeName": {
 						"TypeName": "date",
@@ -108,6 +111,9 @@
 						"Properties": {
 							"DateFormat": "YYYY-MM-DD",
 							"HIVE_TYPE_STRING": "date"
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
 						}
 					}
@@ -173,17 +179,23 @@
 					"Description": "",
 					"OriginDataTypeName": {
 <<<<<<< HEAD
+<<<<<<< HEAD
 						"TypeName": "long",
 						"IsComplexType": false,
 						"IsNullable": false,
 						"Properties": {
 							"HIVE_TYPE_STRING": "long"
 =======
+=======
+>>>>>>> main
 						"TypeName": "integer",
 						"IsNullable": false,
 						"IsComplexType": false,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
 						}
 					}

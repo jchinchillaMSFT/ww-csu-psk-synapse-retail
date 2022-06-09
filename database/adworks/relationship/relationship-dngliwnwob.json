@@ -1,8 +1,15 @@
 {
+<<<<<<< HEAD
 <<<<<<<< HEAD:database/adworks/relationship/relationship-fybugkapdy.json
 	"name": "relationship-fybugkapdy",
 	"properties": {
 		"Name": "relationship-fybugkapdy",
+=======
+<<<<<<<< HEAD:database/adworks/relationship/relationship-icsxkfyxeh.json
+	"name": "relationship-icsxkfyxeh",
+	"properties": {
+		"Name": "relationship-icsxkfyxeh",
+>>>>>>> main
 ========
 	"name": "relationship-dngliwnwob",
 	"properties": {
@@ -15,6 +22,7 @@
 		"Origin": {
 			"Type": "SPARK"
 		},
+<<<<<<< HEAD
 		"FromTableName": "Sales",
 		"ToTableName": "InternetCustomer",
 		"ColumnRelationshipInformations": [
@@ -22,6 +30,15 @@
 <<<<<<<< HEAD:database/adworks/relationship/relationship-fybugkapdy.json
 				"FromColumnName": "CustomerId",
 				"ToColumnName": "CustomerId"
+=======
+		"FromTableName": "Reseller",
+		"ToTableName": "Country",
+		"ColumnRelationshipInformations": [
+			{
+<<<<<<<< HEAD:database/adworks/relationship/relationship-icsxkfyxeh.json
+				"FromColumnName": "CountryRegion",
+				"ToColumnName": "IsoCountryName"
+>>>>>>> main
 ========
 				"FromColumnName": "OrderDate",
 				"ToColumnName": "Date"

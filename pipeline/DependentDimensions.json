@@ -1,9 +1,19 @@
 {
 <<<<<<<< HEAD:pipeline/3_2 DependentDimensions.json
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:pipeline/3_2 DependentDimensions.json
+>>>>>>> main
 	"name": "3_2 DependentDimensions",
 ========
 	"name": "DependentDimensions",
 >>>>>>>> main:pipeline/DependentDimensions.json
+<<<<<<< HEAD
+=======
+========
+	"name": "DependentDimensions",
+>>>>>>>> main:pipeline/DependentDimensions.json
+>>>>>>> main
 	"properties": {
 		"activities": [
 			{

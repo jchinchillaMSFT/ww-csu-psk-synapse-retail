@@ -1,16 +1,32 @@
 {
+<<<<<<< HEAD
+<<<<<<<< HEAD:database/adworkstarget/table/DimGeography.json
+=======
+>>>>>>> main
 	"name": "DimGeography",
 	"properties": {
 		"Name": "DimGeography",
 		"EntityType": "TABLE",
 		"Namespace": {
+<<<<<<< HEAD
 <<<<<<<< HEAD:database/adworkstarget/table/DimGeography.json
+========
+	"name": "DimProduct",
+	"properties": {
+		"Name": "DimProduct",
+		"EntityType": "TABLE",
+		"Namespace": {
+>>>>>>>> main:database/adworkstarget/table/DimProduct.json
+=======
+>>>>>>> main
 			"DatabaseName": "adworkstarget"
 		},
 		"Description": "",
 		"TableType": "EXTERNAL",
 		"Origin": {
 			"Type": "SPARK"
+<<<<<<< HEAD
+<<<<<<<< HEAD:database/adworkstarget/table/DimGeography.json
 ========
 			"DatabaseName": "adworks"
 >>>>>>>> main:database/adworks/table/Country.json
@@ -19,10 +35,16 @@
 		"TableType": "EXTERNAL",
 		"Origin": {
 			"Type": "SPARK"
+========
+>>>>>>>> main:database/adworkstarget/table/DimProduct.json
+=======
+>>>>>>> main
 		},
 		"StorageDescriptor": {
 			"Columns": [
 				{
+<<<<<<< HEAD
+<<<<<<<< HEAD:database/adworkstarget/table/DimGeography.json
 <<<<<<<< HEAD:database/adworkstarget/table/DimGeography.json
 					"Name": "City",
 ========
@@ -31,14 +53,28 @@
 						"TypeName": "short",
 						"IsComplexType": false,
 						"IsNullable": false,
+========
+					"Name": "ProductId",
+					"OriginDataTypeName": {
+						"TypeName": "short",
+						"IsComplexType": false,
+						"IsNullable": true,
+>>>>>>>> main:database/adworkstarget/table/DimProduct.json
 						"Properties": {
 							"HIVE_TYPE_STRING": "short"
 						}
 					}
 				},
 				{
+<<<<<<<< HEAD:database/adworkstarget/table/DimGeography.json
 					"Name": "IsoCountryName",
 >>>>>>>> main:database/adworks/table/Country.json
+========
+					"Name": "Category",
+>>>>>>>> main:database/adworkstarget/table/DimProduct.json
+=======
+					"Name": "City",
+>>>>>>> main
 					"OriginDataTypeName": {
 						"TypeName": "string",
 						"IsComplexType": false,
@@ -50,7 +86,15 @@
 					}
 				},
 				{
+<<<<<<< HEAD
+<<<<<<<< HEAD:database/adworkstarget/table/DimGeography.json
 					"Name": "StateProvince",
+========
+					"Name": "Subcategory",
+>>>>>>>> main:database/adworkstarget/table/DimProduct.json
+=======
+					"Name": "StateProvince",
+>>>>>>> main
 					"OriginDataTypeName": {
 						"TypeName": "string",
 						"IsComplexType": false,
@@ -62,7 +106,15 @@
 					}
 				},
 				{
+<<<<<<< HEAD
+<<<<<<<< HEAD:database/adworkstarget/table/DimGeography.json
 					"Name": "PostalCode",
+========
+					"Name": "Model",
+>>>>>>>> main:database/adworkstarget/table/DimProduct.json
+=======
+					"Name": "PostalCode",
+>>>>>>> main
 					"OriginDataTypeName": {
 						"TypeName": "string",
 						"IsComplexType": false,
@@ -74,7 +126,26 @@
 					}
 				},
 				{
+<<<<<<< HEAD
+<<<<<<<< HEAD:database/adworkstarget/table/DimGeography.json
 					"Name": "CountryRegion",
+========
+					"Name": "ListPrice",
+					"OriginDataTypeName": {
+						"TypeName": "float",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"HIVE_TYPE_STRING": "float"
+						}
+					}
+				},
+				{
+					"Name": "Color",
+>>>>>>>> main:database/adworkstarget/table/DimProduct.json
+=======
+					"Name": "CountryRegion",
+>>>>>>> main
 					"OriginDataTypeName": {
 						"TypeName": "string",
 						"IsComplexType": false,
@@ -86,7 +157,50 @@
 					}
 				},
 				{
+<<<<<<< HEAD
+<<<<<<<< HEAD:database/adworkstarget/table/DimGeography.json
 					"Name": "GeographyKey",
+========
+					"Name": "StandardCost",
+					"OriginDataTypeName": {
+						"TypeName": "float",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"HIVE_TYPE_STRING": "float"
+						}
+					}
+				},
+				{
+					"Name": "Product",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 8000,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					}
+				},
+				{
+					"Name": "SKU",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 8000,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					}
+				},
+				{
+					"Name": "ProductKey",
+>>>>>>>> main:database/adworkstarget/table/DimProduct.json
+=======
+					"Name": "GeographyKey",
+>>>>>>> main
 					"OriginDataTypeName": {
 						"TypeName": "long",
 						"IsComplexType": false,
@@ -103,16 +217,26 @@
 				"FormatType": "parquet",
 				"SerializeLib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
 				"Properties": {
+<<<<<<< HEAD
+<<<<<<<< HEAD:database/adworkstarget/table/DimGeography.json
 <<<<<<<< HEAD:database/adworkstarget/table/DimGeography.json
 					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworkstarget/DimGeography",
 ========
 					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworks/Country",
 >>>>>>>> main:database/adworks/table/Country.json
+========
+					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworkstarget/DimProduct",
+>>>>>>>> main:database/adworkstarget/table/DimProduct.json
+=======
+					"path": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworkstarget/DimGeography",
+>>>>>>> main
 					"FormatTypeSetToDatabaseDefault": false
 				}
 			},
 			"Source": {
 				"Provider": "ADLS",
+<<<<<<< HEAD
+<<<<<<<< HEAD:database/adworkstarget/table/DimGeography.json
 				"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworkstarget/DimGeography",
 				"Properties": {
 <<<<<<<< HEAD:database/adworkstarget/table/DimGeography.json
@@ -120,6 +244,16 @@
 ========
 					"LinkedServiceName": "azsynapsewksgo2d3-WorkspaceDefaultStorage",
 >>>>>>>> main:database/adworks/table/Country.json
+========
+				"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworkstarget/DimProduct",
+				"Properties": {
+					"LinkedServiceName": "azwksdatalakego2d3",
+>>>>>>>> main:database/adworkstarget/table/DimProduct.json
+=======
+				"Location": "abfss://azsynapsewksgo2d3@azwksdatalakego2d3.dfs.core.windows.net/azsynapsewksgo2d3/adworkstarget/DimGeography",
+				"Properties": {
+					"LinkedServiceName": "azwksdatalakego2d3",
+>>>>>>> main
 					"LocationSetToDatabaseDefault": false
 				}
 			},
@@ -134,11 +268,19 @@
 		"Properties": {
 			"Description": "",
 			"DisplayFolderInfo": "{\"name\":\"Others\",\"colorCode\":\"\"}",
+<<<<<<< HEAD
+<<<<<<<< HEAD:database/adworkstarget/table/DimGeography.json
 <<<<<<<< HEAD:database/adworkstarget/table/DimGeography.json
 			"PrimaryKeys": "GeographyKey",
 ========
 			"PrimaryKeys": "",
 >>>>>>>> main:database/adworks/table/Country.json
+========
+			"PrimaryKeys": "ProductKey",
+>>>>>>>> main:database/adworkstarget/table/DimProduct.json
+=======
+			"PrimaryKeys": "GeographyKey",
+>>>>>>> main
 			"spark.sql.sources.provider": "parquet"
 		},
 		"Retention": 0,

@@ -1,6 +1,10 @@
 {
 <<<<<<<< HEAD:pipeline/3_2 DependentDimensions.json
+<<<<<<<< HEAD:pipeline/3_2 DependentDimensions.json
 	"name": "3_2 DependentDimensions",
+========
+	"name": "DependentDimensions",
+>>>>>>>> main:pipeline/DependentDimensions.json
 ========
 	"name": "DependentDimensions",
 >>>>>>>> main:pipeline/DependentDimensions.json

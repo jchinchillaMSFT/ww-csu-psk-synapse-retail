@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:database/adworks/relationship/relationship-fybugkapdy.json
 	"name": "relationship-fybugkapdy",
 	"properties": {
@@ -17,6 +18,12 @@
 	"name": "relationship-ypbjktffns",
 	"properties": {
 		"Name": "relationship-ypbjktffns",
+=======
+<<<<<<<< HEAD:database/adworks/relationship/relationship-bvbxmtunqg.json
+	"name": "relationship-bvbxmtunqg",
+	"properties": {
+		"Name": "relationship-bvbxmtunqg",
+>>>>>>> main
 ========
 	"name": "relationship-fybugkapdy",
 	"properties": {
@@ -24,12 +31,17 @@
 >>>>>>>> main:database/adworks/relationship/relationship-fybugkapdy.json
 		"EntityType": "RELATIONSHIP",
 		"Namespace": {
+<<<<<<< HEAD
 			"DatabaseName": "adworkstarget"
+>>>>>>> main
+=======
+			"DatabaseName": "adworks"
 >>>>>>> main
 		},
 		"Origin": {
 			"Type": "SPARK"
 		},
+<<<<<<< HEAD
 <<<<<<< HEAD
 		"FromTableName": "Sales",
 		"ToTableName": "InternetCustomer",
@@ -50,10 +62,26 @@
 		"FromTableName": "Sales",
 		"ToTableName": "CustomerData",
 >>>>>>>> main:database/adworks/relationship/relationship-fybugkapdy.json
+=======
+<<<<<<<< HEAD:database/adworks/relationship/relationship-bvbxmtunqg.json
+		"FromTableName": "Location",
+		"ToTableName": "Country",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "Country",
+				"ToColumnName": "IsoCountryName"
+========
+		"FromTableName": "Sales",
+		"ToTableName": "CustomerData",
+>>>>>>> main
 		"ColumnRelationshipInformations": [
 			{
 				"FromColumnName": "CustomerId",
 				"ToColumnName": "CustomerId"
+<<<<<<< HEAD
+>>>>>>> main
+=======
+>>>>>>>> main:database/adworks/relationship/relationship-fybugkapdy.json
 >>>>>>> main
 			}
 		],
