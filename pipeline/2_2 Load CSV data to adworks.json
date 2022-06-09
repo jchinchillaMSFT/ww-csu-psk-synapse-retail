@@ -78,7 +78,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"dataflow": {
-									"referenceName": "Load_adworks",
+									"referenceName": "adworks_DF",
 									"type": "DataFlowReference",
 									"parameters": {
 										"tableName": {
