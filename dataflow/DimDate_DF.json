@@ -48,7 +48,7 @@
 				"     databaseType: 'spark',",
 				"     format: 'table',",
 				"     database: 'adworkstarget',",
-				"     tableName: 'DimDate') ~> DimDateSink"
+				"     tableName: 'DimCalendar') ~> DimDateSink"
 			]
 		}
 	}
