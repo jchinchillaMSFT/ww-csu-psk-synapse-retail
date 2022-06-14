@@ -5,6 +5,7 @@ The Microsoft Partner Solution Kit for Retail is an end-to-end solution to drive
 The Partner Solution Kit for Retail includes the following technical assets:
 * 1-Click deploy of Azure Synapse and related services
 * Step-by-step deployment guidance
+* Reference Architecture
 * Retail Analytics Solution assets and artifacts including:
   * Adventure Works sample CSV source files
   * Integration pipelines
@@ -13,5 +14,11 @@ The Partner Solution Kit for Retail includes the following technical assets:
   * Product Recommender model based on PySpark notebook
 * Links to learning resources (videos, workshops, and blogs)
 
+## Deployment Guidance
+
+
+
 ## Reference Architecture
 ![](https://github.com/jchinchillaMSFT/wwcsu-psk-synapse-retail/blob/4339afd8142772dfbe9b7f5dde5bbe57ba534397/media/SynapseRetailReferenceArchitecture.png)
+
+## Learning Resources
