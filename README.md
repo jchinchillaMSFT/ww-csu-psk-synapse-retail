@@ -1,4 +1,4 @@
-# Partner Solution Kit for Retail
+# Microsoft Partner Solution Kit for Retail
 
 The Microsoft Partner Solution Kit for Retail is an end-to-end solution to drive sales demos, Proof of Concept (POC), workshops, and similar type of engagements with customers. This Partner Solution Kit (PSK) leverages the Analytics End-to-End with Azure Synapse zccelerator which allows partners to quickly implement a pre-built template to deploy Azure Synapse alongside other Azure Services used in this Retail solution.
 
