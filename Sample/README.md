@@ -29,4 +29,4 @@ A sample Power BI Dashboard and Details report is included:
 
 |Power BI|
 |-----|
-|![Alt text]([https://assets.digitalocean.com/articles/alligator/boo.svg](https://github.com/jchinchillaMSFT/ww-csu-psk-synapse-retail/blob/f887add868d68e6d046dbe8cd6e5025d7f9f2e82/Sample/PowerBI/Retail%20Analytics%20Dashboard.png) "Retail Analytics Dashboard")|
+|![Retail Analytics Dashboard](https://github.com/jchinchillaMSFT/ww-csu-psk-synapse-retail/blob/f887add868d68e6d046dbe8cd6e5025d7f9f2e82/Sample/PowerBI/Retail%20Analytics%20Dashboard.png)|
