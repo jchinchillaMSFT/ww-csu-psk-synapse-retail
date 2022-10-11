@@ -23,3 +23,10 @@ The sample data extracted from the Adventure Works database has ten data files:
 |**SalesTerritory.csv**|Sales territories are organized into groups (North America, Europe, and Pacific), countries, and regions. Only the United States sells products at the region level.|
 |**Location.csv**|Gepgraphy list of City, Zipcode, State/Province and Country Id from the Country.csv data file |
 
+## Power BI Dasboard
+
+A sample Power BI Dashboard and Details report is included:
+
+|Power BI|
+|-----|
+|![Alt text]([https://assets.digitalocean.com/articles/alligator/boo.svg](https://github.com/jchinchillaMSFT/ww-csu-psk-synapse-retail/blob/f887add868d68e6d046dbe8cd6e5025d7f9f2e82/Sample/PowerBI/Retail%20Analytics%20Dashboard.png) "Retail Analytics Dashboard")|
