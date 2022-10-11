@@ -23,7 +23,7 @@ The sample data extracted from the Adventure Works database has ten data files:
 
 ## Power BI Dasboard
 
-A sample Power BI Dashboard and Details report is included in the [Sample/PowerBI](https://github.com/jchinchillaMSFT/ww-csu-psk-synapse-retail/blob/ca4f2d39181080ca6c653a4275024541a2ad758f/Sample/PowerBI/Retail%20Analytics.pbix) folder:
+A sample Power BI Dashboard and Details report is included in the [Sample/PowerBI](https://github.com/jchinchillaMSFT/ww-csu-psk-synapse-retail/tree/ca4f2d39181080ca6c653a4275024541a2ad758f/Sample/PowerBI) folder:
 
 |Retail Analytics Dasboard & Drilldown Report|
 |-----|
